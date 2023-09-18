@@ -13,5 +13,4 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   venus
