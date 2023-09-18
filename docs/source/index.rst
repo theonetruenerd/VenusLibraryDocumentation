@@ -1,17 +1,12 @@
-Welcome to Lumache's documentation!
+Welcome to Venus's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+**Venus** is a coding language wrapper used in the coding of Hamilton Microlab STARs and similar devices.
+This is the consolidated unofficial documentation for Venus as well as its libraries, compiled from official sources as well as personal troubleshooting.
 
 .. note::
 
-   This project is under active development.
+   This project is under active development. If any issues or mistakes are found, please comment or contact me directly.
 
 Contents
 --------
