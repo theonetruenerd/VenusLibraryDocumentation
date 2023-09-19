@@ -35,7 +35,7 @@ HSL String Library provides the following functions:
 - StrTrimLeft
 - StrTrimRight
 
-..  pyfunction:: StrAsciiToStr(variable asciiCode)
+..  py:function:: StrAsciiToStr(variable asciiCode)
     Converts the given ASCII Code (an integer) to a character (string).
 
     :param asciiCode: The ASCII code to convert
