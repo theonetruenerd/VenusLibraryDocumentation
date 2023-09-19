@@ -2,6 +2,7 @@ ArrayTools
 ====================================
 
 The ArrayTools library provides the following functions:
+
 - :py:func:`ArraySeqVLookup`
 - :py:func:`ArrayVLookup`
 - :py:func:`ConvertArrayOfNumericIntegersIntoString`
@@ -33,7 +34,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function::ArrayVLookup(array i_arrayValuesA, array i_arrayValuesB, variable i_varCondition, array o_arrayValuesC)
+.. py:function:: ArrayVLookup(array i_arrayValuesA, array i_arrayValuesB, variable i_varCondition, array o_arrayValuesC)
   Given 2 arrays of values A and B with same size
   Retrieve all the elements in B where A = input value
 
