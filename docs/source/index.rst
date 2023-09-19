@@ -14,3 +14,4 @@ Contents
 .. toctree::
 
    venus
+   HSLStrLib
