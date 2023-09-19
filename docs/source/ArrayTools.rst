@@ -115,3 +115,14 @@ The ArrayTools library provides the following functions:
   :type i_index: Variable
   :return: None
   :rtype: N/A
+
+.. py:function:: get_distinct_from_array(array i_arr, array o_arr)
+
+  Gets all the values in an array that only appear once.
+
+  :param i_arr: The input array to be searched.
+  :param o_arr: The new output array containing the values which only appear once.
+  :type i_arr: Array
+  :type i_arr: Array
+  :return: None
+  :rtype: N/A
