@@ -126,3 +126,27 @@ The ArrayTools library provides the following functions:
   :type i_arr: Array
   :return: None
   :rtype: N/A
+
+.. py:function:: mergeArrays(array array1, array array2, array array3)
+
+  Concatenates two arrays and outputs the result into a third array.
+
+  :param array1: The first array of interest.
+  :param array2: The second array of interest.
+  :param array3: The resulting array of values.
+  :type array1: Array
+  :type array2: Array
+  :type array3: Array
+  :return: None
+  :rtype: N/A
+
+.. py:function:: removeValueFromArray_basedOnIndex(array i_array_elements, variable i_index_to_remove)
+
+  Removes a value from an array at the specified index.
+
+  :param i_array_elements: The array from which an item is to be removed.
+  :param i_index_to_remove: The 1-based index of the array from which the item is to be removed.
+  :type i_array_elements: Array
+  :type i_index_to_remove: Variable
+  :return: None
+  :rtype: N/A
