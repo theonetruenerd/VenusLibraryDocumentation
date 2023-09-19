@@ -15,3 +15,4 @@ Contents
 
    venus
    HSLStrLib
+   ArrayTools
