@@ -16,3 +16,4 @@ Contents
    venus
    HSLStrLib
    ArrayTools
+   EditFileAttributes
