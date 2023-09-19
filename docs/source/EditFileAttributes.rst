@@ -3,10 +3,10 @@ EditFileAttributes
 
 The Edit File Attributes library adds the following functions: 
 
-- py:func:`Make_Hidden`
-- py:func:`Make_ReadOnly`
-- py:func:`Remove_Hidden`
-- py:func:`Remove_ReadOnly`
+- :py:func:`Make_Hidden`
+- :py:func:`Make_ReadOnly`
+- :py:func:`Remove_Hidden`
+- :py:func:`Remove_ReadOnly`
 
 .. py:function:: Make_Hidden(variable Filename)
 
