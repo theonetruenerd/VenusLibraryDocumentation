@@ -3,7 +3,7 @@ HSL String Library
 
 HSL String Library provides the following functions: 
 
-- StrAsciiToStr
+- :py:func:`StrAsciiToStr`
 - StrConcat2
 - StrConcat4
 - StrConcat8
@@ -52,3 +52,5 @@ HSL String Library provides the following functions:
     :type Var2: String
     :return: The combined string of Var1 + Var2
     :rtype: String
+
+.. py:function:: S
