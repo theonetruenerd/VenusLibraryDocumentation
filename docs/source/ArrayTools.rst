@@ -74,3 +74,13 @@ The ArrayTools library provides the following functions:
   :type o_arr1_int: Array of variables
   :return: None
   :rtype: N/A
+
+.. py:function:: Lookup(array array, variable item)
+  Looks up a value within an array, outputting a 1-based index of the value if found in the array, and a 0 if the value isn't found.
+
+  :param array: The input array to be searched
+  :param item: The variable to be searched for
+  :type array: Array
+  :type item: Variable
+  :return: None
+  :rtype: N/A
