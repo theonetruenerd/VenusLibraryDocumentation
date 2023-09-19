@@ -54,3 +54,8 @@ The ArrayTools library provides the following functions:
   :type o_arrayValuesC: Array of variables
   :return: None
   :rtype: N/A
+
+.. py:function:: ConvertArrayOfNumericIntegersToString(array i_arr1_int, array o_arr1_str)
+  Converts all the numeric integers within an array to strings.
+
+  :param i_arr1_int: The array containing 
