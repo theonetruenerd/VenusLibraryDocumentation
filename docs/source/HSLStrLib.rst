@@ -36,12 +36,12 @@ HSL String Library provides the following functions:
 - StrTrimRight
 
 ..  py:function:: StrAsciiToStr(variable asciiCode)
-Converts the given ASCII Code (an integer) to a character (string).
+    Converts the given ASCII Code (an integer) to a character (string).
 
-:param asciiCode: The ASCII code to convert
-:type asciiCode: Integer
-:return: The ASCII code as a string
-:rtype: String
+    :param asciiCode: The ASCII code to convert
+    :type asciiCode: Integer
+    :return: The ASCII code as a string
+    :rtype: String
 
 .. py:function:: StrConcat2(variable Var1, variable Var2)
     Combines two strings into a new string
