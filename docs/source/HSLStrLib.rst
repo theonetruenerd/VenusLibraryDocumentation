@@ -39,4 +39,7 @@ HSL String Library provides the following functions:
     Converts the given ASCII Code (an integer) to a character (string).
 
     :param asciiCode: The ASCII code to convert
+    :type asciiCode: Integer
+    :return: The ASCII code as a string
+    :rtype: String
     
