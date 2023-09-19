@@ -4,9 +4,9 @@ HSL String Library
 HSL String Library provides the following functions: 
 
 - :py:func:`StrAsciiToStr`
-- StrConcat2
-- StrConcat4
-- StrConcat8
+- :py:func:`StrConcat2`
+- :py:func:`StrConcat4`
+- :py:func:`StrConcat8`
 - StrConcat12
 - StrEvaluateExpr
 - StrFillLeft
