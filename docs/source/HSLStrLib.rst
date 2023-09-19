@@ -2,6 +2,7 @@ HSL String Library
 ==========================================
 
 HSL String Library provides the following functions: 
+
 - StrAsciiToStr
 - StrConcat2
 - StrConcat4
