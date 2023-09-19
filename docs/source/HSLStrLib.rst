@@ -36,6 +36,7 @@ HSL String Library provides the following functions:
 - StrTrimRight
 
 ..  py:function:: StrAsciiToStr(variable asciiCode)
+
     Converts the given ASCII Code (an integer) to a character (string).
 
     :param asciiCode: The ASCII code to convert
@@ -44,6 +45,7 @@ HSL String Library provides the following functions:
     :rtype: String
 
 .. py:function:: StrConcat2(variable Var1, variable Var2)
+
     Combines two strings into a new string
 
     :param Var1: The first string to be combined
@@ -54,6 +56,7 @@ HSL String Library provides the following functions:
     :rtype: String
 
 .. py:function:: StrConcat4(variable Var1, variable Var2, variable Var3, variable Var4)
+
     Combines four strings into a new string
 
     :param Var1: The first string to be combined
@@ -68,6 +71,7 @@ HSL String Library provides the following functions:
     :rtype: String
 
 .. py:function:: StrConcat8(variable Var1, variable Var2, variable Var3, variable Var4, variable Var5, variable Var6, variable Var7, variable Var8)
+
     Combines eight strings into a new string
 
     :param Var1: The first string to be combined
