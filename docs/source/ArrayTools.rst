@@ -89,3 +89,29 @@ The ArrayTools library provides the following functions:
   :type item: Variable
   :return: None
   :rtype: N/A
+
+.. py:function:: Sort3ArraysByNumericAscendingOrder(array io_array1, array io_array2, array io_array3)
+
+  Sorts 3 arrays by numeric ascending order. io_array1 must contain only numeric values; this one will be sorted and then the other arrays will update to match the new order of io_array1.
+
+  :param io_array1: The first of the arrays to be sorted, which must contain only numeric values.
+  :param io_array2: The second of the arrays to be sorted, which can contain any values.
+  :param io_array3: The third of the arrays to be sorted, which can contain any values.
+  :type io_array1: Array
+  :type io_array2: Array
+  :type io_array3: Array
+  :return: None
+  :rtype: N/A
+
+.. py:function:: Update_Value_in_Array(array i_array, variable i_value, variable i_index)
+
+  Overwrites a value in the array at a specified index.
+
+  :param i_array: The array in which the value will be changed.
+  :param i_value: The new value to be inserted into the array.
+  :param i_index: The 1-based index of the position in the array to be overwritten.
+  :type i_array: Array
+  :type i_value: Variable
+  :type i_index: Variable
+  :return: None
+  :rtype: N/A
