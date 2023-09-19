@@ -5,8 +5,8 @@ The ArrayTools library provides the following functions:
 
 - :py:func:`ArraySeqVLookup`
 - :py:func:`ArrayVLookup`
-- :py:func:`ConvertArrayOfNumericIntegersIntoString`
-- :py:func:`ConvertArrayOfNumericStringsIntoInteger`
+- :py:func:`ConvertArrayOfNumericIntegersToString`
+- :py:func:`ConvertArrayOfNumericStringsToInteger`
 - :py:func:`Lookup`
 - :py:func:`Sort3ArraysByNumericAscendingOrder`
 - :py:func:`Update_Value_in_Array`
