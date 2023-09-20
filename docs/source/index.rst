@@ -14,6 +14,11 @@ Contents
 .. toctree::
 
    venus
-   HSLStrLib
    ArrayTools
    EditFileAttributes
+   ErrorReportLibrary
+   If_And_If_Or
+   Lookup
+   StrTokenize
+   Tools_Library
+   ZerouLScanner
