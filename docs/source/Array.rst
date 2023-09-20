@@ -1,4 +1,4 @@
-Array (from HSLExtensions)
+Array (from HSLExtensions) - unfinished
 =========================
 
 The array library from HSLExtensions adds functions to help manipulate 1-D arrays. The following functions are added:
