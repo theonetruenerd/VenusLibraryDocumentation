@@ -1,4 +1,4 @@
-HSL String Library
+HSL String Library - unfinished
 ==========================================
 
 HSL String Library provides the following functions: 
