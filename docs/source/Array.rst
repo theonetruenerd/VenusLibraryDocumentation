@@ -19,7 +19,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
 - :py:func:`IsEmpty`
 - :py:func:`IsFloatArray`
 - :py:func:`IsIntegerArray`
-- :py:func:`IsStringArray
+- :py:func:`IsStringArray`
 - :py:func:`Sort`
 
 .. py:function:: Append(array io_arrValuesA, array i_arrValuesB)
