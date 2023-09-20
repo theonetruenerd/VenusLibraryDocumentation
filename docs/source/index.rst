@@ -19,6 +19,7 @@ Contents
    ArrayTools
    EditFileAttributes
    ErrorReportLibrary
+   HSLFilLibEx
    If_And_If_Or
    Lookup
    StrTokenize
