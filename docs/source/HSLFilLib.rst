@@ -1,4 +1,4 @@
-HSLFilLib
+HSLFilLib - unfinished
 ================================
 
 This library allows interaction with and manipulation of files present on the host computer. It adds the following functions: 
