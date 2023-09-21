@@ -1,6 +1,8 @@
 If_And_If_Or
 ===================================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/If_And_If_Or.pkg
+
 The if_and_if_or library adds two functions:
 
 - :py:func:`if_and`
