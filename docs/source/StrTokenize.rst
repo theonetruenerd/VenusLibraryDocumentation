@@ -1,6 +1,8 @@
 StrTokenize
 =====================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/StrTokenize.pkg
+
 The string tokenize library allows you to split a string into an array based on delimiters. It adds one function:
 
 - :py:func:`StrTokenize`
