@@ -1,6 +1,8 @@
 Tools Library
 ============================================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/Tools_Library.pkg
+
 The tools library is designed to add some QoL functions to Venus. It adds the following functions.
 
 - :py:func:`CalculateNumberOfTubesAndVolumePerTube`
