@@ -9,6 +9,7 @@ This is the consolidated unofficial documentation for Venus as well as its libra
 .. note::
 
    This project is under active development. If any issues or mistakes are found, please comment or contact me directly.
+   General place to download libraries: https://github.com/theonetruenerd/VenusPackages
 
 Contents
 --------
