@@ -1,6 +1,8 @@
 HSLZipLib
 ================================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/HSLZipLib.pkg
+
 HSLZipLib is a library that allows you to create zip folders, as well as unzip and extract folders from them. It adds the following four functions:
 
 - :py:func:`UnpackArchive`
