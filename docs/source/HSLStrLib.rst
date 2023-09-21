@@ -1,6 +1,8 @@
 HSL String Library - unfinished
 ==========================================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/HSLStrLib.pkg
+
 HSL String Library provides the following functions: 
 
 - :py:func:`StrAsciiToStr`
