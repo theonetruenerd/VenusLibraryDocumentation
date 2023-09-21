@@ -1,6 +1,8 @@
 ArrayTools
 ====================================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/ArrayTools.pkg
+
 The ArrayTools library provides the following functions:
 
 - :py:func:`ArraySeqVLookup`
