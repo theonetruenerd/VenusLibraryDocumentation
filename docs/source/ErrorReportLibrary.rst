@@ -1,6 +1,8 @@
 Error Report Library
 ===================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/ErrorReportLibrary.pkg
+
 The error report library generates concise reports on both general errors and pipetting errors that occur during a run, extracting the information from the trace file. It adds the following functions:
 
 - :py:func:`CopyActiveTraceFile`
