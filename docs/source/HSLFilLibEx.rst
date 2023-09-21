@@ -1,6 +1,8 @@
 HSLFileLibEx
 =============================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/HSLFilLibEx.pkg
+
 HSLFilLibEx allows you to manipulate files. It adds the following functions:
 
 - :py:func:`FilCopyFileEx`
