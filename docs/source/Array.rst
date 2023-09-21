@@ -1,6 +1,8 @@
 Array (from HSLExtensions) - unfinished
 =========================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/Array.pkg
+
 The array library from HSLExtensions adds functions to help manipulate 1-D arrays. The following functions are added:
 
 - :py:func:`Append`
