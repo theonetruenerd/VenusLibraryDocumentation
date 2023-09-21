@@ -1,6 +1,8 @@
 Lookup
 ================================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/Lookup.pkg
+
 The lookup library provides one function which allows you to locate items in an array and get their index.
 
 - :py:func:`Lookup`
