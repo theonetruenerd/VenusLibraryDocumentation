@@ -1,6 +1,8 @@
 EditFileAttributes
 ===============================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/EditFileAttributes.pkg
+
 The Edit File Attributes library adds the following functions: 
 
 - :py:func:`Make_Hidden`
