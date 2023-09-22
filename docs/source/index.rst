@@ -21,6 +21,7 @@ Contents
    ArrayTools
    EditFileAttributes
    ErrorReportLibrary
+   HSLFilLib
    HSLFilLibEx
    If_And_If_Or
    Lookup
