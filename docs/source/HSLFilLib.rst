@@ -1,4 +1,4 @@
-HSLFilLib - unfinished
+HSLFilLib
 ================================
 
 https://github.com/theonetruenerd/VenusPackages/blob/main/HSLFilLib.pkg
@@ -154,3 +154,62 @@ This library allows interaction with and manipulation of files present on the ho
   :return: The contents of the line being looked at as string-valued data, or the specific run-time error
   :rtype: String
 
+.. py:function:: FilRemoveFields(file fileObj)
+
+  This function removes all fields from a record definition
+
+  :params fileObj: The file containing the record which is having its fields removed
+  :type fileObj: File
+  :return: None
+  :rtype: N/A
+
+.. py:function:: FilSearchPath(variable fileName)
+
+  This function searches for the specified file, and outputs the path and filename of the file if found, or an empty string if not found. Will search the current directory, the methods directory, the library directory, and any directories in the PATH environment variable.
+
+  :params fileName: The file name to be searched for
+  :type fileName: Variable
+  :return: The path name of the first file found, or an empty string if no files were found
+  :rtype: Variable
+
+.. py:function:: FilSetCommState(file port, variable cfgFile)
+
+  This function configures a communication resource according to the specifications in a structure that contains the configuration information. The structure that contains the configuration information must be structured as shown below. Each entry in the structure is optional and overwrites the default value in parentheses.
+
+  :params port: The communication resource opened during the file-Open operation
+  :params cfgFile: The name of the file containing the configuration information. If this parameter is empty, the entries in the structure that contains the configuration information must be accessible in the global scope.
+  :type port: File
+  :type cfgFile: Variable
+  :return: Boolean showing whether the function succeeded or not
+  :rtype: Boolean
+
+.. py:function:: FilSetCommTimeouts(file port, variable cfgFile)
+
+  This function sets the time-out parameters for all read and write operations on a specified communication resource. The structure that contains the time-out information is as shown below. Each entry in the structure is optional and overwrites the default value in parentheses.
+
+  :params port: The communication resource opened during the file-Open operation
+  :params cfgFile: The name of the file that contains the time-out information. If this parameter is empty, the entries in the structure that contains the time-out information must be accessible in the global scope.
+  :type port: File
+  :type cfgFile: Variable
+  :return: Boolean showing whether the function succeeded or not
+  :rtype: Boolean
+
+.. py:function:: FilUpdateRecord(file fileObj)
+
+  Updates the current record of the file object with the values of the variable objects specified in the record definition. The current record remains current after you call the FilUpdateRecord function. The provider must support UPDATE.
+
+  :params fileObj: The file object being updated
+  :type fileObj: File
+  :return: Boolean showing whether the function succeeded or not
+  :rtype: Boolean
+
+.. py:function:: FilWriteString(file fileObj, variable stringObj)
+
+  Writes a string to the end of the file data source. After you call the FilWriteString function, the new record becomes the current record.
+
+  :params fileObj: The file which is being written in
+  :params stringObj: The string to be written
+  :type fileObj: File
+  :type stringObj: Variable
+  :return: Boolean showing whether the function succeeded or not
+  :rtype: Boolean
