@@ -1,4 +1,4 @@
-Array (from HSLExtensions) - unfinished
+Array (from HSLExtensions)
 =========================
 
 https://github.com/theonetruenerd/VenusPackages/blob/main/Array.pkg
