@@ -202,3 +202,12 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
 .. py:function:: Sort(array i_arrValues, variable i_intSortMode, o_bSuccessfulSorted)
 
   This function outputs a sorted version of the array using the Shakersort sorting algorithm. All values in the array must share the same type for this function to work. Sort mode can either be 1 or 2, 1 is ascending and 2 is descending. 
+
+  :params i_arrValues: The array containing the values to be sorted  
+  :params i_intSortMode: Whether the array is to be sorted in ascending (1) or descending (2) order
+  :params o_bSuccesfulSorted: A boolean of whether the sort was successful or not
+  :type i_arrValues: Array
+  :type i_intSortMode: Variable
+  :type o_bSuccesfulSorted: Boolean
+  :return: A sorted copy of the array
+  :rtype: Array
