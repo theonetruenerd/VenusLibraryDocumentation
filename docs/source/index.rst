@@ -17,6 +17,7 @@ Contents
 .. toctree::
 
    venus
+   Array
    ArrayTools
    EditFileAttributes
    ErrorReportLibrary
