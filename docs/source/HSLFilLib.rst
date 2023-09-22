@@ -94,9 +94,63 @@ This library allows interaction with and manipulation of files present on the ho
   :return: Boolean showing if the function was successful or not
   :rtype: Boolean
 
-.. FilGetConfigPath()
+.. py:function:: FilGetConfigPath()
 
   This function retrieves the vector configuration path
 
   :return: The vector configuration path (usually C:\Program Files (x86)\Hamilton\Config)
   :rtype: Variable
+
+.. py:function:: FilGetLabwarePath()
+
+  This function retrieves the vector labware path
+
+  :return: The vector labware path (usually C:\Program Files (x86)\Hamilton\Labware)
+  :rtype: Variable
+
+.. py:function:: FilGetLibraryPath()
+
+  This function retrieves the vector library path
+
+  :return: The vector library path (usually C:\Program Files (x86)\Hamilton\Library)
+  :rtype: Variable
+
+.. py:function:: FilGetLogFilesPath()
+
+  This function retrieves the vector log files path
+
+  :return: The vector log files path (usually C:\Program Files (x86)\Hamilton\LogFiles)
+  :rtype: Variable
+
+.. py:function:: FilGetMethodsPath()
+
+  This function retrieves the vector methods path
+
+  :return: The vector methods path (usually C:\Program Files (x86)\Hamilton\Methods)
+  :rtype: Variable
+
+.. py:function:: FilGetSystemPath()
+
+  This function retrieves the vector system path
+
+  :return: The vector system path (usually C:\Program Files (x86)\Hamilton\System)
+  :rtype: Variable
+
+.. py:function:: FilIsNull(variable value)
+
+  This function returns a non-zero if the variable is a null value (SQL style Null). 
+
+  :params value: The variable being checked
+  :type value: Variable
+  :return: A boolean determining if the variable is SQL style Null or not
+  :rtype: Boolean
+
+.. py:function:: FilReadString(file fileObj)
+
+  This function reads the next record from the input file as string-valued data. Row data, but no schema data, is saved to the string. After you call FilReadString, the next unread record becomes the current record, or Eof is set to hslTrue if there are no more records.
+
+  :params fileObj: The file being looked at
+  :type fileObj: File
+  :return: The contents of the line being looked at as string-valued data, or the specific run-time error
+  :rtype: String
+
