@@ -81,13 +81,124 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: True if the value is present, false otherwise
   :rtype: Boolean
 
-.. py:function:: ConvertToBooleanArray(i_arrValues, o_blnSuccessfullyConverted)
+.. py:function:: ConvertToBooleanArray(array i_arrValues, variable o_blnSuccessfullyConverted)
 
-  This function converts the input array to an array with boolean values. If it is not possible to convert one or more values of the input array, the output will be false and the output array will be empty
+  This function converts the input array to an array with boolean values. If it is not possible to convert one or more values of the input array, the output will be false and the output array will be empty. Cannot interact with strings, will convert a non-zero int or float into a 1, and will turn a 0 float into a 0.
 
   :params i_arrValues: The array to be converted
   :params o_blnSuccessfullyConverted: A boolean which tells you whether the conversion was successful or not
   :type i_arrValues: Array
   :type o_blnSuccessfullyConverted: Boolean
   :return: The boolean version of the input array
+  :rtype: Array
+
+.. py:function:: ConvertToFloatArray(array i_arrValues, variable o_blnSuccessfullyConverted)
+
+  This function converts the input array to an array with float values. If it is not possible to convert one or more values of the input array, the output will be false and the output array will be empty. Cannot interact with strings, will convert any int into a float. 
+
+  :params i_arrValues: The array to be converted
+  :params o_blnSuccessfullyConverted: A boolean which tells you whether the conversion was successful or not
+  :type i_arrValues: Array
+  :type o_blnSuccessfullyConverted: Boolean
+  :return: The float version of the input array
+  :rtype: Array
+
+.. py:function:: ConvertToIntArray(array i_arrValues, variable o_blnSuccessfullyConverted)
+
+  This function converts the input array to one with integer values. If it is not possible to convert one or more values of the input array, the output will be false and the output array will be empty. Cannot interact with strings, will round any floats to the nearest integer.
+
+  :params i_arrValues: The array to be converted
+  :params o_blnSuccessfullyConverted: A boolean which tells you whether the conversion was successful or not
+  :type i_arrValues: Array
+  :type o_blnSuccessfullyConverted: Boolean
+  :return: The integer version of the input array
+  :rtype: Array
+
+.. py:function:: ConvertToStringArray(array i_arrValues)
+
+  This function converts the input array to one with string values. 
+
+  :params i_arrValues: The array to be converted
+  :type i_arrValues: Array
+  :return: The float version of the input array
+  :rtype: Array
+
+.. py:function:: Copy(array i_arrValues)
+
+  This function will output an exact copy of the input array. 
+
+  :params i_arrValues: The array to be copied
+  :type i_arrValues: Array
+  :return: A copy of the input array
+  :rtype: Array
+
+.. py:function:: FindValue(array i_arrValues, variable i_varValue)
+
+  This function will lookup the input variable within the input array and return a 1-based array of the indices of all positions that the input variable was found.
+
+  :params i_arrValues: The array to be searched
+  :params i_varValue: The variable to be searched for
+  :type i_arrValues: Array
+  :type i_varValue: Variable
+  :return: An array of all the locations that the input variable was found
+  :rtype: Array
+
+.. py:function:: InitializeAllValues(array io_arrValues, variable i_varValue)
+
+  This function sets all values within an array to the input variable. Does not work on empty arrays. 
+
+  :params io_arrValues: The array in which all values will be converted. 
+  :params i_varValue: The variable to which all values will be converted.
+  :type io_arrValues: Array
+  :type i_varValue: Variable
+  :return: None
+  :rtype: N/A
+
+.. py:function:: IsBooleanArray(array i_arrValues)
+
+  This function checks whether all values in the array are booleans.
+
+  :params i_arrValues: The array to be checked
+  :type i_arrValues: Array
+  :return: A boolean of whether the input array is all booleans or not
   :rtype: Boolean
+
+.. py:function:: IsEmpty(array i_arrValues)
+
+  This function checks whether the input array is empty
+
+  :params i_arrValues: The array to be checked
+  :type i_arrValues: Array
+  :return: A boolean of whether the input array is empty or not
+  :rtype: Boolean
+
+.. py:function:: IsFloatArray(array i_arrValues)
+
+  This function checks whether all values in the array are floats.
+
+  :params i_arrValues: The array to be checked
+  :type i_arrValues: Array
+  :return: A boolean of whether the input array is all floats or not
+  :rtype: Boolean
+
+.. py:function:: IsIntegerArray(array i_arrValues)
+
+  This function checks whether all values in the array are integers.
+
+  :params i_arrValues: The array to be checked
+  :type i_arrValues: Array
+  :return: A boolean of whether the input array is all integers or not
+  :rtype: Boolean
+
+.. py:function:: IsStringArray(array i_arrValues)
+
+  This function checks whether all values in the array are strings.
+
+  :params i_arrValues: The array to be checked
+  :type i_arrValues: Array
+  :return: A boolean of whether the input array is all strings or not
+  :rtype: Boolean
+
+.. py:function:: Sort(array i_arrValues, variable i_intSortMode, o_bSuccessfulSorted)
+
+  This function outputs a sorted version of the array using the Shakersort sorting algorithm. All values in the array must share the same type for this function to work. Sort mode can either be 1 or 2, 1 is ascending and 2 is descending. 
