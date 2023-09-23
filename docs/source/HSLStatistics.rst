@@ -1,4 +1,4 @@
-HSLStatistics - unfinished
+HSLStatistics
 ===================================
 
 https://github.com/theonetruenerd/VenusPackages/blob/main/HSLStatistics.pkg
