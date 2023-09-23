@@ -23,6 +23,7 @@ Contents
    ErrorReportLibrary
    HSLFilLib
    HSLFilLibEx
+   HSLStatistics
    If_And_If_Or
    Lookup
    StrTokenize
