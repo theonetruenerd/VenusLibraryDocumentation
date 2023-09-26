@@ -17,11 +17,11 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   - :py:func:`LIQUID_LEVEL_MeasureLiquidSingle`
   - :py:func:`LIQUID_LEVEL_ReturnVolumesFromLiquidLevel`
   - :py:func:`MOVE_ChannelsToSequencePosition`
-  - :py:func:`MOVE_ChannelsToSequencePosition_5mL1
+  - :py:func:`MOVE_ChannelsToSequencePosition_5mL`
   - :py:func:`MOVE_CheckPlateWithTwoChannels`
   - :py:func:`MOVE_InitDispenseDrive`
   - :py:func:`MOVE_InitDispenseDrive_5mL`
-  - :py:func:`PLATE_STACK_CountPlateStacks1
+  - :py:func:`PLATE_STACK_CountPlateStacks`
   - :py:func:`QUERY_GetChannelPosition`
   - :py:func:`QUERY_GetChannelPosition_5mL`
   - :py:func:`QUERY_GetTipPresentState`
