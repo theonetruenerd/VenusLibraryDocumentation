@@ -70,7 +70,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
 
   :params ML_STAR: The ML_STAR itself, which will be the only option in the dropdown.
   :params io_Sequence_to_Sort: The input sequence to be sorted.
-  :params io_Array_of_Variables: The array to be sorted with the sequence.
+  :params io_Array_of_Variables: The array to be sorted with the sequence. Used positions will be removed from the array.
   :params i_Channel_Type: The channel type associated with the pipetting step (1mL, 5mL, labware handler). 0 = 1mL, 1 = 5mL, 2 = Labware handler.
   :params i_Sort_by_Labware: A boolean determining whether the sequence is to be sorted by labware in ascending order
   :params i_Sort_by_XY: A boolean determining whether the sequence is to be sorted by position (X ascending, Y descending)
@@ -81,7 +81,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :params o_Channel_Pattern: The outputted channel pattern for the pipetting step
   :type ML_STAR: Device
   :type io_Sequence_to_Sort: Sequence
-  :params io_Array_of_Variables: Array
+  :type io_Array_of_Variables: Array
   :type i_Channel_Type: Variable
   :type i_Sort_by_Labware: Boolean
   :type i_Sort_by_XY: Boolean
@@ -93,7 +93,69 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: The number of sequence positions remaining in the sequence
   :rtype: Variable
 
-.. py:function: LIQUID_LEVEL_GetLiquidLevelHeight(device ML_STAR, variable i_str_LiquidLevelReturn, sequence i_seq_Labware, variable i_int_Channel, variable o_flt_LiquidHeight)
+.. py:function:: CHAN_ACCESS_Sort1Sequence2Arrays(device ML_STAR, sequence io_Sequence_to_Sort, array io_Array_of_Variables, array io_Array_of_Variables2, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, array o_Sorted_Array, variable o_Channel_Pattern)
+
+  This submethod takes in input sequence and sorts it by the conditions given below.  After sorting, the submethod will choose a position that the current channel can access up to the maximum.  If the current channel cannot access the position, it wil skip it and move to the next available position.  If the current channel cannot access any more positions, that channel will be skipped.  The arrays will be sorted with the sequence.  The arrays and the sequence must be the same size. Make sure the channel use setting is set to "All sequence positions" otherwise the sequence and channel pattern will not line up.
+
+  :params ML_STAR: The ML_STAR itself, which will be the only option in the dropdown.
+  :params io_Sequence_to_Sort: The input sequence to be sorted.
+  :params io_Array_of_Variables: The first array to be sorted with the sequence. Used positions will be removed from the array.
+  :params io_Array_of_Variables2: The second array to be sorted with the sequence. Used positions will be removed from the array.
+  :params i_Channel_Type: The channel type associated with the pipetting step (1mL, 5mL, labware handler). 0 = 1mL, 1 = 5mL, 2 = Labware handler.
+  :params i_Sort_by_Labware: A boolean determining whether the sequence is to be sorted by labware in ascending order
+  :params i_Sort_by_XY: A boolean determining whether the sequence is to be sorted by position (X ascending, Y descending)
+  :params i_Sort_for_Channel_Raster: A boolean determining whether the next position will be at least the raster distance unless no other positions are available
+  :params i_Max_Channel: The maximum channel that you want to be used from 1 to 16. 0 turns this option off and the maximum number of channels will be used. 
+  :params o_Sorted_Sequence: The outputted sorted sequence for the pipetting step
+  :params o_Sorted_Array: The outputted sorted first array which matches the sequence
+  :params o_Sorted_Array2: The outputted sorted second array which matches the sequence
+  :params o_Channel_Pattern: The outputted channel pattern for the pipetting step
+  :type ML_STAR: Device
+  :type io_Sequence_to_Sort: Sequence
+  :type io_Array_of_Variables: Array
+  :type io_Array_of_Variables2: Array
+  :type i_Channel_Type: Variable
+  :type i_Sort_by_Labware: Boolean
+  :type i_Sort_by_XY: Boolean
+  :type i_Sort_for_Channel_Raster: Boolean
+  :type i_Max_Channel: Variable
+  :type o_Sorted_Sequence: Sequence
+  :type o_Sorted_Array: Array
+  :type o_Sorted_Array2: Array
+  :type o_Channel_Pattern: Variable
+  :return: The number of sequence positions remaining in the sequence
+  :rtype: Variable
+
+..  py:function:: CHAN_ACCESS_Sort2Sequences(device ML_STAR, sequence io_Sequence_to_Sort, sequence io_Sequence_to_Sort2 variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, variable o_Channel_Pattern)
+
+  This sub method takes the in input sequences and sorts them by the conditions given below.  After sorting, the sub will choose a position that the current channel can access in both sequence positions up to the maximum.  If the current channel cannot access the positions, it wil skip it and move to the next available position.  If the current channel cannot access any more positions, that channel will be skipped. Make sure the channel use setting is set to "All sequence positions" otherwise the sequence and channel pattern will not line up. The first sequence is the driving sequence and the second sequence will be adjusted by the first sort.
+ 
+  :params ML_STAR: The ML_STAR itself, which will be the only option in the dropdown. 
+  :params io_Sequence_to_Sort: The first input sequence to be sorted.
+  :params io_Sequence_to_Sort2: The second input sequence to be sorted.
+  :params i_Channel_Type: The channel type associated with the pipetting step (1mL, 5mL, labware handler). 0 = 1mL, 1 = 5mL, 2 = Labware handler.
+  :params i_Sort_by_Labware: A boolean determining whether the sequence is to be sorted by labware in ascending order
+  :params i_Sort_by_XY: A boolean determining whether the sequence is to be sorted by position (X ascending, Y descending)
+  :params i_Sort_for_Channel_Raster: A boolean determining whether the next position will be at least the raster distance unless no other positions are available
+  :params i_Max_Channel: The maximum channel that you want to be used from 1 to 16. 0 turns this option off and the maximum number of channels will be used. 
+  :params o_Sorted_Sequence: The outputted second sorted sequence for the pipetting step
+  :params o_Sorted_Sequence2: The outputted second sorted sequence for the pipetting step
+  :params o_Channel_Pattern: The outputted channel pattern for the pipetting step
+  :type ML_STAR: Device
+  :type io_Sequence_to_Sort: Sequence
+  :type io_Sequence_to_Sort2: Sequence
+  :type i_Channel_Type: Variable
+  :type i_Sort_by_Labware: Boolean
+  :type i_Sort_by_XY: Boolean
+  :type i_Sort_for_Channel_Raster: Boolean
+  :type i_Max_Channel: Variable
+  :type o_Sorted_Sequence: Sequence
+  :type o_Sorted_Sequence2: Sequence  
+  :type o_Channel_Pattern: Variable
+  :return: The number of sequence positions remaining in the sequence
+  :rtype: Variable
+
+.. py:function:: LIQUID_LEVEL_GetLiquidLevelHeight(device ML_STAR, variable i_str_LiquidLevelReturn, sequence i_seq_Labware, variable i_int_Channel, variable o_flt_LiquidHeight)
 
   This function will return the liquid level height relative to the container bottem.
 
