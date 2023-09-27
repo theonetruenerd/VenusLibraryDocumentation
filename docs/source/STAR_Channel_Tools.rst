@@ -1,4 +1,4 @@
-STAR_Channel_Tools - unfinished
+STAR_Channel_Tools
 
 ==================================
 
