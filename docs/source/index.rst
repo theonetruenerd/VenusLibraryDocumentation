@@ -26,6 +26,7 @@ Contents
    HSLStatistics
    If_And_If_Or
    Lookup
+   STAR_Channel_Tools
    StrTokenize
    Tools_Library
    ZerouLScanner
