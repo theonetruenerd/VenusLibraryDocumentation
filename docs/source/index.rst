@@ -29,4 +29,5 @@ Contents
    STAR_Channel_Tools
    StrTokenize
    Tools_Library
+   Windows
    ZerouLScanner
