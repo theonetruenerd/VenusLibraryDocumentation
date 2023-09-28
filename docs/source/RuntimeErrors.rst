@@ -133,4 +133,6 @@ Error explanations and advice
 
 .. py:function:: 0xa1230006 (Not an identifier)
 
-  This error means that the symbol table entry of the identifier at the specified line is not an identifier. To fix this, try changing the name of the identifier being used. You can also look through the method to confirm that the identifier is being used and that you are not misspelling anything
+  This error means that the symbol table entry of the identifier at the specified line is not an identifier. To fix this, try: 
+
+  - Changing the name of the identifier being used. You can also look through the method to confirm that the identifier is being used and that you are not misspelling anything
