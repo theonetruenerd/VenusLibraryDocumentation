@@ -1,4 +1,4 @@
-String (from HSLExtensions) - unfinished
+String (from HSLExtensions)
 ===================================
 
 https://github.com/theonetruenerd/VenusPackages/blob/main/String.pkg
