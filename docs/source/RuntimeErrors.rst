@@ -87,9 +87,9 @@ HSLUtilLib2 Errors
 Error explanations and advice
 -----------------------------
 
-.. _0xa0220001: (No memory)
+.. _0xa0220001: 
 
-  This error means that the system cannot allocate or access enough memory or disk space for whatever operation causes the error to arise. To fix this, try:
+  (No memory)  This error means that the system cannot allocate or access enough memory or disk space for whatever operation causes the error to arise. To fix this, try:
 
   - Opening task manager and closing down other programs that are using a lot of RAM
   - Modify the operation to optimise for less memory usage
