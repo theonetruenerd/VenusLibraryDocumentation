@@ -136,3 +136,78 @@ Error explanations and advice
   This error means that the symbol table entry of the identifier at the specified line is not an identifier. To fix this, try: 
 
   - Changing the name of the identifier being used. You can also look through the method to confirm that the identifier is being used and that you are not misspelling anything
+
+.. py:function:: 0xa1220007 (Unrecognized token)
+
+  This error means that the executor detected an unrecognized token. This usually means that what it is trying to parse contains characters that are not allowed. A typical example of this is when a JSON Parser tries to parse HTML, and encounters the \"<\" character. To fix this, try:
+
+  - Identify what code line the error comes from via the HSL code, and then look at that code in Venus. 
+  - Look through the code that the executor is trying to manage and try identify any characters that might not be standard. This includes anything outside of the normal ASCII range of 0x00 - 0x7F. Remove or replace those characters
+  - Check that any special characters that are part of strings have backslashes in front of them.
+
+.. py:function:: 0xa1230008 (R-value not bound)
+
+  This error occurs when the R-value in a line is not bound to a valid value. An example would be v = a + b, where b has not been assigned to any value, or has been assigned to a sequence rather than a variable and thus cannot take part in this operation. To fix this, try:
+
+  - Identify what code line the error comes from via the HSL code, and identify what variable is on the right hand side of that line
+  - Check to see what the type of that variable is. If not obvious from reading the code, you can use the StrGetType function from HSLStrLib, or CheckValueType from HSLUtilLib2, or go through and try specific ones such as IsBoolean from HSLUtilLib.
+  - If the variable is the correct type, check to see that it has been assigned to the right value. An easy way to do this is just to add in a step which traces the variable value immediately before the error.
+  - If the variable is the right type and the correct value, check to see what value the line is expecting --> could it be mistakenly expecting a string concatenation instead of a summation.
+
+.. py:function:: 0xa2230009 (Bad number)
+
+  This error means that the executor detected an error in a number at the specific line. This often occurs if a number is of the wrong format (e.g. int rather than flt). To fix this, try:
+
+  - Check what number is causing the error to occur by looking at the line given in the error code. 
+  - Work out what type the line is expecting the number to be --> for example, a loop counter will be expecting an integer rather than a float
+  - Check what type the number causing the error is. This can be done using the CheckValueType from HSLUtilLib2, or the IsFloat/IsInteger functions from HSLUtilLib. 
+  - If unsure, just toggle the number type and see if swapping it from int to flt or vice versa helps. 
+
+.. py:function:: 0xa123000a (Bad tree)
+
+  This error means that the executor detected an error in the structure of the syntax tree.
+
+.. py:function:: 0xa123000b (Invalid entry)
+
+  This error means that the executor has detected an invalid symbol table entry. This error usually occurs if there is a non-ASCII character present in the symbol table, and the executor was not the one who inserted the value into the symbol table in the first place. To fix this, try:
+
+  - Work out which character(s) in the symbol table are invalid
+  - Try to replace those characters with their ASCII equivalents, as well as work out where/why they were added in teh first place
+
+.. py:function:: 0xa122000c (Function identifier is protected)
+
+  This error means that the parser or executor detected a protected function identifier in the symbol table at the specified line. This happens if a device is declared in the local scope, for example. To fix this, try:
+
+  - Checking to make sure nothing is in the local scope which shouldn't be
+
+.. py:function:: 0xa223000d (Underspecified)
+
+  This error means that the executor detected underspecified formal parameters of a function at the specific line. To fix this, try:
+
+  - Check what line the error gives as the function going wrong, look at that line in HSL and work out the correct location in Venus code
+  - Look at whatever functions are present on that line and check how many input parameters the functions are meant to have vs how many they actually have
+  - Make sure all input parameters exist and are not just empty variables/arrays/sequences.
+
+.. py:function:: 0xa2230037 (Overspecified)
+
+  This error means that the executor detected overspecified formal parameters ofa  function at the specific line. To fix this, try:
+
+  - Check what line the error gives as the function going wrong, look at that line in HSL and work out the correct location in Venus code
+  - Look at whatever functions are present on that line and check how many input parameters the functions are meant to have vs how many they actually have
+  - Make sure all input parameters exist and are not just empty variables/arrays/sequences.
+
+.. py:function:: 0xa123000e (Setting value failed)
+
+  This error means that the executor failed to set the value of a symbol table entry at the specified line. To fix this, try:
+
+  - Check what line the error gives as the function going wrong, look at that line in HSL and work out the correct location in Venus code
+  - See what value is trying to be set within the symbol table; make sure it has no special characters, the correct type and attributes
+
+.. py:function:: 0xa123000f (Function identifier not found)
+
+  This error occurs when the executor failed to lookup a function identifier in the symbol table at the specified line. This usually means the function has not been defined properly or has failed to import into the symbol table properly. It can also be the result of a misspelt name at any steps involving it. To fix this, try:
+
+  - See what the name of the function is that isn't being found
+  - Check to see if the function name is spelt correctly
+  - Check to see earlier in the method that the function has been defined and imported successfully into the symbol table
+  - Check to see if this happens everytime this function is called or just this one step. If it happens every time then it is likely a definition/import issue, if only once then it is likely a naming/exporting issue.
