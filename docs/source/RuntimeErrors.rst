@@ -213,3 +213,7 @@ Error explanations and advice
   - Check to see if the function name is spelt correctly
   - Check to see earlier in the method that the function has been defined and imported successfully into the symbol table
   - Check to see if this happens everytime this function is called or just this one step. If it happens every time then it is likely a definition/import issue, if only once then it is likely a naming/exporting issue.
+
+.. py:function:: 0xa1230010 (Bindings not found)
+
+  This error occurs when the executor failed to lookup the value bound to a formal parameter in the symbol table at the line specified. 
