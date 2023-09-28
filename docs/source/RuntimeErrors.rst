@@ -6,7 +6,7 @@ Runtime Errors
 Venus errors
 --------------------
 
-- :py:func:`0xa0220001` : No memory
+- `0xa0220001` : No memory
 - :py:func:`0xa1230002` : Inserting identifier failed
 - :py:func:`0xa1230003` : Identifier not found
 - :py:func:`0xa2230004` : L-value not a number
