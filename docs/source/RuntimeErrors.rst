@@ -87,7 +87,9 @@ HSLUtilLib2 Errors
 Error explanations and advice
 -----------------------------
 
-.. py:function:: _0xa0220001 (No memory)  
+.. py:function:: _0xa0220001 
+
+  (No memory)  
 
   This error means that the system cannot allocate or access enough memory or disk space for whatever operation causes the error to arise. To fix this, try:
 
