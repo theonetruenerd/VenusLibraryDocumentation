@@ -6,7 +6,7 @@ Runtime Errors
 Venus errors
 --------------------
 
-- :ref:`0xa0220001` : No memory
+- :py:func:`0xa0220001` : No memory
 - :py:func:`0xa1230002` : Inserting identifier failed
 - :py:func:`0xa1230003` : Identifier not found
 - :py:func:`0xa2230004` : L-value not a number
@@ -87,9 +87,9 @@ HSLUtilLib2 Errors
 Error explanations and advice
 -----------------------------
 
-.. _0xa0220001: 
+.. py:function:: _0xa0220001 (No memory)  
 
-  (No memory)  This error means that the system cannot allocate or access enough memory or disk space for whatever operation causes the error to arise. To fix this, try:
+  This error means that the system cannot allocate or access enough memory or disk space for whatever operation causes the error to arise. To fix this, try:
 
   - Opening task manager and closing down other programs that are using a lot of RAM
   - Modify the operation to optimise for less memory usage
