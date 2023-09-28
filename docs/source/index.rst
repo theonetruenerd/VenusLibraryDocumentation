@@ -17,17 +17,24 @@ Contents
 .. toctree::
 
    venus
+   ErrorCodes
    Array
    ArrayTools
+   ColourSchemeLibrary
    EditFileAttributes
    ErrorReportLibrary
+   Framework
+   HSLDeckVisualize
    HSLFilLib
    HSLFilLibEx
    HSLStatistics
+   HSLZipLib
    If_And_If_Or
    Lookup
+   RemoveTextDelimitersFromAsciiTextFile
    STAR_Channel_Tools
    StrTokenize
+   String
    Tools_Library
    Windows
    ZerouLScanner
