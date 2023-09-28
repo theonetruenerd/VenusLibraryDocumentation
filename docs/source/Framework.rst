@@ -1,6 +1,8 @@
 Framework (from HSLExtensions)
 =========================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/Framework.pkg
+
 The framework library from HSLExtensions provides two visible functions, but is also required for a few of the other HSLExtension libraries. It uses the functionality of the ASW Standard TraceLevel library. The functions it adds are: 
 
 - :py:func:`GetVersion`
