@@ -1,6 +1,8 @@
 Runtime Errors
 ========================
 
+.. _RuntimeErrors:
+
 Venus errors
 --------------------
 
