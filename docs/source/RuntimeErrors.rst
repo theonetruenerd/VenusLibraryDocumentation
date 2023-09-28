@@ -68,3 +68,16 @@ Venus errors
 - :py:func:`0xa1230046` : Bad argument parameter
 - :py:func:`0xa123004d` : Sequence property not found
 - :py:func:`0xa123004e` : int64 not supported
+
+HSLUtilLib2 Errors
+-----------------------------
+
+- :py:func:`0x0001` : Unexpected error
+- :py:func:`0x0002` : Create object failed
+- :py:func:`0x0003` : Value check failed: Invalid type
+- :py:func:`0x0004` : Value check failed: Invalid range
+- :py:func:`0x0005` : Labware error
+- :py:func:`0x0006` : Array index not a number
+- :py:func:`0x0007` : Array index not an integer
+- :py:func:`0x0008` : Array index must not be negative
+- :py:func:`0x0009` : Array index must not be greater than array size
