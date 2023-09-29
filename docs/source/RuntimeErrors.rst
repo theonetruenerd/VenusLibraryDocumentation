@@ -13,16 +13,16 @@ Venus errors
 - :ref:`0xa2230005 : R-value not a number <0xa2230005>`
 - :ref:`0xa1230006 : Not an identifier <0xa1230006>`
 - :ref:`0xa1220007` : Unrecognized token <0xa1220007>`
-- :ref:`0xa2230008` : R-value not bound
-- :ref:`0xa2230009` : Bad number
-- :ref:`0xa123000a` : Bad tree
-- :ref:`0xa123000b` : Invalid entry
-- :ref:`0xa122000c` : Function identifier is protected
-- :ref:`0xa223000d` : Underspecified
-- :ref:`0xa2230037` : Overspecified
-- :ref:`0xa123000e` : Setting value failed
-- :ref:`0xa123000f` : Function identifier not found
-- :ref:`0xa1230010` : Bindings not found
+- :ref:`0xa2230008 : R-value not bound <0xa2230008>`
+- :ref:`0xa2230009 : Bad number <0xa2230009>`
+- :ref:`0xa123000a : Bad tree <0xa123000a>`
+- :ref:`0xa123000b : Invalid entry <0xa123000b>`
+- :ref:`0xa122000c : Function identifier is protected <0xa122000c>`
+- :ref:`0xa223000d : Underspecified <0xa223000d>`
+- :ref:`0xa2230037 : Overspecified <0xa2230037>`
+- :ref:`0xa123000e : Setting value failed <0xa123000e>`
+- :ref:`0xa123000f : Function identifier not found <0xa123000f>`
+- :ref:`0xa1230010 : Bindings not found <0xa1230010>`
 - :ref:`0xa1230011` : Temporary variable not found
 - :ref:`0xa1230012` : Unknown function type
 - :ref:`0xa2230013` : Unable to find file
