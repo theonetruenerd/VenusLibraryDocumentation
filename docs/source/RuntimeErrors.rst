@@ -251,3 +251,53 @@ Error explanations and advice
   0xa1230010: (Bindings not found)
 
   This error occurs when the executor failed to lookup the value bound to a formal parameter in the symbol table at the line specified. 
+
+.. _0xa1230011:
+
+  0xa1230011: (Temporary variable not found)
+
+  This error occurs when the executor failed to delete the identifier of a temporary variable in the symbol table at the line specified.
+
+.. _0xa1230012:
+
+  0xa1230012: (Unknown function type)
+
+  This error occurs when the executor detects a function which hasn't been defined at the specific line. To fix this, try:
+
+  - Work out which function hasn't been defined based on the line of code which throws the error
+  - Check whether function name is misspelt
+  - Check whether function is defined post calling rather than pre calling
+  - Check whether function has been defined at all
+
+.. _0xa2230013:
+
+  0xa2230013: Unable to find file
+
+  This error occurs when the executor can't find the file specified. To fix this, try:
+
+  - Check the line of code to determine what the path of the file is that is nonexistent
+  - Determine whether the path was computer specific and the method has been ported across computers (e.g. was the file in C:\\Users\\tchapman and should be in C:\\Users\\Hamilton). To avoid this in the first place, save things in the Hamilton folder of the C:\\Program Files (x86) instead. 
+  - Check whether the file has been moved since the path was created
+  - Check whether the file name has been misspelt
+  - If file name is a variable, check to see it has been defined correctly
+
+.. _0xa1230014: 
+
+  0xa1230014: Type mismatch
+
+  This error occurs when the executor detects a mismatch between the types of variable fed into a function compared to the defined parameter that the function is meant to have an as input. To fix this, try:
+
+  - Check which function is causing the error
+  - Check what type of input the function is expecting; will hopefully be in the documentation, if not you can delve into the HSL code for that function and see directly
+  - Check what type of variable you are feeding in to the function and confirm it matches the type the function is expecting
+
+.. _0xa2230015:
+
+  0xa2230015: Bad L-value
+
+  This error occurs when the left hand side value for an operation is incorrect for the operation. To fix this, try:
+
+  - Check what type of variable the operator is expecting
+  - Check what type of variable you are feeding into the operator equation
+  - This error could be using the wrong operator (e.g. & rather than +), or by using the wrong variable type (e.g. float rather than int)
+
