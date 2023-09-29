@@ -13,7 +13,7 @@ Venus errors
 - :ref:`0xa2230005 : R-value not a number <0xa2230005>`
 - :ref:`0xa1230006 : Not an identifier <0xa1230006>`
 - :ref:`0xa1220007 : Unrecognized token <0xa1220007>`
-- :ref:`0xa2230008 : R-value not bound <0xa2230008>`
+- :ref:`0xa1230008 : R-value not bound <0xa1230008>`
 - :ref:`0xa2230009 : Bad number <0xa2230009>`
 - :ref:`0xa123000a : Bad tree <0xa123000a>`
 - :ref:`0xa123000b : Invalid entry <0xa123000b>`
