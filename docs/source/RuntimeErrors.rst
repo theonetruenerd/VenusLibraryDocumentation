@@ -75,7 +75,7 @@ HSLUtilLib2 Errors
 -----------------------------
 
 - :ref:`0x0001 : Unexpected error <0x0001>`
-- :ref:`0x0002 : Create object failed <0x0002>`
+- :ref:`0x0002 : Create object failed/Invalid parameter <0x0002>`
 - :ref:`0x0003 : Value check failed: Invalid type <0x0003>`
 - :ref:`0x0004 : Value check failed: Invalid range <0x0004>`
 - :ref:`0x0005 : Labware error <0x0005>`
@@ -345,3 +345,85 @@ Error explanations and advice
 
   This error occurs when the executor fails to insert an identifier into the tag table of a structure definition at the specified line.
 
+.. _0x0001: 
+
+  0x0001: Unexpected error
+
+  This error occurs when there is an error in an HSLUtilLib2 step which is not covered by any of the other error messages.
+
+.. _0x0002: 
+
+  0x0002: Create object failed/Invalid parameter
+
+  This error is listed as Create Object Failed in the index of HSLUtilLib2, but described as invalid parameter. I'm assuming that the latter is correct, in which case the error occurs when one or more parameters for an HSLUtilLib2 step is invalid. To fix this, try: 
+
+  - Check what parameters the function called is expecting and compare to the ones you're feeding in
+  - Check whether you are feeding in the correct number of parameters
+
+.. _0x0003:
+
+  0x0003: Value Check Failed (Invalid Type)
+
+  This error occurs when the executor finds a function parameter or read from file that is not of the expected type. To fix this, try:
+
+  - Check what type of parameter you're feeding in to the function or file and make sure it is the expected type. The expected type should be findable in the documentation, if not then it should be findable in the raw HSL code. 
+  - Check that the parameter is actually being fed into the function and that it hasn't been misspelt
+  - Check that the file is present in the right location and hasn't been corrupted or moved to the incorrect place
+
+.. _0x0004:
+
+  0x0004: Value Check Failed (Invalid Range)
+
+  This error occurs when the executor finds a function parameter or read from file that is not within the expected range. To fix this, try:
+
+  - Check what the expected range of the function or file read. This should be findable in the documentation, but will be in the raw HSL code if not.
+  - Check what the value of the parameter being fed in is.
+  - Check whether the range is due to the parameter being mistakenly high or the function range being mistakenly low.
+
+.. _0x0005: 
+
+  0x0005: Labware Error
+
+  This error occurs when the access of labware (based on LabwareID and PositionID) causes an error. To fix this, try:
+
+  - Check that the labware/position IDs have been spelt correctly
+  - Check that the layout file for the method is the correct one
+  - Check that the labware still exists on the system deck and hasn't been deleted
+  - Check that the labware file still exists in the system database and hasn't been moved or deleted
+
+.. _0x0006:
+
+  0x0006: Array Index Not A Number
+
+  This error occurs when the index of the specified array is not a positive integer. To fix this, try:
+
+  - Identify what the index of the array is (e.g. is it a float, a negative integer, a string)
+  - If the identifier is a numeric string or a float that ends in .0, use a convert to int function
+  - If the array index is something other than that, try to assign it to a positive integer as a key code or unique identifier
+
+.. _0x0007:
+
+  0x0007: Array Index Not An Integer
+
+  This error occurs when the index of the specified array is a float rather than an integer. To fix this, try:
+
+  - If the index is at a .0, use a convert to int function
+  - If the index is at a non .0, either use a floor or ceiling function, or assign a positive integer as a key code or unique identifier
+
+.. _0x0008:
+
+  0x0008: Array Index Must Not Be Negative
+
+    This error occurs when the index of the specified array is less than 1. To fix this, try:
+
+  - If the index is less than 0, perhaps take the absolute value of the index, provided that doesn't clash with another identifier.
+  - If the index is between 0 and 1, or the abs value of the index would clash, work out where you want the value to be within the array. If it needs inserting, use an insert function from one of the array libraries. If it doesn't need inserting, get the length of the array and append the value and assign it that as the index.
+
+.. _0x0009:
+
+  0x0009: Array Index Must Not Be Greater Than Array Size
+
+  This error occurs when the index of the specified array is greater than the size of the array. To fix this, try:
+
+  - Check what the index of the value in the array that you are intending to call is and assign it to that
+  - If the value is not within the array correctly, adjust the size of the array to be one larger and append the value at the end of the array or use an insert function from an array library. 
