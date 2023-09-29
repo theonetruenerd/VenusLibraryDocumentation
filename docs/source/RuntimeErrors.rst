@@ -64,7 +64,7 @@ Venus errors
 - :ref:`0xa223003a : Unable to find file <0xa223003a>`
 - :ref:`0xa223003b : File not updatable <0xa223003b>`
 - :ref:`0xa223003c : Recursive call <0xa223003c>`
-- :ref:`0xa223003d : Failed to wait for thread(s) <0xa223003d>`
+- :ref:`0xa223003d : Failed to wait for threads <0xa223003d>`
 - :ref:`0xa223003e : Time-out interval elapsed <0xa223003e>`
 - :ref:`0xa2220044 : Automation type not supported <0xa2220044>`
 - :ref:`0xa1230046 : Bad argument parameter <0xa1230046>`
@@ -89,7 +89,7 @@ Error explanations and advice
 
 .. _0xa0220001: 
 
-  0xa0220001: (No memory)  
+  0xa0220001: No memory
 
   This error means that the system cannot allocate or access enough memory or disk space for whatever operation causes the error to arise. To fix this, try:
 
@@ -100,7 +100,7 @@ Error explanations and advice
 
 .. _0xa1230002: 
 
-  0xa1230002: (Inserting identifier failed)
+  0xa1230002: Inserting identifier failed
 
   This error means that the parser or executer could not insert the specified identifier into the symbol table. Some examples of how this error can arise are: if the table is corrupted, if the identifier being read causes issues for the parser, or similar. To fix this, try:
 
@@ -110,7 +110,7 @@ Error explanations and advice
 
 .. _0xa1230003:
 
-  0xa1230003: (Identifier not found)
+  0xa1230003: Identifier not found
 
   This error means that the parser or executer could not find the specified identifier in the symbol table. This usually means something like a sequence or variable has either not been added or has been added but misspelt. To fix this, try:
 
@@ -121,31 +121,31 @@ Error explanations and advice
 
 .. _0xa2230004: 
 
-  0xa2230004: (L-value not a number)
+  0xa2230004: L-value not a number
 
-  This error means that the executor has detected that the left hand side of the expression at the specified line is not a number. The error thrown will usually include the line number from which the error arose; this will be the line number in the HSL code. Look up the error to find whereabouts in the Venus code it corresponds to, but don't fix it in the HSL method editor; otherwise you can only use HSL method editor from that point onwards as Venus only compiles one way (med --> hsl). This usually occurs when two values are being added and one of them is not a number but instead a string. To fix this, try:
+  This error means that the executor has detected that the left hand side of the expression at the specified line is not a number. The error thrown will usually include the line number from which the error arose; this will be the line number in the HSL code. Look up the error to find whereabouts in the Venus code it corresponds to, but don't fix it in the HSL method editor; otherwise you can only use HSL method editor from that point onwards as Venus only compiles one way med --> hsl. This usually occurs when two values are being added and one of them is not a number but instead a string. To fix this, try:
 
   - Checking whether you are trying to add two numbers or concatenate two strings, both have similar syntax. 
-  - If trying to add two numbers, check which one is on the left (e.g. s in the equation v = s + 1)
+  - If trying to add two numbers, check which one is on the left e.g. s in the equation v = s + 1
   - Make sure the selected number is a number and not a string or similar. You can either convert it to a number manually, or you can input a step into the method which automatically converts strings to their float/int equivalents. This can be performed by the StrFVal function from HSLStrLib.
   - If trying to concatenate two strings, then the leftmost value is still being stored as a number rather than a string
   - Use the StrFStr function from HSLStrLib to convert a floating point number into the correpsponding character string before concatenating.
 
 .. _0xa2230005: 
 
-  0xa2230005: (R-value not a number)
+  0xa2230005: R-value not a number
 
-  This error means that the executor has detected that the right hand side of the expression at the specified line is not a number. The error thrown will usually include the line number from which the error arose; this will be the line number in the HSL code. Look up the error to find whereabouts in the Venus code it corresponds to, but don't fix it in the HSL method editor; otherwise you can only use HSL method editor from that point onwards as Venus only compiles one way (med --> hsl). This usually occurs when two values are being added and one of them is not a number but instead a string. To fix this, try:
+  This error means that the executor has detected that the right hand side of the expression at the specified line is not a number. The error thrown will usually include the line number from which the error arose; this will be the line number in the HSL code. Look up the error to find whereabouts in the Venus code it corresponds to, but don't fix it in the HSL method editor; otherwise you can only use HSL method editor from that point onwards as Venus only compiles one way med --> hsl. This usually occurs when two values are being added and one of them is not a number but instead a string. To fix this, try:
 
   - Checking whether you are trying to add two numbers or concatenate two strings, both have similar syntax. 
-  - If trying to add two numbers, check which one is on the right (e.g. 1 in the equation v = s + 1)
+  - If trying to add two numbers, check which one is on the right e.g. 1 in the equation v = s + 1
   - Make sure the selected number is a number and not a string or similar. You can either convert it to a number manually, or you can input a step into the method which automatically converts strings to their float/int equivalents. This can be performed by the StrFVal function from HSLStrLib.
   - If trying to concatenate two strings, then the leftmost value is still being stored as a number rather than a string
   - Use the StrFStr function from HSLStrLib to convert a floating point number into the correpsponding character string before concatenating.
 
 .. _0xa1230006:
 
-  0xa1230006: (Not an identifier)
+  0xa1230006: Not an identifier
 
   This error means that the symbol table entry of the identifier at the specified line is not an identifier. To fix this, try: 
 
@@ -153,7 +153,7 @@ Error explanations and advice
 
 .. _0xa1220007:
 
-  0xa1220007: (Unrecognized token)
+  0xa1220007: Unrecognized token
 
   This error means that the executor detected an unrecognized token. This usually means that what it is trying to parse contains characters that are not allowed. A typical example of this is when a JSON Parser tries to parse HTML, and encounters the \"<\" character. To fix this, try:
 
@@ -163,7 +163,7 @@ Error explanations and advice
 
 .. _0xa1230008:
 
-  0xa1230008: (R-value not bound)
+  0xa1230008: R-value not bound
 
   This error occurs when the R-value in a line is not bound to a valid value. An example would be v = a + b, where b has not been assigned to any value, or has been assigned to a sequence rather than a variable and thus cannot take part in this operation. To fix this, try:
 
@@ -174,9 +174,9 @@ Error explanations and advice
 
 .. _0xa2230009:
 
-  0xa2230009: (Bad number)
+  0xa2230009: Bad number
 
-  This error means that the executor detected an error in a number at the specific line. This often occurs if a number is of the wrong format (e.g. int rather than flt). To fix this, try:
+  This error means that the executor detected an error in a number at the specific line. This often occurs if a number is of the wrong format e.g. int rather than flt. To fix this, try:
 
   - Check what number is causing the error to occur by looking at the line given in the error code. 
   - Work out what type the line is expecting the number to be --> for example, a loop counter will be expecting an integer rather than a float
@@ -185,22 +185,22 @@ Error explanations and advice
 
 .. _0xa123000a: 
 
-  0xa123000a: (Bad tree)
+  0xa123000a: Bad tree
 
   This error means that the executor detected an error in the structure of the syntax tree.
 
 .. _0xa123000b:
 
-  0xa123000b: (Invalid entry)
+  0xa123000b: Invalid entry
 
   This error means that the executor has detected an invalid symbol table entry. This error usually occurs if there is a non-ASCII character present in the symbol table, and the executor was not the one who inserted the value into the symbol table in the first place. To fix this, try:
 
-  - Work out which character(s) in the symbol table are invalid
+  - Work out which characters in the symbol table are invalid
   - Try to replace those characters with their ASCII equivalents, as well as work out where/why they were added in teh first place
 
 .. _0xa122000c:
 
-  0xa122000c: (Function identifier is protected)
+  0xa122000c: Function identifier is protected
 
   This error means that the parser or executor detected a protected function identifier in the symbol table at the specified line. This happens if a device is declared in the local scope, for example. To fix this, try:
 
@@ -208,7 +208,7 @@ Error explanations and advice
 
 .. _0xa223000d:
 
-  0xa223000d: (Underspecified)
+  0xa223000d: Underspecified
 
   This error means that the executor detected underspecified formal parameters of a function at the specific line. To fix this, try:
 
@@ -218,7 +218,7 @@ Error explanations and advice
 
 .. _0xa2230037:
 
-  0xa2230037: (Overspecified)
+  0xa2230037: Overspecified
 
   This error means that the executor detected overspecified formal parameters ofa  function at the specific line. To fix this, try:
 
@@ -228,7 +228,7 @@ Error explanations and advice
 
 .. _0xa123000e:
 
-  0xa123000e: (Setting value failed)
+  0xa123000e: Setting value failed
 
   This error means that the executor failed to set the value of a symbol table entry at the specified line. To fix this, try:
 
@@ -237,7 +237,7 @@ Error explanations and advice
 
 .. _0xa123000f:
 
-  0xa123000f: (Function identifier not found)
+  0xa123000f: Function identifier not found
 
   This error occurs when the executor failed to lookup a function identifier in the symbol table at the specified line. This usually means the function has not been defined properly or has failed to import into the symbol table properly. It can also be the result of a misspelt name at any steps involving it. To fix this, try:
 
@@ -248,19 +248,19 @@ Error explanations and advice
 
 .. _0xa1230010:
 
-  0xa1230010: (Bindings not found)
+  0xa1230010: Bindings not found
 
   This error occurs when the executor failed to lookup the value bound to a formal parameter in the symbol table at the line specified. 
 
 .. _0xa1230011:
 
-  0xa1230011: (Temporary variable not found)
+  0xa1230011: Temporary variable not found
 
   This error occurs when the executor failed to delete the identifier of a temporary variable in the symbol table at the line specified.
 
 .. _0xa1230012:
 
-  0xa1230012: (Unknown function type)
+  0xa1230012: Unknown function type
 
   This error occurs when the executor detects a function which hasn't been defined at the specific line. To fix this, try:
 
@@ -276,7 +276,7 @@ Error explanations and advice
   This error occurs when the executor can't find the file specified. To fix this, try:
 
   - Check the line of code to determine what the path of the file is that is nonexistent
-  - Determine whether the path was computer specific and the method has been ported across computers (e.g. was the file in C:\\Users\\tchapman and should be in C:\\Users\\Hamilton). To avoid this in the first place, save things in the Hamilton folder of the C:\\Program Files (x86) instead. 
+  - Determine whether the path was computer specific and the method has been ported across computers e.g. was the file in C:\\Users\\tchapman and should be in C:\\Users\\Hamilton. To avoid this in the first place, save things in the Hamilton folder of the C:\\Program Files x86 instead. 
   - Check whether the file has been moved since the path was created
   - Check whether the file name has been misspelt
   - If file name is a variable, check to see it has been defined correctly
@@ -299,7 +299,7 @@ Error explanations and advice
 
   - Check what type of variable the operator is expecting
   - Check what type of variable you are feeding into the operator equation
-  - This error could be using the wrong operator (e.g. & rather than +), or by using the wrong variable type (e.g. float rather than int)
+  - This error could be using the wrong operator e.g. & rather than +, or by using the wrong variable type e.g. float rather than int
 
 .. _0xa2230016:
 
@@ -309,7 +309,7 @@ Error explanations and advice
 
   - Check what type of variable the operator is expecting
   - Check what type of variable you are feeding into the operator equation
-  - This error could be using the wrong operator (e.g. & rather than +), or by using the wrong variable type (e.g. float rather than int)
+  - This error could be using the wrong operator e.g. & rather than +, or by using the wrong variable type e.g. float rather than int
 
 .. _0xa222017:
 
@@ -362,7 +362,7 @@ Error explanations and advice
 
 .. _0x0003:
 
-  0x0003: Value Check Failed (Invalid Type)
+  0x0003: Value Check Failed Invalid Type
 
   This error occurs when the executor finds a function parameter or read from file that is not of the expected type. To fix this, try:
 
@@ -372,7 +372,7 @@ Error explanations and advice
 
 .. _0x0004:
 
-  0x0004: Value Check Failed (Invalid Range)
+  0x0004: Value Check Failed Invalid Range
 
   This error occurs when the executor finds a function parameter or read from file that is not within the expected range. To fix this, try:
 
@@ -384,7 +384,7 @@ Error explanations and advice
 
   0x0005: Labware Error
 
-  This error occurs when the access of labware (based on LabwareID and PositionID) causes an error. To fix this, try:
+  This error occurs when the access of labware based on LabwareID and PositionID causes an error. To fix this, try:
 
   - Check that the labware/position IDs have been spelt correctly
   - Check that the layout file for the method is the correct one
@@ -397,7 +397,7 @@ Error explanations and advice
 
   This error occurs when the index of the specified array is not a positive integer. To fix this, try:
 
-  - Identify what the index of the array is (e.g. is it a float, a negative integer, a string)
+  - Identify what the index of the array is e.g. is it a float, a negative integer, a string
   - If the identifier is a numeric string or a float that ends in .0, use a convert to int function
   - If the array index is something other than that, try to assign it to a positive integer as a key code or unique identifier
 
