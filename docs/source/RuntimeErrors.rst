@@ -87,7 +87,7 @@ HSLUtilLib2 Errors
 Error explanations and advice
 -----------------------------
 
-.. py:function:: _0xa0220001 
+.. py:function:: 0xa0220001 
 
   (No memory)  
 
