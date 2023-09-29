@@ -98,7 +98,7 @@ Error explanations and advice
   - Increase the amount of RAM that Venus has been allocated
   - In task manager, go to details, right click the hamilton software and assign priority high
 
-.. _0xa1230002 
+.. _0xa1230002: 
 
   0xa1230002: (Inserting identifier failed)
 
@@ -108,7 +108,7 @@ Error explanations and advice
   - Check to make sure the identifier has all the data associated with it that the symbol table needs. Typically this includes name, type and attributes
   - Check to make sure the identifier doesn't include any symbols that might interfere with the parser. These can include anything outside of standard ASCII characters from range 0x00 - 0x7F.
 
-.. _0xa1230003 (Identifier not found)
+.. _0xa1230003:
 
   0xa1230003: (Identifier not found)
 
@@ -119,7 +119,9 @@ Error explanations and advice
   - Check whether the name given in the error has been initialised/defined. It may be there, it may be there but misspelt, it may not be there at all. If it isn't there, add it and try again. If it is there but misspelt, rename it to the correct item. 
   - If the name is there and spelt correctly, make sure that the correct symbol table is being called during the method
 
-.. _0xa2230004 (L-value not a number)
+.. _0xa2230004: 
+
+  0xa2230004: (L-value not a number)
 
   This error means that the executor has detected that the left hand side of the expression at the specified line is not a number. The error thrown will usually include the line number from which the error arose; this will be the line number in the HSL code. Look up the error to find whereabouts in the Venus code it corresponds to, but don't fix it in the HSL method editor; otherwise you can only use HSL method editor from that point onwards as Venus only compiles one way (med --> hsl). This usually occurs when two values are being added and one of them is not a number but instead a string. To fix this, try:
 
@@ -129,7 +131,9 @@ Error explanations and advice
   - If trying to concatenate two strings, then the leftmost value is still being stored as a number rather than a string
   - Use the StrFStr function from HSLStrLib to convert a floating point number into the correpsponding character string before concatenating.
 
-.. _0xa2230005 (R-value not a number)
+.. _0xa2230005: 
+
+  0xa2230005: (R-value not a number)
 
   This error means that the executor has detected that the right hand side of the expression at the specified line is not a number. The error thrown will usually include the line number from which the error arose; this will be the line number in the HSL code. Look up the error to find whereabouts in the Venus code it corresponds to, but don't fix it in the HSL method editor; otherwise you can only use HSL method editor from that point onwards as Venus only compiles one way (med --> hsl). This usually occurs when two values are being added and one of them is not a number but instead a string. To fix this, try:
 
@@ -139,13 +143,17 @@ Error explanations and advice
   - If trying to concatenate two strings, then the leftmost value is still being stored as a number rather than a string
   - Use the StrFStr function from HSLStrLib to convert a floating point number into the correpsponding character string before concatenating.
 
-.. _0xa1230006 (Not an identifier)
+.. _0xa1230006:
+
+  0xa1230006: (Not an identifier)
 
   This error means that the symbol table entry of the identifier at the specified line is not an identifier. To fix this, try: 
 
   - Changing the name of the identifier being used. You can also look through the method to confirm that the identifier is being used and that you are not misspelling anything
 
-.. _0xa1220007 (Unrecognized token)
+.. _0xa1220007:
+
+  0xa1220007: (Unrecognized token)
 
   This error means that the executor detected an unrecognized token. This usually means that what it is trying to parse contains characters that are not allowed. A typical example of this is when a JSON Parser tries to parse HTML, and encounters the \"<\" character. To fix this, try:
 
@@ -153,7 +161,9 @@ Error explanations and advice
   - Look through the code that the executor is trying to manage and try identify any characters that might not be standard. This includes anything outside of the normal ASCII range of 0x00 - 0x7F. Remove or replace those characters
   - Check that any special characters that are part of strings have backslashes in front of them.
 
-.. _0xa1230008 (R-value not bound)
+.. _0xa1230008:
+
+  0xa1230008: (R-value not bound)
 
   This error occurs when the R-value in a line is not bound to a valid value. An example would be v = a + b, where b has not been assigned to any value, or has been assigned to a sequence rather than a variable and thus cannot take part in this operation. To fix this, try:
 
@@ -162,7 +172,9 @@ Error explanations and advice
   - If the variable is the correct type, check to see that it has been assigned to the right value. An easy way to do this is just to add in a step which traces the variable value immediately before the error.
   - If the variable is the right type and the correct value, check to see what value the line is expecting --> could it be mistakenly expecting a string concatenation instead of a summation.
 
-.. _0xa2230009 (Bad number)
+.. _0xa2230009:
+
+  0xa2230009: (Bad number)
 
   This error means that the executor detected an error in a number at the specific line. This often occurs if a number is of the wrong format (e.g. int rather than flt). To fix this, try:
 
@@ -171,24 +183,32 @@ Error explanations and advice
   - Check what type the number causing the error is. This can be done using the CheckValueType from HSLUtilLib2, or the IsFloat/IsInteger functions from HSLUtilLib. 
   - If unsure, just toggle the number type and see if swapping it from int to flt or vice versa helps. 
 
-.. _0xa123000a (Bad tree)
+.. _0xa123000a: 
+
+  0xa123000a: (Bad tree)
 
   This error means that the executor detected an error in the structure of the syntax tree.
 
-.. _0xa123000b (Invalid entry)
+.. _0xa123000b:
+
+  0xa123000b: (Invalid entry)
 
   This error means that the executor has detected an invalid symbol table entry. This error usually occurs if there is a non-ASCII character present in the symbol table, and the executor was not the one who inserted the value into the symbol table in the first place. To fix this, try:
 
   - Work out which character(s) in the symbol table are invalid
   - Try to replace those characters with their ASCII equivalents, as well as work out where/why they were added in teh first place
 
-.. _0xa122000c (Function identifier is protected)
+.. _0xa122000c:
+
+  0xa122000c: (Function identifier is protected)
 
   This error means that the parser or executor detected a protected function identifier in the symbol table at the specified line. This happens if a device is declared in the local scope, for example. To fix this, try:
 
   - Checking to make sure nothing is in the local scope which shouldn't be
 
-.. _0xa223000d (Underspecified)
+.. _0xa223000d:
+
+  0xa223000d: (Underspecified)
 
   This error means that the executor detected underspecified formal parameters of a function at the specific line. To fix this, try:
 
@@ -196,7 +216,9 @@ Error explanations and advice
   - Look at whatever functions are present on that line and check how many input parameters the functions are meant to have vs how many they actually have
   - Make sure all input parameters exist and are not just empty variables/arrays/sequences.
 
-.. _0xa2230037 (Overspecified)
+.. _0xa2230037:
+
+  0xa2230037: (Overspecified)
 
   This error means that the executor detected overspecified formal parameters ofa  function at the specific line. To fix this, try:
 
@@ -204,14 +226,18 @@ Error explanations and advice
   - Look at whatever functions are present on that line and check how many input parameters the functions are meant to have vs how many they actually have
   - Make sure all input parameters exist and are not just empty variables/arrays/sequences.
 
-.. _0xa123000e (Setting value failed)
+.. _0xa123000e:
+
+  0xa123000e: (Setting value failed)
 
   This error means that the executor failed to set the value of a symbol table entry at the specified line. To fix this, try:
 
   - Check what line the error gives as the function going wrong, look at that line in HSL and work out the correct location in Venus code
   - See what value is trying to be set within the symbol table; make sure it has no special characters, the correct type and attributes
 
-.. _0xa123000f (Function identifier not found)
+.. _0xa123000f:
+
+  0xa123000f: (Function identifier not found)
 
   This error occurs when the executor failed to lookup a function identifier in the symbol table at the specified line. This usually means the function has not been defined properly or has failed to import into the symbol table properly. It can also be the result of a misspelt name at any steps involving it. To fix this, try:
 
@@ -220,6 +246,8 @@ Error explanations and advice
   - Check to see earlier in the method that the function has been defined and imported successfully into the symbol table
   - Check to see if this happens everytime this function is called or just this one step. If it happens every time then it is likely a definition/import issue, if only once then it is likely a naming/exporting issue.
 
-.. _0xa1230010 (Bindings not found)
+.. _0xa1230010:
+
+  0xa1230010: (Bindings not found)
 
   This error occurs when the executor failed to lookup the value bound to a formal parameter in the symbol table at the line specified. 
