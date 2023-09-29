@@ -301,3 +301,47 @@ Error explanations and advice
   - Check what type of variable you are feeding into the operator equation
   - This error could be using the wrong operator (e.g. & rather than +), or by using the wrong variable type (e.g. float rather than int)
 
+.. _0xa2230016:
+
+  0xa2230016: Bad R-value
+
+    This error occurs when the right hand side value for an operation is incorrect for the operation. To fix this, try:
+
+  - Check what type of variable the operator is expecting
+  - Check what type of variable you are feeding into the operator equation
+  - This error could be using the wrong operator (e.g. & rather than +), or by using the wrong variable type (e.g. float rather than int)
+
+.. _0xa222017:
+
+  0xa222017: Unrecognized type
+
+  This error occurs when the executor detects an unrecognized storage type at the specified line.
+
+.. _0xa1230018: 
+
+  0xa1230018: Bad memory type
+
+  This error occurs when the executor detects a bad memory type for an array at the specified line.
+
+.. _0xa123019:
+
+  0xa123019: Array reference out of bound
+
+  This error occurs when the executor detects an invalid index for an array at a specified line. To fix this, try:
+
+  - Check the size of the array that is being queried
+  - Check which value from the array you are expecting to call and check what index that value has
+  - Potentially add a step into the method to find that index on a dynamic basis so that you can change the array earlier in the method without messing up that step
+
+.. _0xa123001a:
+
+  0xa123001a: Bad array identifier type
+
+  This error occurs when the executor detects an unrecognized storage type for an array identifier at the specified line.
+
+.. _0xa123001b: 
+
+  0xa123001b: Tag insert failed
+
+  This error occurs when the executor fails to insert an identifier into the tag table of a structure definition at the specified line.
+
