@@ -311,9 +311,9 @@ Error explanations and advice
   - Check what type of variable you are feeding into the operator equation
   - This error could be using the wrong operator e.g. & rather than +, or by using the wrong variable type e.g. float rather than int
 
-.. _0xa222017:
+.. _0xa2220017:
 
-  0xa222017: Unrecognized type
+  0xa2220017: Unrecognized type
 
   This error occurs when the executor detects an unrecognized storage type at the specified line.
 
