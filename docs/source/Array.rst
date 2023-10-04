@@ -39,7 +39,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
 
   This function compares two arrays and outputs arrays of values which are missing from the first array but present in the second, and values which are present in the second array but not in the first.
 
-  :params i_arrExpectedValues: The first array, which the second array will be checked against, \n usually is the array of expected values
+  :params i_arrExpectedValues: The first array, which the second array will be checked against, usually is the array of expected values
   :params i_arrActualValues: The second array, which will use the first array as a template when comparing against, usually is your "actual" array
   :params o_arrMissingValues: An output array of values which are present in the first array but not the second 
   :params o_arrNotExpectedValues: An output array of values which are present in the second array but not the first (i.e. unexpected values in your actual data)
