@@ -323,9 +323,9 @@ Error explanations and advice
 
   This error occurs when the executor detects a bad memory type for an array at the specified line.
 
-.. _0xa123019:
+.. _0xa1230019:
 
-  0xa123019: Array reference out of bound
+  0xa1230019: Array reference out of bound
 
   This error occurs when the executor detects an invalid index for an array at a specified line. To fix this, try:
 
