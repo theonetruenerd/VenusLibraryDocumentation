@@ -1,4 +1,4 @@
-HSL String Library - unfinished
+HSL String Library
 ==========================================
 
 https://github.com/theonetruenerd/VenusPackages/blob/main/HSLStrLib.pkg
@@ -229,3 +229,167 @@ HSL String Library provides the following functions:
     :type: Integer
     :return: The hexadecimal string representation of the integer
     :rtype: String
+
+.. py:function:: StrIsDigit(variable character)
+
+    The StrIsDigit function determines if the specified input string (which should be a character) is a digit or not.
+
+    :params character: The input character to be a tested, as a string
+    :type character: Variable
+    :return: Boolean showing whether the character is a digit (1) or not (0)
+    :rtype: Boolean
+
+.. py:function:: StrIsStr(variable number)
+
+    The StrIStr function converts the input integer into the corresponding character string
+
+    :params number: The integer to be converted
+    :type number: Variable
+    :return: The string representation of the integer number
+    :rtype: Variable
+
+.. py:function:: StrIVal(variable str)
+
+    The StrIVal function converts the input sequence of digits into the corresponding integer. The input string is treated as a decimal, unless it begins with an 0x in which case it is interpreted as hexadecimal.            Conversion aborts at the first character in the input which is neither a digit nor one of the characters "+" or "-".
+
+    :params str: The input sequence of digits to be converted
+    :type str: Variable
+    :return: The numeric value of the sequence of digits contained in the character string, as an integer. Null if the character string cannot be converted into a number. LONG_MAX = 2147483647 if the conversion results in an overflow. LONG_MIN = -2147483647 - 1 if the conversion results in an underflow.
+    :rtype: Variable
+
+.. py:function:: StrLeft(variable str, variable count)
+
+    The StrLeft function extracts the first (leftmost) characters of a string and returns a copy of the extracted substring. The number of characters extracted is equal to the input variable "count". If "count" is longer than the string, the entire string is returned.
+
+    :params str: The input string from which the substring is to be extracted
+    :params count: The number of characters to be extracted
+    :type str: Variable
+    :type count: Variable
+    :return: A string containing a copy of the specified range of characters. Can be an empty string.
+    :rtype: Variable
+
+.. py:function:: StrMakeLower(variable str)
+
+    The StrMakeLower function converts the original string to its lowercase form.
+
+    :params str: The string to be converted
+    :type str: Variable
+    :return: The original string converted to lowercase
+    :rtype: Variable
+
+.. py:function:: StrMakeLowerCopy(variable str)
+
+    The StrMakeLowerCopy function returns a copy of the original string converted to lowercase.
+
+    :params str: The string to be copied
+    :type str: Variable
+    :return: A copy of the original string converted to lowercase
+    :rtype: Variable
+
+.. py:function:: StrMakeUpper(variable str)
+
+    The StrMakeUpper function converts the original string to its uppercase form.
+
+    :params str: The string to be converted
+    :type str: Variable
+    :return: The original string converted to uppercase
+    :rtype: Variable
+
+.. py:function:: StrMakeUpperCopy(variable str)
+
+    The StrMakeUpperCopy function returns a copy of the original string converted to uppercase.
+
+    :params str: The string to be copied
+    :type str: Variable
+    :return: A copy of the original string converted to uppercase
+    :rtype: Variable
+
+.. py:function:: StrMid(variable str, variable first, variable count)
+
+    The StrMid function extracts a substring of length "count" characters from the input variable "str", starting at position "first" which is 0-based. The function returns a copy of the extracted substring.
+
+    :params str: The string from which the substring is to be extracted
+    :params first: The first character to be extracted (0-based)
+    :params count: The number of characters to be extracted
+    :type str: Variable
+    :type first: Variable
+    :type count: Variable
+    :return: A string containing a copy of the specified range of characters, can be empty
+    :rtype: Variable
+
+.. py:function:: StrReplace(variable str, variable oldSubStr, variable newSubStr)
+
+    The StrReplace function searches a string for a specified substring and replaces it with another specified substring.
+
+    :params str: The string to be edited
+    :params oldSubStr: The substring to be replaced by newSubStr
+    :params newSubStr: The substring to replace oldSubStr
+    :type str: Variable
+    :type oldSubStr: Variable
+    :type newSubStr: Variable
+    :return: The number of replaced instances of oldSubStr. Zero if the string is unchanged.
+    :rtype: Variable
+
+.. py:function:: StrReverseFind(variable str, variable subStr)
+
+    The StrReverseFind function searches a string object for the last match of a sub-string
+
+    :params str: The string to be searched
+    :params subStr: The substring to be searched for
+    :type str: Variable
+    :type subStr: Variable
+    :return: The zero-based index of the last character in this string that matches the requested substring or characters. -1 if the substring is not found.
+    :rtype: Variable
+
+.. py:function:: StrRight(variable str, variable count)
+
+    The StrRight function extracts the last (rightmost) characters of a string and returns a copy of the extracted substring. The number of characters extracted is equal to the input variable "count". If "count" is longer than the string, the entire string is returned.
+
+    :params str: The input string from which the substring is to be extracted
+    :params count: The number of characters to be extracted
+    :type str: Variable
+    :type count: Variable
+    :return: A string containing a copy of the specified range of characters. Can be an empty string.
+    :rtype: Variable
+
+.. py:function:: StrSpanExcluding(variable str, variable subStr)
+
+    The StrSpanExcluding function can be used to search the string for the first occurrence of any character in the specified set subStr. StrSpanExcluding extracts and returns all characters preceding the first occurrence of a character from subStr (in other words, the character from subStr and all characters following it in the string, are not returned). If no character from subStr is found in the string, then StrSpanExcluding returns the entire string.
+
+    :params str: The string to be searched
+    :params subStr: A string containing the set of characters to be searched for
+    :type str: Variable
+    :type subStr: Variable
+    :return: A sub-string containing characters in the string that are not in subStr, beginning with the first character in the string and ending with the first character found in the string that is also in subStr (that is, starting with the first character in the string and up to but excluding the first character in the string that is found subStr). It returns the entire string if no character in subStr is found in the string.
+    :rtype: Variable
+
+.. py:function:: StrStrToAscii(variable character)
+
+    The StrStrToAscii function converts the given character (as a string) into an ASCII code (as an integer)
+
+    :params character: The character to convert, inputted as a string
+    :type character: Variable
+    :return: The ASCII code for the given character as an integer, -1 if the function fails
+    :rtype: Variable
+
+.. py:function:: StrTrimLeft(variable str, variable character)
+
+    The StrTrimLeft function trims leading whitespace characters from the string (removes newline, space, tab, and user-defined characters)
+
+    :params str: The string to trim
+    :params character: A string containing user-defined characters to be trimmed (may be empty, in which case only newline, space and tabs will be trimmed)
+    :type str: Variable
+    :type character: Variable
+    :return: None
+    :rtype: N/A
+
+.. py:function:: StrTrimRight(variable str, variable character)
+
+    The StrTrimRight function trims lagging whitespace characters from the string (removes newline, space, tab, and user-defined characters)
+
+    :params str: The string to trim
+    :params character: A string containing user-defined characters to be trimmed (may be empty, in which case only newline, space and tabs will be trimmed)
+    :type str: Variable
+    :type character: Variable
+    :return: None
+    :rtype: N/A
