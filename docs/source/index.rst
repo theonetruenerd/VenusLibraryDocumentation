@@ -28,6 +28,7 @@ This is the consolidated unofficial documentation for Venus as well as its libra
    HSLFilLib
    HSLFilLibEx
    HSLStatistics
+   HSLStrLib
    HSLZipLib
    If_And_If_Or
    Lookup
