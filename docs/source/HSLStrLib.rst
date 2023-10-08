@@ -1,4 +1,4 @@
-HSL String Library
+HSLStrLib
 ==========================================
 
 https://github.com/theonetruenerd/VenusPackages/blob/main/HSLStrLib.pkg
