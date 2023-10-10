@@ -21,6 +21,7 @@ This is the consolidated unofficial documentation for Venus as well as its libra
    Array
    ArrayTools
    ColourSchemeLibrary
+   DebugAssist
    EditFileAttributes
    ErrorReportLibrary
    Framework
