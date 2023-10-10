@@ -3,7 +3,7 @@ DebugAssist
 
 https://github.com/theonetruenerd/VenusPackages/blob/main/DebugAssist.pkg 
 
-The debug assist library adds one functions aimed at helping the user identify, understand, and fix runtime errors. The function it adds is:
+The debug assist library adds one function aimed at helping the user identify, understand, and fix runtime errors. The function it adds is:
 
 - :py:func:`FullErrorAnalysis`
 
