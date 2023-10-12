@@ -7,7 +7,7 @@ The debug assist library adds one function aimed at helping the user identify, u
 
 - :py:func:`FullErrorAnalysis`
 
-This function requires the `ASWStandardDialog library <https://github.com/theonetruenerd/VenusPackages/blob/main/ASWStandardDialogs.pkg>`_ to be present and the initialise step from that library needs to have been run.
+This function can use the `ASWStandardDialog library <https://github.com/theonetruenerd/VenusPackages/blob/main/ASWStandardDialogs.pkg>`_ which makes the dialog nicer, but is not a requirement.
 
 .. py:function:: FullErrorAnalysis(variable i_PathForErrorDataAnalysis)
 
