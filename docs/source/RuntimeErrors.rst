@@ -345,6 +345,12 @@ Error explanations and advice
 
   This error occurs when the executor fails to insert an identifier into the tag table of a structure definition at the specified line.
 
+.. _0xa123001c:
+
+  0xa123001c: Dynamic memory identifier not bound
+
+  This error occurs when the executor detected at the specified line an identifier of a dynamic memory object that was not bound to a valid value. This is when a variable or data structures has been allocated at runtime, and has been assigned an incorrect value, such as binding a variable to 
+
 .. _0x0001: 
 
   0x0001: Unexpected error
