@@ -349,7 +349,45 @@ Error explanations and advice
 
   0xa123001c: Dynamic memory identifier not bound
 
-  This error occurs when the executor detected at the specified line an identifier of a dynamic memory object that was not bound to a valid value. This is when a variable or data structures has been allocated at runtime, and has been assigned an incorrect value, such as binding a variable to 
+  This error occurs when the executor detected at the specified line an identifier of a dynamic memory object that was not bound to a valid value. This is when a variable or data structures has been allocated at runtime, and has been assigned an incorrect value, such as binding an identifier that is meant to be a variable to a submethod instead. As far as I'm aware, this is only possible to do by editing the HSL code, I don't think the method editor has any functions that allow you to bind identifiers incorrectly, I'm not 100% certain on that though. To fix this, try: 
+
+  - Locate the identifier that is causing the error (should be possible in either the method editor or the hsl method editor)
+  - Confirm what kind of object the identifier is meant to be
+  - Work out what method editor step corresponds to the incorrect HSL code, which is likely to be a block of HSL code inserted directly into the method editor
+  - Correct that code (if you have knowledge of HSL) or replace it with method editor steps that have the same functionality. If you're really attached to the HSL block of code but aren't proficient with HSL, try to make the same function with method editor steps in a separate method, look at the HSL code that generates, and copy that HSL code into the original method as an inserted block of HSL. 
+
+.. _0xa123001d:
+
+  0xa123001d: Tag identifier not bound
+
+  This error occurs when the executor detected at the specified line an identifier of a structure tag object that was not bound to a valid value. A structure tag object is a piece of metadata associated with a variable. In this error, a variable is expected to have some sort of tag, but the tag doesn't exist. To fix this, try:
+
+  - Determine which variable the tag is meant to be associated with based on the specified line
+  - From that, work out what kind of tag is meant to be present. This is doable by looking at the HSL code. In the HSL Method Editor Help section, you can go to HSL Reference \> Declaration of Objects \> Declaration of Structure Objects to see what the format of tag declaration is meant to be, and therefore can compare this to the code in the method associated with the object declaration
+  - Add the assignment of the tag in the method editor code, confirming via the HSL that the tag has been assigned correctly. You can also assign the tag via an HSL code insert step.
+
+.. _0xa123001e:
+
+  0xa123001e: Structure reference out of bound
+
+  This error occurs when the executor detects a reference to an element of a structure which is outside the allowed range. A few examples of this are integers which are too large or too small, or strings which are too long. To fix this, try:
+
+  - Determine which reference is out of bounds. This should be doable by looking at the HSL code; the error message in the trace file should show you which line is the one causing the problems. 
+  - Locate in the HSL code where the bounds of the identifier have been set; this can usually be done by searching the HSL file for "struct" functions, and then seeing what character(s) follow the "}" character. 
+  - Depending on the requirements of the reference, either adjust the reference bounds assignment to include the target value, or adjust the function which is causing the error to ensure the reference is always within the specified bounds (e.g. splitting/truncating strings, editing loops to only contain correct integers)
+
+.. _0xa123001f:
+
+  0xa123001f: Bad tag identifier type
+
+  This error occurs when the identifier of a structure tag object has been assigned to an incorrect type, such as a being assigned a string rather than an integer. To fix this, try:
+
+  - Determine what tag is causing the problem by looking at the HSL code associated with the line specified in the trace file
+  - Identify what type of data the tag is expecting
+  - If the tag is expecting a string rather than an int, locate the assignment and add quotation marks around the assignment
+  - If the tag is expecting an int rather than a string, locate the assignment and either use a function to convert the string to an int or remove the quotation marks around the assignment
+  - If the tag is expecting an int rather than a float or vice versa, locate the assignment and use a function to convert one to the other. 
+  - Functions to convert the variable type are present in the HSLExtensions:Core library
 
 .. _0x0001: 
 
