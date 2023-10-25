@@ -39,5 +39,6 @@ This is the consolidated unofficial documentation for Venus as well as its libra
    StrTokenize
    String
    Tools_Library
+   TraceLevel
    Windows
    ZerouLScanner
