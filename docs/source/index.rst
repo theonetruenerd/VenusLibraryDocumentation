@@ -18,6 +18,7 @@ This is the consolidated unofficial documentation for Venus as well as its libra
 
    venus
    ErrorCodes
+   ASWGlobal
    Array
    ArrayTools
    ColourSchemeLibrary
