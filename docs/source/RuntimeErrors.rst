@@ -89,7 +89,7 @@ Error explanations and advice
 
 .. _0xa0220001: 
 
-  *0xa0220001: No memory*
+  **0xa0220001: No memory**
 
   This error means that the system cannot allocate or access enough memory or disk space for whatever operation causes the error to arise. To fix this, try:
 
@@ -100,7 +100,7 @@ Error explanations and advice
 
 .. _0xa1230002: 
 
-  0xa1230002: Inserting identifier failed
+  **0xa1230002: Inserting identifier failed**
 
   This error means that the parser or executer could not insert the specified identifier into the symbol table. Some examples of how this error can arise are: if the table is corrupted, if the identifier being read causes issues for the parser, or similar. To fix this, try:
 
@@ -110,7 +110,7 @@ Error explanations and advice
 
 .. _0xa1230003:
 
-  0xa1230003: Identifier not found
+  **0xa1230003: Identifier not found**
 
   This error means that the parser or executer could not find the specified identifier in the symbol table. This usually means something like a sequence or variable has either not been added or has been added but misspelt. To fix this, try:
 
@@ -121,7 +121,7 @@ Error explanations and advice
 
 .. _0xa2230004: 
 
-  0xa2230004: L-value not a number
+  **0xa2230004: L-value not a number**
 
   This error means that the executor has detected that the left hand side of the expression at the specified line is not a number. The error thrown will usually include the line number from which the error arose; this will be the line number in the HSL code. Look up the error to find whereabouts in the Venus code it corresponds to, but don't fix it in the HSL method editor; otherwise you can only use HSL method editor from that point onwards as Venus only compiles one way med --> hsl. This usually occurs when two values are being added and one of them is not a number but instead a string. To fix this, try:
 
@@ -133,7 +133,7 @@ Error explanations and advice
 
 .. _0xa2230005: 
 
-  0xa2230005: R-value not a number
+  **0xa2230005: R-value not a number**
 
   This error means that the executor has detected that the right hand side of the expression at the specified line is not a number. The error thrown will usually include the line number from which the error arose; this will be the line number in the HSL code. Look up the error to find whereabouts in the Venus code it corresponds to, but don't fix it in the HSL method editor; otherwise you can only use HSL method editor from that point onwards as Venus only compiles one way med --> hsl. This usually occurs when two values are being added and one of them is not a number but instead a string. To fix this, try:
 
@@ -145,7 +145,7 @@ Error explanations and advice
 
 .. _0xa1230006:
 
-  0xa1230006: Not an identifier
+  **0xa1230006: Not an identifier**
 
   This error means that the symbol table entry of the identifier at the specified line is not an identifier. To fix this, try: 
 
@@ -153,7 +153,7 @@ Error explanations and advice
 
 .. _0xa1220007:
 
-  0xa1220007: Unrecognized token
+  **0xa1220007: Unrecognized token**
 
   This error means that the executor detected an unrecognized token. This usually means that what it is trying to parse contains characters that are not allowed. A typical example of this is when a JSON Parser tries to parse HTML, and encounters the \"<\" character. To fix this, try:
 
@@ -163,7 +163,7 @@ Error explanations and advice
 
 .. _0xa1230008:
 
-  0xa1230008: R-value not bound
+  **0xa1230008: R-value not bound**
 
   This error occurs when the R-value in a line is not bound to a valid value. An example would be v = a + b, where b has not been assigned to any value, or has been assigned to a sequence rather than a variable and thus cannot take part in this operation. To fix this, try:
 
@@ -174,7 +174,7 @@ Error explanations and advice
 
 .. _0xa2230009:
 
-  0xa2230009: Bad number
+  **0xa2230009: Bad number**
 
   This error means that the executor detected an error in a number at the specific line. This often occurs if a number is of the wrong format e.g. int rather than flt. To fix this, try:
 
@@ -185,13 +185,13 @@ Error explanations and advice
 
 .. _0xa123000a: 
 
-  0xa123000a: Bad tree
+  **0xa123000a: Bad tree**
 
   This error means that the executor detected an error in the structure of the syntax tree.
 
 .. _0xa123000b:
 
-  0xa123000b: Invalid entry
+  **0xa123000b: Invalid entry**
 
   This error means that the executor has detected an invalid symbol table entry. This error usually occurs if there is a non-ASCII character present in the symbol table, and the executor was not the one who inserted the value into the symbol table in the first place. To fix this, try:
 
@@ -200,7 +200,7 @@ Error explanations and advice
 
 .. _0xa122000c:
 
-  0xa122000c: Function identifier is protected
+  **0xa122000c: Function identifier is protected**
 
   This error means that the parser or executor detected a protected function identifier in the symbol table at the specified line. This happens if a device is declared in the local scope, for example. To fix this, try:
 
@@ -208,7 +208,7 @@ Error explanations and advice
 
 .. _0xa223000d:
 
-  0xa223000d: Underspecified
+  **0xa223000d: Underspecified**
 
   This error means that the executor detected underspecified formal parameters of a function at the specific line. To fix this, try:
 
@@ -218,7 +218,7 @@ Error explanations and advice
 
 .. _0xa2230037:
 
-  0xa2230037: Overspecified
+  **0xa2230037: Overspecified**
 
   This error means that the executor detected overspecified formal parameters ofa  function at the specific line. To fix this, try:
 
@@ -228,7 +228,7 @@ Error explanations and advice
 
 .. _0xa123000e:
 
-  0xa123000e: Setting value failed
+  **0xa123000e: Setting value failed**
 
   This error means that the executor failed to set the value of a symbol table entry at the specified line. To fix this, try:
 
@@ -237,7 +237,7 @@ Error explanations and advice
 
 .. _0xa123000f:
 
-  0xa123000f: Function identifier not found
+  **0xa123000f: Function identifier not found**
 
   This error occurs when the executor failed to lookup a function identifier in the symbol table at the specified line. This usually means the function has not been defined properly or has failed to import into the symbol table properly. It can also be the result of a misspelt name at any steps involving it. To fix this, try:
 
@@ -248,19 +248,19 @@ Error explanations and advice
 
 .. _0xa1230010:
 
-  0xa1230010: Bindings not found
+  **0xa1230010: Bindings not found**
 
   This error occurs when the executor failed to lookup the value bound to a formal parameter in the symbol table at the line specified. 
 
 .. _0xa1230011:
 
-  0xa1230011: Temporary variable not found
+  **0xa1230011: Temporary variable not found**
 
   This error occurs when the executor failed to delete the identifier of a temporary variable in the symbol table at the line specified.
 
 .. _0xa1230012:
 
-  0xa1230012: Unknown function type
+  **0xa1230012: Unknown function type**
 
   This error occurs when the executor detects a function which hasn't been defined at the specific line. To fix this, try:
 
@@ -271,7 +271,7 @@ Error explanations and advice
 
 .. _0xa2230013:
 
-  0xa2230013: Unable to find file
+  **0xa2230013: Unable to find file**
 
   This error occurs when the executor can't find the file specified. To fix this, try:
 
@@ -283,7 +283,7 @@ Error explanations and advice
 
 .. _0xa1230014: 
 
-  0xa1230014: Type mismatch
+  **0xa1230014: Type mismatch**
 
   This error occurs when the executor detects a mismatch between the types of variable fed into a function compared to the defined parameter that the function is meant to have an as input. To fix this, try:
 
@@ -293,7 +293,7 @@ Error explanations and advice
 
 .. _0xa2230015:
 
-  0xa2230015: Bad L-value
+  **0xa2230015: Bad L-value**
 
   This error occurs when the left hand side value for an operation is incorrect for the operation. To fix this, try:
 
@@ -303,7 +303,7 @@ Error explanations and advice
 
 .. _0xa2230016:
 
-  0xa2230016: Bad R-value
+  **0xa2230016: Bad R-value**
 
     This error occurs when the right hand side value for an operation is incorrect for the operation. To fix this, try:
 
@@ -313,19 +313,19 @@ Error explanations and advice
 
 .. _0xa2220017:
 
-  0xa2220017: Unrecognized type
+  **0xa2220017: Unrecognized type**
 
   This error occurs when the executor detects an unrecognized storage type at the specified line.
 
 .. _0xa1230018: 
 
-  0xa1230018: Bad memory type
+  **0xa1230018: Bad memory type**
 
   This error occurs when the executor detects a bad memory type for an array at the specified line.
 
 .. _0xa1230019:
 
-  0xa1230019: Array reference out of bound
+  **0xa1230019: Array reference out of bound**
 
   This error occurs when the executor detects an invalid index for an array at a specified line. To fix this, try:
 
@@ -335,19 +335,19 @@ Error explanations and advice
 
 .. _0xa123001a:
 
-  0xa123001a: Bad array identifier type
+  **0xa123001a: Bad array identifier type**
 
   This error occurs when the executor detects an unrecognized storage type for an array identifier at the specified line.
 
 .. _0xa123001b: 
 
-  0xa123001b: Tag insert failed
+  **0xa123001b: Tag insert failed**
 
   This error occurs when the executor fails to insert an identifier into the tag table of a structure definition at the specified line.
 
 .. _0xa123001c:
 
-  0xa123001c: Dynamic memory identifier not bound
+  **0xa123001c: Dynamic memory identifier not bound**
 
   This error occurs when the executor detected at the specified line an identifier of a dynamic memory object that was not bound to a valid value. This is when a variable or data structures has been allocated at runtime, and has been assigned an incorrect value, such as binding an identifier that is meant to be a variable to a submethod instead. As far as I'm aware, this is only possible to do by editing the HSL code, I don't think the method editor has any functions that allow you to bind identifiers incorrectly, I'm not 100% certain on that though. To fix this, try: 
 
@@ -358,7 +358,7 @@ Error explanations and advice
 
 .. _0xa123001d:
 
-  0xa123001d: Tag identifier not bound
+  **0xa123001d: Tag identifier not bound**
 
   This error occurs when the executor detected at the specified line an identifier of a structure tag object that was not bound to a valid value. A structure tag object is a piece of metadata associated with a variable. In this error, a variable is expected to have some sort of tag, but the tag doesn't exist. To fix this, try:
 
@@ -368,7 +368,7 @@ Error explanations and advice
 
 .. _0xa123001e:
 
-  0xa123001e: Structure reference out of bound
+  **0xa123001e: Structure reference out of bound**
 
   This error occurs when the executor detects a reference to an element of a structure which is outside the allowed range. A few examples of this are integers which are too large or too small, or strings which are too long. To fix this, try:
 
@@ -378,7 +378,7 @@ Error explanations and advice
 
 .. _0xa123001f:
 
-  0xa123001f: Bad tag identifier type
+  **0xa123001f: Bad tag identifier type**
 
   This error occurs when the identifier of a structure tag object has been assigned to an incorrect type, such as a being assigned a string rather than an integer. To fix this, try:
 
@@ -391,13 +391,13 @@ Error explanations and advice
 
 .. _0x0001: 
 
-  0x0001: Unexpected error
+  **0x0001: Unexpected error**
 
   This error occurs when there is an error in an HSLUtilLib2 step which is not covered by any of the other error messages.
 
 .. _0x0002: 
 
-  0x0002: Create object failed/Invalid parameter
+  **0x0002: Create object failed/Invalid parameter**
 
   This error is listed as Create Object Failed in the index of HSLUtilLib2, but described as invalid parameter. I'm assuming that the latter is correct, in which case the error occurs when one or more parameters for an HSLUtilLib2 step is invalid. To fix this, try: 
 
@@ -406,7 +406,7 @@ Error explanations and advice
 
 .. _0x0003:
 
-  0x0003: Value Check Failed Invalid Type
+  **0x0003: Value Check Failed Invalid Type**
 
   This error occurs when the executor finds a function parameter or read from file that is not of the expected type. To fix this, try:
 
@@ -416,7 +416,7 @@ Error explanations and advice
 
 .. _0x0004:
 
-  0x0004: Value Check Failed Invalid Range
+  **0x0004: Value Check Failed Invalid Range**
 
   This error occurs when the executor finds a function parameter or read from file that is not within the expected range. To fix this, try:
 
@@ -426,7 +426,7 @@ Error explanations and advice
 
 .. _0x0005: 
 
-  0x0005: Labware Error
+  **0x0005: Labware Error**
 
   This error occurs when the access of labware based on LabwareID and PositionID causes an error. To fix this, try:
 
@@ -437,7 +437,7 @@ Error explanations and advice
 
 .. _0x0006:
 
-  0x0006: Array Index Not A Number
+  **0x0006: Array Index Not A Number**
 
   This error occurs when the index of the specified array is not a positive integer. To fix this, try:
 
@@ -447,7 +447,7 @@ Error explanations and advice
 
 .. _0x0007:
 
-  0x0007: Array Index Not An Integer
+  **0x0007: Array Index Not An Integer**
 
   This error occurs when the index of the specified array is a float rather than an integer. To fix this, try:
 
@@ -456,7 +456,7 @@ Error explanations and advice
 
 .. _0x0008:
 
-  0x0008: Array Index Must Not Be Negative
+  **0x0008: Array Index Must Not Be Negative**
 
     This error occurs when the index of the specified array is less than 1. To fix this, try:
 
@@ -465,7 +465,7 @@ Error explanations and advice
 
 .. _0x0009:
 
-  0x0009: Array Index Must Not Be Greater Than Array Size
+  **0x0009: Array Index Must Not Be Greater Than Array Size**
 
   This error occurs when the index of the specified array is greater than the size of the array. To fix this, try:
 
