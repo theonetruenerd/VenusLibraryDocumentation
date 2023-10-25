@@ -1,6 +1,8 @@
 TraceLevel
 =================================
 
+https://github.com/theonetruenerd/VenusPackages/blob/main/TraceLevel.pkg
+
 The TraceLevel library adds a variety of functions related to the trace file. The functions it adds are:
 
 - :py:func:`GetTraceLevel`
