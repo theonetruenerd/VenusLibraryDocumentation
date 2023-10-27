@@ -74,15 +74,15 @@ Venus errors
 HSLUtilLib2 Errors
 -----------------------------
 
-- :ref:`0x0001 : Unexpected error <0x0001>`
-- :ref:`0x0002 : Create object failed/Invalid parameter <0x0002>`
-- :ref:`0x0003 : Value check failed: Invalid type <0x0003>`
-- :ref:`0x0004 : Value check failed: Invalid range <0x0004>`
-- :ref:`0x0005 : Labware error <0x0005>`
-- :ref:`0x0006 : Array index not a number <0x0006>`
-- :ref:`0x0007 : Array index not an integer <0x0007>`
-- :ref:`0x0008 : Array index must not be negative <0x0008>`
-- :ref:`0x0009 : Array index must not be greater than array size <0x0009>`
+- :ref:`0xa1630001 : Unexpected error <0xa1630001>`
+- :ref:`0xa1630002 : Create object failed/Invalid parameter <0xa1630002>`
+- :ref:`0xa1630003 : Value check failed: Invalid type <0xa1630003>`
+- :ref:`0xa1630004 : Value check failed: Invalid range <0xa1630004>`
+- :ref:`0xa1630005 : Labware error <0xa1630005>`
+- :ref:`0xa1630006 : Array index not a number <0xa1630006>`
+- :ref:`0xa1630007 : Array index not an integer <0xa1630007>`
+- :ref:`0xa1630008 : Array index must not be negative <0xa1630008>`
+- :ref:`0xa1630009 : Array index must not be greater than array size <0xa1630009>`
 
 Error explanations and advice
 -----------------------------
@@ -389,24 +389,50 @@ Error explanations and advice
   - If the tag is expecting an int rather than a float or vice versa, locate the assignment and use a function to convert one to the other. 
   - Functions to convert the variable type are present in the HSLExtensions:Core library
 
-.. _0x0001: 
+<!--- Missed out a few as need to work out in more detail what they are and how to fix them --->
 
-  **0x0001: Unexpected error**
+.. _0xa2230026:
+
+  **0xa2230026: Array size is not an integer**
+
+  This error occurs when the executer detects an error in the size of an array at the specified line. This is usually if an array is assigned to a float or string by accident. To fix this, try:
+
+  - Check where the size of the array was assigned. If it was done via a calculation (especially a division), it is often assigned a float even when the numbers divide exactly.
+  - If the assignment of size was done via a variable, check to ensure the variable was written as an integer and not as a string
+  - If you can't identify where the mistake is in assignment type, you can try use one of the convert-to-integer functions and see whether that works or whether it throws up a fresh error.
+  - Make sure the array size is positive
+  - Try assigning the array size dynamically, i.e. when declaring the array make it empty, and then add items to it at the end of the array rather than at specific locations
+
+.. _0xa1230034:
+
+  **0xa1230034: Bad argument**
+
+  This error occurs when the executor detects an error in the function argument at the specified line. An example of this would be having a File:Set Position command with a non-integer value as the input; as positions can only take integer values. To fix this, try: 
+
+  - Determine from the trace file which line and function are causing these errors
+  - Determine the type of input the function is expecting (e.g. int, str, var)
+  - Determine any bounds the function input has (e.g. max 300uL volume for 300uL tips)
+  - Check your input and see which of the above it doesn't meet
+  - If your input is the right value but the wrong type, there are various functions that can convert variables from one type to another - for example in HSLMthLib you can convert floats to ints, ints to strings, etc.
+
+.. _0xa1630001: 
+
+  **0xa1630001: Unexpected error**
 
   This error occurs when there is an error in an HSLUtilLib2 step which is not covered by any of the other error messages.
 
-.. _0x0002: 
+.. _0xa1630002: 
 
-  **0x0002: Create object failed/Invalid parameter**
+  **0xa1630002: Create object failed/Invalid parameter**
 
   This error is listed as Create Object Failed in the index of HSLUtilLib2, but described as invalid parameter. I'm assuming that the latter is correct, in which case the error occurs when one or more parameters for an HSLUtilLib2 step is invalid. To fix this, try: 
 
   - Check what parameters the function called is expecting and compare to the ones you're feeding in
   - Check whether you are feeding in the correct number of parameters
 
-.. _0x0003:
+.. _0xa1630003:
 
-  **0x0003: Value Check Failed Invalid Type**
+  **0xa1630003: Value Check Failed Invalid Type**
 
   This error occurs when the executor finds a function parameter or read from file that is not of the expected type. To fix this, try:
 
@@ -414,9 +440,9 @@ Error explanations and advice
   - Check that the parameter is actually being fed into the function and that it hasn't been misspelt
   - Check that the file is present in the right location and hasn't been corrupted or moved to the incorrect place
 
-.. _0x0004:
+.. _0xa1630004:
 
-  **0x0004: Value Check Failed Invalid Range**
+  **0xa1630004: Value Check Failed Invalid Range**
 
   This error occurs when the executor finds a function parameter or read from file that is not within the expected range. To fix this, try:
 
@@ -424,9 +450,9 @@ Error explanations and advice
   - Check what the value of the parameter being fed in is.
   - Check whether the range is due to the parameter being mistakenly high or the function range being mistakenly low.
 
-.. _0x0005: 
+.. _0xa1630005: 
 
-  **0x0005: Labware Error**
+  **0xa1630005: Labware Error**
 
   This error occurs when the access of labware based on LabwareID and PositionID causes an error. To fix this, try:
 
@@ -435,7 +461,7 @@ Error explanations and advice
   - Check that the labware still exists on the system deck and hasn't been deleted
   - Check that the labware file still exists in the system database and hasn't been moved or deleted
 
-.. _0x0006:
+.. _0xa1630006:
 
   **0x0006: Array Index Not A Number**
 
@@ -445,27 +471,27 @@ Error explanations and advice
   - If the identifier is a numeric string or a float that ends in .0, use a convert to int function
   - If the array index is something other than that, try to assign it to a positive integer as a key code or unique identifier
 
-.. _0x0007:
+.. _0xa1630007:
 
-  **0x0007: Array Index Not An Integer**
+  **0xa1630007: Array Index Not An Integer**
 
   This error occurs when the index of the specified array is a float rather than an integer. To fix this, try:
 
   - If the index is at a .0, use a convert to int function
   - If the index is at a non .0, either use a floor or ceiling function, or assign a positive integer as a key code or unique identifier
 
-.. _0x0008:
+.. _0xa1630008:
 
-  **0x0008: Array Index Must Not Be Negative**
+  **0xa1630008: Array Index Must Not Be Negative**
 
     This error occurs when the index of the specified array is less than 1. To fix this, try:
 
   - If the index is less than 0, perhaps take the absolute value of the index, provided that doesn't clash with another identifier.
   - If the index is between 0 and 1, or the abs value of the index would clash, work out where you want the value to be within the array. If it needs inserting, use an insert function from one of the array libraries. If it doesn't need inserting, get the length of the array and append the value and assign it that as the index.
 
-.. _0x0009:
+.. _0xa1630009:
 
-  **0x0009: Array Index Must Not Be Greater Than Array Size**
+  **0xa1630009: Array Index Must Not Be Greater Than Array Size**
 
   This error occurs when the index of the specified array is greater than the size of the array. To fix this, try:
 
