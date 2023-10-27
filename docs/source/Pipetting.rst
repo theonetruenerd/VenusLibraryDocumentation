@@ -64,3 +64,25 @@ The pipetting library from HSL Extensions adds functions related to pipetting, p
   :type o_strPositionText: Variable
   :return: A boolean of whether the conversion was successful
   :rtype: Boolean
+
+.. py:function:: Plate96PositionNumberToPositionText(variable i_intPositionNumber, variable o_strPositionText)
+
+  This function converts position number to position text for a 96 well plate. E.g. if given a 1 it will convert it to A1, if given an 8 it will convert it to H1, etc.
+
+  :params i_intPositionNumber: The position number to be converted. Any int in the range of 1-96.
+  :params o_strPositionText: The position text which will be the output. Will be a string of any of the well identifiers on a 96 well plate (i.e. A1-H12)
+  :type i_intPositionNumber: Variable
+  :type o_strPositionText: Variable
+  :return: A boolean of whether the conversion was successful
+  :rtype: Boolean
+
+.. py:function:: Plate96PositionNumberToPositionText(variable i_strPositionText, variable o_intPositionNumber)
+
+  This function converts position text to position number for a 96 well plate. E.g. if given A1 it will convert it to a 1, if given H1 it will convert it to a 8, etc.
+
+  :params i_strPositionText: The position text to be converted. Will be a string of any of the well identifiers on a 96 well plate (i.e. A1-H12)
+  :params o_intPositionNumber: The position number which will be the output. Any int in the range of 1-96.
+  :type i_intPositionNumber: Variable
+  :type o_strPositionText: Variable
+  :return: A boolean of whether the conversion was successful
+  :rtype: Boolean
