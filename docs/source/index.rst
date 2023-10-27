@@ -32,6 +32,7 @@ This is the consolidated unofficial documentation for Venus as well as its libra
    HSLStatistics
    HSLStrLib
    HSLZipLib
+   HSL_SeqDailyTools
    If_And_If_Or
    Lookup
    RemoveTextDelimitersFromAsciiTextFile
