@@ -389,7 +389,7 @@ Error explanations and advice
   - If the tag is expecting an int rather than a float or vice versa, locate the assignment and use a function to convert one to the other. 
   - Functions to convert the variable type are present in the HSLExtensions:Core library
 
-<!--- Missed out a few as need to work out in more detail what they are and how to fix them --->
+<!-- Missed out a few as need to work out in more detail what they are and how to fix them -->
 
 .. _0xa2230026:
 
