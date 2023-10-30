@@ -31,10 +31,13 @@ templates_path = ['_templates']
 
 html_theme = 'sphinx_rtd_theme'
 
+html_css_files = 'custom.css'
+
+custom.css = [
 pre {                                 
     white-space: pre-wrap !important; 
     word-break: break-all;            
-}
+}]
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
