@@ -74,7 +74,7 @@ Venus errors
 HSLUtilLib Errors
 -----------------------------
 
-- :ref:`0x00000001 : The parameter is incorrect <0x00000001>`
+- :ref:`0xa0000001 : The parameter is incorrect <0x00000001>`
 
 HSLUtilLib2 Errors
 -----------------------------
