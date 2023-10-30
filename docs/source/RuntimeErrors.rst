@@ -394,8 +394,6 @@ Error explanations and advice
   - If the tag is expecting an int rather than a float or vice versa, locate the assignment and use a function to convert one to the other. 
   - Functions to convert the variable type are present in the HSLExtensions:Core library
 
-<!-- Missed out a few as need to work out in more detail what they are and how to fix them -->
-
 .. _0xa1230020:
 
   **0xa1230020: L-value is not a structure identifier**
@@ -462,6 +460,71 @@ Error explanations and advice
   - If you are not the author of the library but are proficient in HSL, you can do as above, but would be worth making a copy of the library and editing that instead
   - Otherwise, remove the function from your method and find an alternative way of doing whatever you were aiming to do
 
+.. _0xa123002a: 
+
+  **0xa123002a: Unable to enter nesting level**
+
+  This error occurs when the executor failed to enter the nesting level at the specified line.
+
+.. _0xa123002b:
+
+  **0xa123002b: Unable to exit nesting level**
+
+  This error occurs when the executor failed to exit the nesting level at the specified line.
+
+.. _0xa122002c: 
+
+  **0xa122002c: No context**
+
+  This error occurs when the executor fails to create a new symbol table at the specified line.
+
+.. _0xa123002d:
+
+  **0xa123002d: Failed to read file**
+
+  This error occurs when the executor fails to read a specific file. To fix this, try:
+
+  - Ensure the file path specified is a correct and valid path
+  - Ensure the file you are trying to read exists
+  - Check whether the file has the hidden attribute. If so, you can use the File Handling library to remove that property dynamically during the run, or do it manually in file explorer
+  - Ensure that the file is in a location that Venus has access to
+
+.. _0xa123002e:
+
+  **0xa123002e: Failed to create timer**
+
+  This error occurs when the executor or parser fails to create a timer at the specified line
+
+.. _0xa123002f:
+
+  **0xa123002f: Failed to set timer**
+
+  This error occurs when the executor fails to set a timer at the specified line
+
+.. _0xa1230030:
+
+  **0xa1230030: Failed to wait timer**
+
+  This error occurs when the executor fails to wait for at timer to be signaled at the specified line
+
+.. _0xa1230031:
+
+  **0xa1230031: Failed to create event**
+
+  This error occurs when the parser or executor fails to create an event at the specified line
+
+.. _0xa1230032:
+
+  **0xa1230032: Failed to set event**
+
+  This error occurs when the executor fails to set an event at the specified line
+
+.. _0xa1230033:
+
+  **0xa1230033: Failed to wait event**
+
+  This error occurs when the executor fails to wait for an event to be signaled
+
 .. _0xa1230034:
 
   **0xa1230034: Bad argument**
@@ -474,7 +537,114 @@ Error explanations and advice
   - Check your input and see which of the above it doesn't meet
   - If your input is the right value but the wrong type, there are various functions that can convert variables from one type to another - for example in HSLMthLib you can convert floats to ints, ints to strings, etc.
 
-.. _
+.. _0xa2230035:
+
+  **0xa2230035: Syntax error**
+
+  This error occurs when the parser detects syntax errors in the method
+
+.. _0xa2230036:
+
+  **0xa2230036: Integer divide by zero**
+
+  This error occurs when the executor detects an integer divide by zero at a specified line. To fix this, try:
+
+  - Determine which variable/integer is being treated as a zero in the calculation
+  - Check that that variable/integer has an assignment step associated with it; without one it will default to zero
+  - Check that the variable is correctly spelled; if incorrectly spelled (compared to its assignment) it will default to zero
+
+.. _0xa2230038:
+
+  **0xa2230038: Returning address of local variable or temporary**
+
+  This error occurs when the executor detects a function returning the address of a local or temporary variable. This causes problems as local variables and temporary variables are destroyed upon function return, so the address returned becomes invalid. To fix this, try:
+
+  - Converting the variable that is being returned to global or task local
+  - Removing the function return value if it isn't essentially
+
+.. _0xa223003a:
+
+  **0xa223003a: Unable to find file**
+
+  This error occurs when the executor couldn't find the file at the specified line. To fix this, try:
+
+  - Checking that the file isn't a hidden file
+  - Checking that the file exists
+  - Checking that the file is in the location specified in the path
+  - Checking that the path is correct with no spelling mistakes and has double backslashes instead of single
+  - Check that the file is in a location that Venus has access to
+
+.. _0xa223003b:
+
+  **0xa223003b: File not updatable**
+
+  This error occurs when the executor is asked to update a non-updatable file. To fix this, try:
+
+  - Removing the read-only tag of the file, which can either be done manually in file explorer or using the File Handling library
+  - Moving the file to a location that Venus has edit access in (such as to documents instead of Program Files section)
+  - Giving venus the appropriate permissions to edit files in that area
+  - Making sure the file isn't in use by another program or open separately
+
+.. _0xa223003c:
+
+  **0xa223003c: Recursive call**
+
+  This error occurs when the executor detects a recursive or concurrent funtion call. To fix this, try:
+
+  - If the function is one from an HSL library, remove the function from your method and find an alternative way of doing whatever you were trying to do, or edit the HSL file to fix it if you are proficient in HSL
+  - If the recursion is caused by function parameter input, change the parameters to be not that function. If need be you can create two copies of a function and call one from within the other.
+  - If the concurrency is caused by a method fork in which both call the same function, you can either stop the fork or add in a "wait for event" clause to ensure that they trigger sequentially rather than concurrently
+
+.. _0xa223003d:
+
+  **0xa223003d: Failed to wait for thread(s)**
+
+  This error occurs when the executor fails to wait for one or more threads to be signaled. 
+
+.. _0xa223003e:
+
+  **0xa223003e: Time-out interval elapsed**
+
+  This error occurs when the time-out window for a specific function or error elapses without user response. To fix this, try:
+
+  - Ensure that the user is present at the STAR or that there is a way of notifying the user when a time-out dialog pops up
+  - If the dialog is one caused by a function, increase the time-out period of the dialog, or set it to an infinite timeout (usually by setting the timeout to 0)
+
+.. _0xa2220044: 
+
+  **0xa2220044: Automation type not supported**
+
+  This error occurs when there is a reference to an automation function which has a parameter that is not supported.
+
+.. _0xa1230046:
+
+  **80xa1230046: Bad argument parameter**
+
+  This error occurs when the executor detects an error in a function argument at the specified line. To fix this, try:
+
+  - Determine which argument within the function is causing the error
+  - Confirm that the argument is the correct type (e.g. a string of 0 vs an int of 0)
+  - Check that the argument has not been misspelled if it is a variable
+  - Check that the function being called is the correct one
+
+.. _0xa123004d: 
+
+  **0xa123004d: Sequence property not found**
+
+  This error occurs when the sequence property being referenced is not found. To fix this, try:
+
+  - If the sequence is one which is defined in the layout file, go into the layout file and view/edit the sequence properties there
+  - If the sequence is one which is defined during the method, confirm that the step defining the referenced property exists
+  - Confirm that the step defining the referenced property is not commented out, is called in advance of the sequence property being referenced, and is not misspelled
+
+.. _0xa123004e:
+
+  **0xa123004e: Int64 not supported**
+
+  This error occurs when a 64 bit integer is used on certain platforms. To fix this, try:
+
+  - Moving off a windows 2000 platform
+  - Changing the integer to a 32 bit integer
 
 .. _0x00000001:
 
