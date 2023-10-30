@@ -71,6 +71,11 @@ Venus errors
 - :ref:`0xa123004d : Sequence property not found <0xa123004d>`
 - :ref:`0xa123004e : int64 not supported <0xa123004e>`
 
+HSLUtilLib Errors
+-----------------------------
+
+- :ref:`0x00000001 : The parameter is incorrect <0x00000001>`
+
 HSLUtilLib2 Errors
 -----------------------------
 
@@ -414,6 +419,15 @@ Error explanations and advice
   - Determine any bounds the function input has (e.g. max 300uL volume for 300uL tips)
   - Check your input and see which of the above it doesn't meet
   - If your input is the right value but the wrong type, there are various functions that can convert variables from one type to another - for example in HSLMthLib you can convert floats to ints, ints to strings, etc.
+
+.. _0x00000001:
+
+  **0x00000001: The parameter is incorrect**
+
+ This error occurs when the parameter input into a function is incorrect. To fix this, try:
+
+  - Check that the variable type inputted into a function is correct, for example not an integer instead of a string/float.
+  - Check that the parameter value is within the acceptable range; either length for string or upper and lower limits for int or float or bool
 
 .. _0xa1630001: 
 
