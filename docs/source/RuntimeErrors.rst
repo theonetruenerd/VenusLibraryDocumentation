@@ -406,7 +406,9 @@ Error explanations and advice
 
   This error occurs when the executor detects a data reference which is not an array at the specified line, in the left hand side of the assignment.
 
-.. _0xa1230022: Failed to lookup tag identifier in the tag table**
+.. _0xa1230022: 
+
+  **0xa1230022: Failed to lookup tag identifier in the tag table**
 
   This error occurs when the executor detects a tag identifier which is not a member of the tag table. To fix this, try:
 
