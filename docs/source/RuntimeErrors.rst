@@ -396,6 +396,44 @@ Error explanations and advice
 
 <!-- Missed out a few as need to work out in more detail what they are and how to fix them -->
 
+.. _0xa1230020:
+
+  **0xa1230020: L-value is not a structure identifier**
+
+ This error occurs when the executor detects a data reference which is not a structure at the specified line, in the left hand side of the assignment.
+
+.. _0xa1230021:
+
+  **0xa1230021: L-value is not an array identifier**
+
+  This error occurs when the executor detects a data reference which is not an array at the specified line, in the left hand side of the assignment.
+
+.. _0xa1230022: Failed to lookup tag identifier in the tag table**
+
+  This error occurs when the executor detects a tag identifier which is not a member of the tag table. To fix this, try:
+
+ - Checking whether your tag is correctly spelled
+ - Attempt to add your tag to the tag table
+ - Change your tag to be one which is present in the tag table already
+
+.. _0xa1230023:
+
+  **0xa1230023: Signal break**
+
+  This error occurs when the executor detects an invalid break statement at the specified line.
+
+.. _0xa1230024:
+
+  **0xa1230024: Copy out of bound**
+
+  This error occurs when the executor detects a structure copy which is out of bound.
+
+.. _0xa1230025:
+
+  **0xa1230025: Signal return**
+
+  This error occurs when the executor detects an invalid return-statement.
+
 .. _0xa2230026:
 
   **0xa2230026: Array size is not an integer**
@@ -408,6 +446,22 @@ Error explanations and advice
   - Make sure the array size is positive
   - Try assigning the array size dynamically, i.e. when declaring the array make it empty, and then add items to it at the end of the array rather than at specific locations
 
+.. _0xa1230027: 
+
+  **0xa1230027: Failed to copy tag table**
+
+  This error occurs when the executor fails to copy the tag table.
+
+.. _0xa1230029:
+
+  **0xa1230029: Function has not been defined**
+
+  This error occurs when a function has not been defined in the library it is being called from. To fix this, try:
+
+  - If you are the author of the target library, open the code in HSL and check whether the function has been defined at all, or if it is only defined in one namespace, or if it has been misspelled, or if it has been incorrectly commented out
+  - If you are not the author of the library but are proficient in HSL, you can do as above, but would be worth making a copy of the library and editing that instead
+  - Otherwise, remove the function from your method and find an alternative way of doing whatever you were aiming to do
+
 .. _0xa1230034:
 
   **0xa1230034: Bad argument**
@@ -419,6 +473,8 @@ Error explanations and advice
   - Determine any bounds the function input has (e.g. max 300uL volume for 300uL tips)
   - Check your input and see which of the above it doesn't meet
   - If your input is the right value but the wrong type, there are various functions that can convert variables from one type to another - for example in HSLMthLib you can convert floats to ints, ints to strings, etc.
+
+.. _
 
 .. _0x00000001:
 
