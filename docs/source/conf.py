@@ -31,6 +31,6 @@ templates_path = ['_templates']
 
 html_theme = 'sphinx_rtd_theme'
 
-html_theme_options = {'body_max_width': '50%'}
+html_theme_options = {'body_max_width': '40%'}
 
 epub_show_urls = 'footnote'
