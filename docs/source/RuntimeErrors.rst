@@ -81,7 +81,7 @@ HSLUtilLib2 Errors
 -----------------------------
 
 - :ref:`0xa1630001 : Unexpected error <0xa1630001>`
-- :ref:`0xa1630002 : Create object failed/Invalid parameter <0xa1630002>`
+- :ref:`0xa1630002 : Create object failed or Invalid parameter <0xa1630002>`
 - :ref:`0xa1630003 : Value check failed: Invalid type <0xa1630003>`
 - :ref:`0xa1630004 : Value check failed: Invalid range <0xa1630004>`
 - :ref:`0xa1630005 : Labware error <0xa1630005>`
@@ -122,7 +122,7 @@ Error explanations and advice
 
   - Check what the error says. It should be an error which tells you the name of what it fails to lookup, which is useful for debugging purposes.
   - Check whether the name given in the error is spelt correctly; if not then that needs correcting
-  - Check whether the name given in the error has been initialised/defined. It may be there, it may be there but misspelt, it may not be there at all. If it isn't there, add it and try again. If it is there but misspelt, rename it to the correct item. 
+  - Check whether the name given in the error has been initialised or defined. It may be there, it may be there but misspelt, it may not be there at all. If it isn't there, add it and try again. If it is there but misspelt, rename it to the correct item. 
   - If the name is there and spelt correctly, make sure that the correct symbol table is being called during the method
 
 .. _0xa2230004: 
@@ -133,7 +133,7 @@ Error explanations and advice
 
   - Checking whether you are trying to add two numbers or concatenate two strings, both have similar syntax. 
   - If trying to add two numbers, check which one is on the left e.g. s in the equation v = s + 1
-  - Make sure the selected number is a number and not a string or similar. You can either convert it to a number manually, or you can input a step into the method which automatically converts strings to their float/int equivalents. This can be performed by the StrFVal function from HSLStrLib.
+  - Make sure the selected number is a number and not a string or similar. You can either convert it to a number manually, or you can input a step into the method which automatically converts strings to their float or int equivalents. This can be performed by the StrFVal function from HSLStrLib.
   - If trying to concatenate two strings, then the leftmost value is still being stored as a number rather than a string
   - Use the StrFStr function from HSLStrLib to convert a floating point number into the correpsponding character string before concatenating.
 
@@ -145,7 +145,7 @@ Error explanations and advice
 
   - Checking whether you are trying to add two numbers or concatenate two strings, both have similar syntax. 
   - If trying to add two numbers, check which one is on the right e.g. 1 in the equation v = s + 1
-  - Make sure the selected number is a number and not a string or similar. You can either convert it to a number manually, or you can input a step into the method which automatically converts strings to their float/int equivalents. This can be performed by the StrFVal function from HSLStrLib.
+  - Make sure the selected number is a number and not a string or similar. You can either convert it to a number manually, or you can input a step into the method which automatically converts strings to their float or int equivalents. This can be performed by the StrFVal function from HSLStrLib.
   - If trying to concatenate two strings, then the leftmost value is still being stored as a number rather than a string
   - Use the StrFStr function from HSLStrLib to convert a floating point number into the correpsponding character string before concatenating.
 
@@ -186,7 +186,7 @@ Error explanations and advice
 
   - Check what number is causing the error to occur by looking at the line given in the error code. 
   - Work out what type the line is expecting the number to be --> for example, a loop counter will be expecting an integer rather than a float
-  - Check what type the number causing the error is. This can be done using the CheckValueType from HSLUtilLib2, or the IsFloat/IsInteger functions from HSLUtilLib. 
+  - Check what type the number causing the error is. This can be done using the CheckValueType from HSLUtilLib2, or the IsFloat or IsInteger functions from HSLUtilLib. 
   - If unsure, just toggle the number type and see if swapping it from int to flt or vice versa helps. 
 
 .. _0xa123000a: 
@@ -202,7 +202,7 @@ Error explanations and advice
   This error means that the executor has detected an invalid symbol table entry. This error usually occurs if there is a non-ASCII character present in the symbol table, and the executor was not the one who inserted the value into the symbol table in the first place. To fix this, try:
 
   - Work out which characters in the symbol table are invalid
-  - Try to replace those characters with their ASCII equivalents, as well as work out where/why they were added in teh first place
+  - Try to replace those characters with their ASCII equivalents, as well as work out where or why they were added in teh first place
 
 .. _0xa122000c:
 
@@ -220,7 +220,7 @@ Error explanations and advice
 
   - Check what line the error gives as the function going wrong, look at that line in HSL and work out the correct location in Venus code
   - Look at whatever functions are present on that line and check how many input parameters the functions are meant to have vs how many they actually have
-  - Make sure all input parameters exist and are not just empty variables/arrays/sequences.
+  - Make sure all input parameters exist and are not just empty variables or arrays or sequences.
 
 .. _0xa2230037:
 
@@ -230,7 +230,7 @@ Error explanations and advice
 
   - Check what line the error gives as the function going wrong, look at that line in HSL and work out the correct location in Venus code
   - Look at whatever functions are present on that line and check how many input parameters the functions are meant to have vs how many they actually have
-  - Make sure all input parameters exist and are not just empty variables/arrays/sequences.
+  - Make sure all input parameters exist and are not just empty variables or arrays or sequences.
 
 .. _0xa123000e:
 
@@ -250,7 +250,7 @@ Error explanations and advice
   - See what the name of the function is that isn't being found
   - Check to see if the function name is spelt correctly
   - Check to see earlier in the method that the function has been defined and imported successfully into the symbol table
-  - Check to see if this happens everytime this function is called or just this one step. If it happens every time then it is likely a definition/import issue, if only once then it is likely a naming/exporting issue.
+  - Check to see if this happens everytime this function is called or just this one step. If it happens every time then it is likely a definition or import issue, if only once then it is likely a naming or exporting issue.
 
 .. _0xa1230010:
 
@@ -380,7 +380,7 @@ Error explanations and advice
 
   - Determine which reference is out of bounds. This should be doable by looking at the HSL code; the error message in the trace file should show you which line is the one causing the problems. 
   - Locate in the HSL code where the bounds of the identifier have been set; this can usually be done by searching the HSL file for "struct" functions, and then seeing what character(s) follow the "}" character. 
-  - Depending on the requirements of the reference, either adjust the reference bounds assignment to include the target value, or adjust the function which is causing the error to ensure the reference is always within the specified bounds (e.g. splitting/truncating strings, editing loops to only contain correct integers)
+  - Depending on the requirements of the reference, either adjust the reference bounds assignment to include the target value, or adjust the function which is causing the error to ensure the reference is always within the specified bounds (e.g. splitting or truncating strings, editing loops to only contain correct integers)
 
 .. _0xa123001f:
 
@@ -552,8 +552,8 @@ Error explanations and advice
 
   This error occurs when the executor detects an integer divide by zero at a specified line. To fix this, try:
 
-  - Determine which variable/integer is being treated as a zero in the calculation
-  - Check that that variable/integer has an assignment step associated with it; without one it will default to zero
+  - Determine which variable or integer is being treated as a zero in the calculation
+  - Check that that variable or integer has an assignment step associated with it; without one it will default to zero
   - Check that the variable is correctly spelled; if incorrectly spelled (compared to its assignment) it will default to zero
 
 .. _0xa2230038:
@@ -646,7 +646,7 @@ Error explanations and advice
 
   This error occurs when the sequence property being referenced is not found. To fix this, try:
 
-  - If the sequence is one which is defined in the layout file, go into the layout file and view/edit the sequence properties there
+  - If the sequence is one which is defined in the layout file, go into the layout file and view or edit the sequence properties there
   - If the sequence is one which is defined during the method, confirm that the step defining the referenced property exists
   - Confirm that the step defining the referenced property is not commented out, is called in advance of the sequence property being referenced, and is not misspelled
 
@@ -665,7 +665,7 @@ Error explanations and advice
 
  This error occurs when the parameter input into a function is incorrect. To fix this, try:
 
-  - Check that the variable type inputted into a function is correct, for example not an integer instead of a string/float.
+  - Check that the variable type inputted into a function is correct, for example not an integer instead of a string or float.
   - Check that the parameter value is within the acceptable range; either length for string or upper and lower limits for int or float or bool
 
 .. _0xa1630001: 
@@ -676,7 +676,7 @@ Error explanations and advice
 
 .. _0xa1630002: 
 
-  **0xa1630002: Create object failed/Invalid parameter**
+  **0xa1630002: Create object failed or Invalid parameter**
 
   This error is listed as Create Object Failed in the index of HSLUtilLib2, but described as invalid parameter. I'm assuming that the latter is correct, in which case the error occurs when one or more parameters for an HSLUtilLib2 step is invalid. To fix this, try: 
 
@@ -709,7 +709,7 @@ Error explanations and advice
 
   This error occurs when the access of labware based on LabwareID and PositionID causes an error. To fix this, try:
 
-  - Check that the labware/position IDs have been spelt correctly
+  - Check that the labware or position IDs have been spelt correctly
   - Check that the layout file for the method is the correct one
   - Check that the labware still exists on the system deck and hasn't been deleted
   - Check that the labware file still exists in the system database and hasn't been moved or deleted
