@@ -1,6 +1,8 @@
 Syntax Errors
 =========================
 
+Syntax errors will show up during the analysis of the method and should prevent the method from running. The error code for a syntax error is 4 digits long and should show up along with the line of the HSL file causing the syntax error, whether that is the method or the library. This will then be followed by a line with the runtime error code for syntax errors being present, namely 0x23 - 0x2 - 0x35 (0xa2230035)
+
 Venus Errors
 ------------------------
 
