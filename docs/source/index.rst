@@ -17,10 +17,10 @@ This is the consolidated unofficial documentation for Venus 4 as well as its lib
    :titlesonly:
    :maxdepth: 1
 
-   .. collapse:: venus
+   venus
    ErrorCodes
    ASWGlobal
-   ..collapse:: Array
+   Array
    ArrayTools
    ColourSchemeLibrary
    DebugAssist
