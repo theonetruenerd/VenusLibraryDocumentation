@@ -15,6 +15,7 @@ This is the consolidated unofficial documentation for Venus 4 as well as its lib
 
    :caption: Documented Libraries
    :titlesonly:
+   :maxdepth: 1
 
    .. collapse:: venus
    ErrorCodes
