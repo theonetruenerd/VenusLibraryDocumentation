@@ -16,10 +16,10 @@ This is the consolidated unofficial documentation for Venus 4 as well as its lib
    :caption: Documented Libraries
    :titlesonly:
 
-   .. collapse[venus]
+   .. collapse:: venus
    ErrorCodes
    ASWGlobal
-   ..collapse[Array]
+   ..collapse:: Array
    ArrayTools
    ColourSchemeLibrary
    DebugAssist
