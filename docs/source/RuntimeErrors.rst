@@ -61,6 +61,7 @@ Venus errors
 - :ref:`0xa2230035 : Syntax error <0xa2230035>`
 - :ref:`0xa2230036 : Integer divide by zero <0xa2230036>`
 - :ref:`0xa2230038 : Returning address of local variable or temporary <0xa2230038>`
+- :ref:`0xa2230039 <0xa2230039>`
 - :ref:`0xa223003a : Unable to find file <0xa223003a>`
 - :ref:`0xa223003b : File not updatable <0xa223003b>`
 - :ref:`0xa223003c : Recursive call <0xa223003c>`
@@ -563,6 +564,16 @@ Error explanations and advice
 
   - Converting the variable that is being returned to global or task local
   - Removing the function return value if it isn't essentially
+
+.. _0xa2230039:
+
+  **0xa2230039**
+
+  This error occurs when a library requires an installer to be run before use and the installer hasn't yet been run. An example of this would be the Dynamic Liquid Classes library. To fix this, try:
+
+  - Contact me directly as there is a reasonable chance I have the installer and can send it over
+  - Contact your Hamilton apps specialist
+  - Go into the hsl file for the library, find the author (usually in the final line or at the top commented out) and contact them directly
 
 .. _0xa223003a:
 
