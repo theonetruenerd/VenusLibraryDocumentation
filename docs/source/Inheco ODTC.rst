@@ -67,3 +67,20 @@ Advanced Functions
   This function is used to retrieve the status of the device.
 
   :params i_intDeviceID: The unique identifier for the device as returned by the :py:func:`Connect` function. 
+  :params o_strDeviceID: Internal information of the device
+  :params o_strState: State as reported by the device. One of the following values:'startup', 'resetting', 'standby', 'idle', 'busy', 'paused', 'errorhandling', 'inerror', 'asynchpaused', 'pauserequested', 'processing', 'responsewaiting'
+  :params o_blnLocked: Lock state of the device
+  :params o_strPMSId: Name of the PMS connected to the device
+  :params o_strCurrentTime: Time as reported by the device
+  :params o_intSILAReturnValue: The SILA return code of the device
+  :params o_strSILAMessage: The SILA message returned by the device
+  :type i_intDeviceID: Variable
+  :type o_strDeviceID: Variable
+  :type o_strState: Variable 
+  :type o_blnLocked: Variable
+  :type o_strPMSId: Variable
+  :type o_strCurrentTime: Variable
+  :type o_intSILAReturnValue: Variable
+  :type o_strSILAMessage: Variable
+  :return: A boolean as to whether the function returned succesfully (1) or not (0).
+  :rtype: Boolean
