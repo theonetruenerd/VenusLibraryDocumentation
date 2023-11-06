@@ -8,7 +8,7 @@ This is the consolidated unofficial documentation for Venus 4 as well as its lib
 
 .. note::
 
-   This project is under active development. If any issues or mistakes are found, please comment or contact me directly.
+   This project is under active development. If any issues or mistakes are found, please comment or contact me directly at tarunchapman@hotmail.com.
    General place to download libraries: https://github.com/theonetruenerd/VenusPackages
 
 .. toctree::
