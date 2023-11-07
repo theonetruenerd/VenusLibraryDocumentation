@@ -19,9 +19,12 @@ This is the consolidated unofficial documentation for Venus 4 as well as its lib
    venus
    ErrorCodes
    ASWGlobal
+   Aliquot_for_EasySteps_v2
+   Aliquot_with_EasySteps
    Array
    ArrayTools
    ColourSchemeLibrary
+   CheckCarrierPresence_v2
    DebugAssist
    EditFileAttributes
    ErrorReportLibrary
