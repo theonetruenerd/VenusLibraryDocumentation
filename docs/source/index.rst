@@ -23,8 +23,9 @@ This is the consolidated unofficial documentation for Venus 4 as well as its lib
    Aliquot_with_EasySteps
    Array
    ArrayTools
-   ColourSchemeLibrary
    CheckCarrierPresence_v2
+   ColourSchemeLibrary
+   ConvertFileToASCII
    DebugAssist
    EditFileAttributes
    ErrorReportLibrary
@@ -37,6 +38,7 @@ This is the consolidated unofficial documentation for Venus 4 as well as its lib
    HSLZipLib
    HSL_SeqDailyTools
    If_And_If_Or
+   Labware_Properties
    Lookup
    Pipetting
    RemoveTextDelimitersFromAsciiTextFile
