@@ -80,10 +80,10 @@ This library adds the ability to simulate a variety of errors, to assist with de
 .. py:function:: STEP2c_SimulateError_iSWAP(variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
 
   This function simulates an error in the iSWAP. It can simulate an error of your choice (between errors 1 and 4) at any step of the process. The error codes are:
-  1...... Expected object not found (error 21/94)
-  2...... Step lost in Z drive, crash against something (error 02/62)
-  3...... Hardware (error 02/00)
-  4...... Object lost (error 23/96)
+  - 1...... Expected object not found (error 21/94)
+  - 2...... Step lost in Z drive, crash against something (error 02/62)
+  - 3...... Hardware (error 02/00)
+  - 4...... Object lost (error 23/96)
 
   :params WhenSimulateError: The step of the process in which the error is desired to be simulated. 1 = Get Plate, 2 = Put Plate
   :params ErrorToSimulate: Integer corresponding to the desired simulated error, key listed in function description.
@@ -93,3 +93,26 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :type ML_STAR: Device
   :return: None
   :rtype: N/A
+
+.. py:function:: STEP2d_SimulateError_96Head(variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
+
+  This function simulates an error in the 96-head. It can simulate an error of your choice (between errors 1 and 12 - not all available) at any step of the process. The error codes are:
+  - 1....... Liquid Level not found  (error 06/70)
+  - 2....... Not enough liquid  (error 06/71)
+  - 6....... Tip already present (error 07/00)
+  - 7....... No Tip (error 08/00)
+  - 8....... Wrong tip type detected (error 08/78)
+  - 9....... Syntax / parameter out of range (error 01/00)
+  - 10...... Hardware (error 02/00)  
+  - 11...... Not Executed (error 03/00)
+  - 12...... Not Completed (error 10/00)
+
+  :params WhenSimulateError: The step of the process in which the error is desired to be simulated. 1 = Aspiration, 2 = Dispense, 3 = Tip Pickup, 4 = Tip eject, 5 = Wash
+  :params ErrorToSimulate: Integer corresponding to the desired simulated error, key listed in function description.
+  :params ML_STAR: The instrument being used. Should be ML_STAR.
+  :type WhenSimulateError: Variable
+  :type ErrorToSimulate: Variable
+  :type ML_STAR: Device
+  :return: None
+  :rtype: N/A
+
