@@ -29,6 +29,7 @@ This is the consolidated unofficial documentation for Venus 4 as well as its lib
    DebugAssist
    EditFileAttributes
    ErrorReportLibrary
+   ErrorSimulator
    Framework
    HSLDeckVisualize
    HSLFilLib
