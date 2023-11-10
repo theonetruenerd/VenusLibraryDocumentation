@@ -116,3 +116,75 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
+.. py:function:: STEP2e_SimulateError_384head(variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
+
+  This function simulates an error in the 384-head. It can simulate an error of your choice (between errors 1 and 12 - not all available) at any step of the process. The error codes are:
+  - 1....... Liquid Level not found  (error 06/70)
+  - 2....... Not enough liquid  (error 06/71)
+  - 6....... Tip already present (error 07/00)
+  - 7....... No Tip (error 08/00)
+  - 8....... Wrong tip type detected (error 08/78)
+  - 9....... Syntax / parameter out of range (error 01/00)
+  - 10...... Hardware (error 02/00)  
+  - 11...... Not Executed (error 03/00)
+  - 12...... Not Completed (error 10/00)
+
+  :params WhenSimulateError: The step of the process in which desired error is to be simulated. 1 = Aspiration, 2 = Dispense, 3 = Tip Pickup, 4 = Tip eject, 5 = Wash.
+  :params ErrorToSimulate: Integer corresponding to the desired simulated error, key listed in function definition.
+  :params ML_STAR: The instrument being used. Should be ML_STAR
+  :type WhenSimulatedError: Variable
+  :type ErrorToSimulate: Variable
+  :type ML_STAR: Device
+  :return: None
+  :rtype: N/A
+
+.. py:function:: STEP2f_SimulateError_BarcodeReading(variable WhenSimulateError, device ML_STAR)
+
+  This function simulates an error during the barcode reading step. It can simulate the error as though it was either the CO-RE grips or the iSWAP involved.
+
+  :params WhenSimulateError: Poorly labelled variable, likely copied and pasted. This is not when the error is simulated; it is instead whether the barcode is being read with CO-RE grips (1) or the iSWAP (2)
+  :param ML_STAR: The instrument being used. Should be ML_STAR
+  :type WhenSimulateError: Variable
+  :type ML_STAR: Device
+  :return: None
+  :rtype: N/A
+
+.. py:function:: STEP2g_SimulateError_Autoload(variable notReadPosition_Str, variable notPresentPosition_Str, device ML_STAR)
+
+  This submethod simulates the "Barcode not read"  and "Labware not Present Errors".you can enter positions with errors separated by a comma
+
+  :params notReadPosition_Str: A string of comma separated values with the positions in which you want to simulate barcode errors
+  :params notPresentPosition_Str: A string of comma separated values with the positions in which you want to simulate labware not present errors.
+  :params ML_STAR: The instrument being used. Should be ML_STAR.
+  :type notReadPosition_Str: Variable
+  :type notPresentPosition_Str: Variable
+  :type ML_STAR: Device
+  :return: None  
+  :rtype: N/A
+
+.. py:function:: STEP2h_SimulateError_CRWashstation(variable errorToSimulate, device ML_STAR)
+
+  This function simulates an error when starting the washing with the CR washstation
+
+  :params errorToSimulate: The error being simulated. 1 = Not washing liquid error, 2 = hardware error.
+  :params ML_STAR: The instrument being used. Should be ML_STAR.
+  :type errorToSimulate: Variable
+  :type ML_STAR: Device
+  :return: None
+  :rtype: N/A
+
+.. py:function:: STEP3_Restore_BackupCfgFile(device ML_STAR)
+
+  This function restores the backup configuration file created in function STEP1_PrepareRegistryAndCfgFile
+
+  :params ML_STAR: The instrument being used. Should be ML_STAR.
+  :type ML_STAR: Device
+  :return: None
+  :rtype: N/A
+
+.. py:function:: STEP4_Optional_SwitchChecksum_ON()
+
+  This function is optional.  Use it at the end of your method if you want to Switch the File Checksum ON in the registry
+
+  :return: None
+  :rtype: N/A
