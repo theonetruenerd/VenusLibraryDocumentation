@@ -3,39 +3,39 @@ Data Manager Interface - unfinished
 
 Data Manager Interface provides the following functions: 
 
-- py:func:`AddColumn`
-- py:func:`AddTable`
-- py:func:`DeleteRows`
-- py:func:`ExecuteAggregateFunction`
-- py:func:`ExecuteSelectAllLineByLineCommand`
-- py:func:`ExecuteSelectCommand`
-- py:func:`ExportColumnsToCSVFile`
-- py:func:`ExportColumnsToExcelFile`
-- py:func:`ExportColumnsToXMLFile`
-- py:func:`ExportSelectedToCSVFile`
-- py:func:`ExportSelectedToExcelFile`
-- py:func:`ExportSelectedToXMLFile`
-- py:func:`ExportToCSVFile`
-- py:func:`ExportToExcelFile`
-- py:func:`ExportToXMLFile`
-- py:func:`GetRowCount`
-- py:func:`GetSelectCommandRow`
-- py:func:`ImportFromCSVFile`
-- py:func:`ImportFromExcelFile`
-- py:func:`ImportFromXMLFile`
-- py:func:`Init`
-- py:func:`InsertRow`
-- py:func:`InsertSortedRow`
-- py:func:`LoadDataManagerContent`
-- py:func:`RemoveColumn`
-- py:func:`RemoveTable`
-- py:func:`RenameColumn`
-- py:func:`ResetManager`
-- py:func:`SaveDataManagerContent`
-- py:func:`Terminate`
-- py:func:`UpdateRows`
+- ven:func:`AddColumn`
+- ven:func:`AddTable`
+- ven:func:`DeleteRows`
+- ven:func:`ExecuteAggregateFunction`
+- ven:func:`ExecuteSelectAllLineByLineCommand`
+- ven:func:`ExecuteSelectCommand`
+- ven:func:`ExportColumnsToCSVFile`
+- ven:func:`ExportColumnsToExcelFile`
+- ven:func:`ExportColumnsToXMLFile`
+- ven:func:`ExportSelectedToCSVFile`
+- ven:func:`ExportSelectedToExcelFile`
+- ven:func:`ExportSelectedToXMLFile`
+- ven:func:`ExportToCSVFile`
+- ven:func:`ExportToExcelFile`
+- ven:func:`ExportToXMLFile`
+- ven:func:`GetRowCount`
+- ven:func:`GetSelectCommandRow`
+- ven:func:`ImportFromCSVFile`
+- ven:func:`ImportFromExcelFile`
+- ven:func:`ImportFromXMLFile`
+- ven:func:`Init`
+- ven:func:`InsertRow`
+- ven:func:`InsertSortedRow`
+- ven:func:`LoadDataManagerContent`
+- ven:func:`RemoveColumn`
+- ven:func:`RemoveTable`
+- ven:func:`RenameColumn`
+- ven:func:`ResetManager`
+- ven:func:`SaveDataManagerContent`
+- ven:func:`Terminate`
+- ven:func:`UpdateRows`
 
-.. py:function:: AddColumn(variable i_strTableName, variable i_strColumnName, variable i_iColumnType, variable i_bAllowDBNull, variable i_oValue)
+.. ven:function:: AddColumn(variable i_strTableName, variable i_strColumnName, variable i_iColumnType, variable i_bAllowDBNull, variable i_oValue)
 
 This function adds a column to the specified table.
 
