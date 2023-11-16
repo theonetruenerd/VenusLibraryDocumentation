@@ -5,11 +5,11 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/Tools_Library.pkg
 
 The tools library is designed to add some QoL functions to Venus. It adds the following functions.
 
-- :py:func:`CalculateNumberOfTubesAndVolumePerTube`
-- :py:func:`Reformat_Sequence`
-- :py:func:`Reformat_ValuesForDialog`
+- :ven:func:`CalculateNumberOfTubesAndVolumePerTube`
+- :ven:func:`Reformat_Sequence`
+- :ven:func:`Reformat_ValuesForDialog`
 
-.. py:function:: CalculateNumberOfTubesAndVolumePerTube(variable i_str_ReagentName, variable i_int_NumberOfSamples, variable i_flt_VolumePerSample, variable i_flt_MaximumContainerVolume, variable i_flt_DeadLabwareVolume, variable i_flt_DeadVolumeReagent, variable o_int_NumberOfContainersNeeded, array o_arr_VolumesPerContainer, array o_arr_DescriptionForDialog)
+.. ven:function:: CalculateNumberOfTubesAndVolumePerTube(variable i_str_ReagentName, variable i_int_NumberOfSamples, variable i_flt_VolumePerSample, variable i_flt_MaximumContainerVolume, variable i_flt_DeadLabwareVolume, variable i_flt_DeadVolumeReagent, variable o_int_NumberOfContainersNeeded, array o_arr_VolumesPerContainer, array o_arr_DescriptionForDialog)
 
 	This function calculates the number of containers needed for a reagent and the volume per container.
 
@@ -22,19 +22,19 @@ The tools library is designed to add some QoL functions to Venus. It adds the fo
 	:params o_int_NumberOfContainersNeeded: The calculated number of containers needed
 	:params o_arr_VolumesPerContainer: An array of the volumes required for each tube
 	:params o_arr_DescriptionForDialog: An array of the descriptions for the dialog
-  :type i_str_ReagentName: Variable
-  :type i_int_NumberOfSamples: Variable
-  :type i_flt_VolumePerSample: Variable
-  :type i_flt_MaximumContainerVolume: Variable
-  :type i_flt_DeadVolumeLabware: Variable
-  :type i_flt_DeadVolumeReagent: Variable
-  :type o_int_NumberOfContainersNeeded: Variable
-  :type o_arr_VolumesPerContainer: Array of variables
-  :type o_arr_DescriptionForDialog: Array of variables
-  :return: None
-  :rtype: N/A
+	:type i_str_ReagentName: Variable
+ 	:type i_int_NumberOfSamples: Variable
+  	:type i_flt_VolumePerSample: Variable
+ 	:type i_flt_MaximumContainerVolume: Variable
+  	:type i_flt_DeadVolumeLabware: Variable
+  	:type i_flt_DeadVolumeReagent: Variable
+  	:type o_int_NumberOfContainersNeeded: Variable
+  	:type o_arr_VolumesPerContainer: Array of variables
+  	:type o_arr_DescriptionForDialog: Array of variables
+  	:return: None
+  	:rtype: N/A
 
-.. py:function:: Reformat_Sequence(sequence io_sequenceInput, variable i_intNumberOfPositions)
+.. ven:function:: Reformat_Sequence(sequence io_sequenceInput, variable i_intNumberOfPositions)
 
   This function reformats a sequence to have as many positions as needed:
   Source Sequence:
@@ -52,7 +52,7 @@ The tools library is designed to add some QoL functions to Venus. It adds the fo
   :return: None
   :rtype: N/A
 
-.. py:function:: Reformat_ValuesForDialog(variable i_flt_valueToReformat, variable o_str_valueFormatted)
+.. ven:function:: Reformat_ValuesForDialog(variable i_flt_valueToReformat, variable o_str_valueFormatted)
 
   This function translates floats into strings and gets rid of any trailing 0s. Use the output value to display volumes in dialogs only.
 
