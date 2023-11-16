@@ -5,11 +5,11 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/ErrorReportLibrary.pkg
 
 The error report library generates concise reports on both general errors and pipetting errors that occur during a run, extracting the information from the trace file. It adds the following functions:
 
-- :py:func:`CopyActiveTraceFile`
-- :py:func:`GenerateGeneralErrorsReport`
-- :py:func:`GeneratePipettingErrorsReport`
+- :ven:func:`CopyActiveTraceFile`
+- :ven:func:`GenerateGeneralErrorsReport`
+- :ven:func:`GeneratePipettingErrorsReport`
 
-.. py:function:: CopyActiveTraceFile(variable o_strTraceCopyFilePath)
+.. ven:function:: CopyActiveTraceFile(variable o_strTraceCopyFilePath)
 
   Finds the trace file that is currently active (i.e. associated with the current run) and makes a copy of it, which it saves in the location specified.
 
@@ -18,7 +18,7 @@ The error report library generates concise reports on both general errors and pi
   :return: None 
   :rtype: N/A
 
-.. py:function:: GenerateGeneralErrorsReport(variable i_strTraceFilePath, variable o_strPDF_FilePath)
+.. ven:function:: GenerateGeneralErrorsReport(variable i_strTraceFilePath, variable o_strPDF_FilePath)
 
   Reads the active trace file, locates errors found within it and generates an error report on errors found in non-pipetting steps
 
@@ -29,7 +29,7 @@ The error report library generates concise reports on both general errors and pi
   :return: None
   :rtype: N/A
 
-.. py:function:: GeneratePipettingErrorsReport(variable i_strTraceFilePath, variable i_strTemplateFilePath, variable i_intWriteRowStart, o_strPDF_FilePath)
+.. ven:function:: GeneratePipettingErrorsReport(variable i_strTraceFilePath, variable i_strTemplateFilePath, variable i_intWriteRowStart, o_strPDF_FilePath)
 
   Reads the active trace file, locates errors in the pipetting steps within it and generates an error report for the pipetting steps only
 
