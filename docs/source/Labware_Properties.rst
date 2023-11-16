@@ -5,19 +5,19 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/Labware_Properties.pkg
 
 The labware properties library adds a variety of functions which assist with obtaining the physical data of the labware, as well as things like its ID. The functions it adds are:
 
-  - :py:func:`GetCarrierIDandSiteID_FromLabID`
-  - :py:func:`Get_ContainerBaseOffset`
-  - :py:func:`Get_ContainerBaseThickness`
-  - :py:func:`Get_Height`
-  - :py:func:`Get_NameAndFileName`
-  - :py:func:`Get_NumberOfColumns`
-  - :py:func:`Get_NumberOfRows`
-  - :py:func:`Get_RackBaseToCoverBase`
-  - :py:func:`Get_StackHeight`
-  - :py:func:`Get_XYZ_deckPosition`
-  - :py:func:`Get_XY_dimensions`
+  - :ven:func:`GetCarrierIDandSiteID_FromLabID`
+  - :ven:func:`Get_ContainerBaseOffset`
+  - :ven:func:`Get_ContainerBaseThickness`
+  - :ven:func:`Get_Height`
+  - :ven:func:`Get_NameAndFileName`
+  - :ven:func:`Get_NumberOfColumns`
+  - :ven:func:`Get_NumberOfRows`
+  - :ven:func:`Get_RackBaseToCoverBase`
+  - :ven:func:`Get_StackHeight`
+  - :ven:func:`Get_XYZ_deckPosition`
+  - :ven:func:`Get_XY_dimensions`
 
-.. py:function:: GetCarrierIDandSiteID_FromLabID(device io_instrument, variable i_labware_ID, variable o_carrier_ID, variable o_site_ID)
+.. ven:function:: GetCarrierIDandSiteID_FromLabID(device io_instrument, variable i_labware_ID, variable o_carrier_ID, variable o_site_ID)
 
   This function takes outputs the carrier ID and site ID which are associated with the given labware ID. It works on both the Nimbus and the STAR.
 
@@ -32,7 +32,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: A boolean determining whether the labware ID exists (1) or not (0)
   :rtype: Boolean
 
-.. py:function:: Get_ContainerBaseOFfset(device io_instrument, sequence i_sequenceLabware, variable i_sequencePosition, variable o_ContainerBaseOffset)
+.. ven:function:: Get_ContainerBaseOFfset(device io_instrument, sequence i_sequenceLabware, variable i_sequencePosition, variable o_ContainerBaseOffset)
 
   This function outputs the distance from the rack base to the container base for the labware at the given sequence position.
 
@@ -47,7 +47,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: None
   :rtype: N/A
 
-.. py:function:: Get_ContainerBaseThickness(device io_instrument, sequence i_sequenceLabware, variable o_containerBaseThickness)
+.. ven:function:: Get_ContainerBaseThickness(device io_instrument, sequence i_sequenceLabware, variable o_containerBaseThickness)
 
   This function outputs the base thickness of the container at the first position of a given sequence.
 
@@ -60,7 +60,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: None
   :rtype: N/A
 
-.. py:function:: Get_Height(device io_instrument, sequence i_sequenceLabware, variable o_labwareHeight)
+.. ven:function:: Get_Height(device io_instrument, sequence i_sequenceLabware, variable o_labwareHeight)
 
   This function outputs the height of the labware at the first position of a given sequence. This value is only the labware height, not the absolute Z position.
 
@@ -73,7 +73,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: None  
   :rtype: N/A
 
-.. py:function:: Get_NameAndFileName(device io_instrument, sequence i_sequenceLabware, variable o_viewName, variable o_fileName)
+.. ven:function:: Get_NameAndFileName(device io_instrument, sequence i_sequenceLabware, variable o_viewName, variable o_fileName)
 
   This function outputs the labware view name and the file name associated with it (with path)
 
@@ -84,7 +84,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: None
   :rtype: N/A
 
-.. py:function:: Get_NumberOfColumns(device io_instrument, sequence i_sequenceLabware, variable o_labwareColumns)
+.. ven:function:: Get_NumberOfColumns(device io_instrument, sequence i_sequenceLabware, variable o_labwareColumns)
 
   This function outputs the number of columns defined in the labware from the first position of a given sequence.
 
@@ -97,7 +97,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: None
   :rtype: N/A
 
-.. py:function:: Get_NumberOfRows(device io_instrument, sequence i_sequenceLabware, variable o_labwareColumns)
+.. ven:function:: Get_NumberOfRows(device io_instrument, sequence i_sequenceLabware, variable o_labwareColumns)
 
   This function outputs the number of rows defined in the labware at the first position of a given sequence. The variable and function description both say columns; this is incorrect.
 
@@ -110,7 +110,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: None
   :rtype: N/A
 
-.. py:function:: Get_RackBaseToCoverBase(device io_instrument, sequence i_sequenceLabware, variable o_RackBaseToCoverBase_Height)
+.. ven:function:: Get_RackBaseToCoverBase(device io_instrument, sequence i_sequenceLabware, variable o_RackBaseToCoverBase_Height)
 
   This function outputs the height from the base of the rack to the base of the cover/lid of the labware at the first position of a given sequence.
 
@@ -123,7 +123,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: None
   :rtype: N/A
 
-.. py:function:: Get_StackHeight(device io_instrument, sequence i_sequenceLabware, variable o_labwareStackHeight)
+.. ven:function:: Get_StackHeight(device io_instrument, sequence i_sequenceLabware, variable o_labwareStackHeight)
 
   This function outputs the stack height of the specified labware at the first position of a given sequence.
 
@@ -136,7 +136,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: None
   :rtype: N/A
 
-.. py:function:: Get_XYZ_deckPosition(device io_instrument, sequence i_sequenceLabware, variable o_labware_deckPosition_X, variable o_labware_deckPosition_Y, variable o_labware_deckPosition_Z)
+.. ven:function:: Get_XYZ_deckPosition(device io_instrument, sequence i_sequenceLabware, variable o_labware_deckPosition_X, variable o_labware_deckPosition_Y, variable o_labware_deckPosition_Z)
 
   This function returns the X, Y and Z coordinates of the upper left well of the specified labware at the first position of a given sequence. The description of this function says it only does the X and Y coordinates, this is incorrect.
 
@@ -153,7 +153,7 @@ The labware properties library adds a variety of functions which assist with obt
   :return: None
   :rtype: N/A
 
-.. py:function:: Get_XY_dimensions(device io_instrument, sequence i_sequenceLabware, variable o_X_width, variable o_Y_depth)
+.. ven:function:: Get_XY_dimensions(device io_instrument, sequence i_sequenceLabware, variable o_X_width, variable o_Y_depth)
 
   This function outputs the X (width) and Y (depth) dimensions of the specified labware at the first position of a given sequence.
 
