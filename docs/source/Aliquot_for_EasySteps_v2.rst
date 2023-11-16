@@ -5,10 +5,10 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/Aliquot_for_EasySteps_
 
 This library adds two functions aimed at making aliquoting steps easier. The functions added are:
 
-  - :py:func:`CalcAliquot_v2_1`
-  - :py:func:`CalcChannelPattern`
+  - :ven:func:`CalcAliquot_v2_1`
+  - :ven:func:`CalcChannelPattern`
 
-.. py:function:: CalcAliquot_v2_1(sequence DispenseSequence, variable VolumePerWell, variable VolumePreAliquote, variable VolumePostAliquote, variable MaxVolumeTip, variable NumberOfDispense, variable NumberOfChannels, variable intNumberOfChannelsInstalled, array arrVolumeToAspirateByChannel, array arrVolumeToMixBeforeAspiration, array arrChannelPatternDispense, variable strChannelPatternAspirate)
+.. ven:function:: CalcAliquot_v2_1(sequence DispenseSequence, variable VolumePerWell, variable VolumePreAliquote, variable VolumePostAliquote, variable MaxVolumeTip, variable NumberOfDispense, variable NumberOfChannels, variable intNumberOfChannelsInstalled, array arrVolumeToAspirateByChannel, array arrVolumeToMixBeforeAspiration, array arrChannelPatternDispense, variable strChannelPatternAspirate)
 
   This function calculates the important variables for performing an aliquote pipetting with Easy- or Single Steps
 
@@ -39,7 +39,7 @@ This library adds two functions aimed at making aliquoting steps easier. The fun
   :return: None
   :rtype: N/A
 
-.. py:function:: CalcChannelPattern(variable i_int_NumberOfPositions, variable i_int_NumberOfInstalledChannels, variable o_str_ChannelPattern)
+.. ven:function:: CalcChannelPattern(variable i_int_NumberOfPositions, variable i_int_NumberOfInstalledChannels, variable o_str_ChannelPattern)
 
   This function creats a channel pattern based on the number of desired positions and the number of installed channels.
 
