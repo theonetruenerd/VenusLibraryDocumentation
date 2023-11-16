@@ -6,44 +6,44 @@ The Inheco ODTC library is used to operate up to 4 Inheco ODTC devices, adding b
 Standard Functions
 -----------------------------------------
 
-- :py:func:`Connect`
-- :py:func:`GetStatus`
-- :py:func:`Reset`
-- :py:func:`Initialize`
-- :py:func:`SetTraceLevel`
-- :py:func:`OpenDoor`
-- :py:func:`CloseDoor`
-- :py:func:`DownloadProtocol`
-- :py:func:`ExecuteMethod`
-- :py:func:`WaitForEndOfExecuteMethod`
-- :py:func:`StopMethod`
-- :py:func:`Abort`
-- :py:func:`ReadActualTemperature`
-- :py:func:`Terminate`
-- :py:func:`EvaluateError`
-- :py:func:`AddAllowedReturnCode`
+- :ven:func:`Connect`
+- :ven:func:`GetStatus`
+- :ven:func:`Reset`
+- :ven:func:`Initialize`
+- :ven:func:`SetTraceLevel`
+- :ven:func:`OpenDoor`
+- :ven:func:`CloseDoor`
+- :ven:func:`DownloadProtocol`
+- :ven:func:`ExecuteMethod`
+- :ven:func:`WaitForEndOfExecuteMethod`
+- :ven:func:`StopMethod`
+- :ven:func:`Abort`
+- :ven:func:`ReadActualTemperature`
+- :ven:func:`Terminate`
+- :ven:func:`EvaluateError`
+- :ven:func:`AddAllowedReturnCode`
 
 Advanced Functions
 -----------------------------------------
 
-- :py:func:`LockDevice`
-- :py:func:`UnlockDevice`
-- :py:func:`SetCSVSeparator`
-- :py:func:`SetDateTime`
-- :py:func:`SetNetWorkConfig`
-- :py:func:`GetParameters`
-- :py:func:`GetDeviceIdentification`
-- :py:func:`GetConfiguration`
-- :py:func:`Pause`
-- :py:func:`DoContinue`
-- :py:func:`SetParameters`
-- :py:func:`SetLogLevel`
-- :py:func:`RegisterStatusEventURL`
-- :py:func:`UnregisterStatusEventURL`
-- :py:func:`GetLastData`
-- :py:func:`DisableTemperatureEvent`
+- :ven:func:`LockDevice`
+- :ven:func:`UnlockDevice`
+- :ven:func:`SetCSVSeparator`
+- :ven:func:`SetDateTime`
+- :ven:func:`SetNetWorkConfig`
+- :ven:func:`GetParameters`
+- :ven:func:`GetDeviceIdentification`
+- :ven:func:`GetConfiguration`
+- :ven:func:`Pause`
+- :ven:func:`DoContinue`
+- :ven:func:`SetParameters`
+- :ven:func:`SetLogLevel`
+- :ven:func:`RegisterStatusEventURL`
+- :ven:func:`UnregisterStatusEventURL`
+- :ven:func:`GetLastData`
+- :ven:func:`DisableTemperatureEvent`
 
-.. py:function:: Connect(variable i_strLocalIP, variable i_strDeviceIP, variable i_strDevicePort, variable i_blnSimulationMode, variable o_intDeviceID, variable o_strMessage)
+.. ven:function:: Connect(variable i_strLocalIP, variable i_strDeviceIP, variable i_strDevicePort, variable i_blnSimulationMode, variable o_intDeviceID, variable o_strMessage)
 
   This function is used to connect to the Inheco ODTC device.
 
@@ -62,11 +62,11 @@ Advanced Functions
   :return: A boolean as to whether the function returned successfully (1) or not (0).
   :rtype: Boolean
 
-.. py:function:: GetStatus(variable i_intDeviceID, variable o_strDeviceID, variable o_strState, variable o_blnLocked, variable o_strPMSId, variable o_strCurrentTime, variable o_intSILAReturnValue, variable o_strSILAMessage)
+.. ven:function:: GetStatus(variable i_intDeviceID, variable o_strDeviceID, variable o_strState, variable o_blnLocked, variable o_strPMSId, variable o_strCurrentTime, variable o_intSILAReturnValue, variable o_strSILAMessage)
 
   This function is used to retrieve the status of the device.
 
-  :params i_intDeviceID: The unique identifier for the device as returned by the :py:func:`Connect` function. 
+  :params i_intDeviceID: The unique identifier for the device as returned by the :ven:func:`Connect` function. 
   :params o_strDeviceID: Internal information of the device
   :params o_strState: State as reported by the device. One of the following values:'startup', 'resetting', 'standby', 'idle', 'busy', 'paused', 'errorhandling', 'inerror', 'asynchpaused', 'pauserequested', 'processing', 'responsewaiting'
   :params o_blnLocked: Lock state of the device
