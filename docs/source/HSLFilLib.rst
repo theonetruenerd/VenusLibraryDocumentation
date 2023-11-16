@@ -5,29 +5,29 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/HSLFilLib.pkg
 
 This library allows interaction with and manipulation of files present on the host computer. It adds the following functions: 
 
-- :py:func:`FilEof`
-- :py:func:`FilFindFile`
-- :py:func:`FilFindNextFile`
-- :py:func:`FilFormatBarcodeFile`
-- :py:func:`FilGetBinPath`
-- :py:func:`FilGetCommState`
-- :py:func:`FilGetCommTimeouts`
-- :py:func:`FilGetConfigPath`
-- :py:func:`FilGetLabwarePath`
-- :py:func:`FilGetLibraryPath`
-- :py:func:`FilGetLogFilesPath`
-- :py:func:`FilGetMethodsPath`
-- :py:func:`FilGetSystemPath`
-- :py:func:`FilIsNull`
-- :py:func:`FilReadString`
-- :py:func:`FilRemoveFields`
-- :py:func:`FilSearchPath`
-- :py:func:`FilSetCommState`
-- :py:func:`FilSetCommTimeouts`
-- :py:func:`FilUpdateRecord`
-- :py:func:`FilWriteString`
+- :ven:func:`FilEof`
+- :ven:func:`FilFindFile`
+- :ven:func:`FilFindNextFile`
+- :ven:func:`FilFormatBarcodeFile`
+- :ven:func:`FilGetBinPath`
+- :ven:func:`FilGetCommState`
+- :ven:func:`FilGetCommTimeouts`
+- :ven:func:`FilGetConfigPath`
+- :ven:func:`FilGetLabwarePath`
+- :ven:func:`FilGetLibraryPath`
+- :ven:func:`FilGetLogFilesPath`
+- :ven:func:`FilGetMethodsPath`
+- :ven:func:`FilGetSystemPath`
+- :ven:func:`FilIsNull`
+- :ven:func:`FilReadString`
+- :ven:func:`FilRemoveFields`
+- :ven:func:`FilSearchPath`
+- :ven:func:`FilSetCommState`
+- :ven:func:`FilSetCommTimeouts`
+- :ven:func:`FilUpdateRecord`
+- :ven:func:`FilWriteString`
 
-.. py:function:: FilEof(variable filObj)
+.. ven:function:: FilEof(variable filObj)
 
   This function checks whether the current position in the specified file is the final line
 
@@ -36,23 +36,23 @@ This library allows interaction with and manipulation of files present on the ho
   :return: Boolean as to whether the position is the end of the file or not
   :rtype: Boolean
 
-.. py:function:: FilFindFile(variable filName)
+.. ven:function:: FilFindFile(variable filName)
 
-  This function starts searching the specified path for a file. This function is obsolete, and :py:func:`FilSearchPath` should be used instead.
+  This function starts searching the specified path for a file. This function is obsolete, and :ven:func:`FilSearchPath` should be used instead.
 
   :params filName: The directory or path and file name to be searched for. Can contain wildcard characters such as * or ?
   :type filName: Variable
   :return: If successful, the path name of the first file found that matches the input
   :rtype: Variable
 
-.. py:function:: FilFindNextFile()
+.. ven:function:: FilFindNextFile()
 
-  Continues the search from :py:func:`FilFindFile` to the next file.
+  Continues the search from :ven:func:`FilFindFile` to the next file.
 
   :return: If successful, the path name of the next file found that matches the input from the most recent FilFindFile command
   :rtype: Variable
 
-.. py:function:: FilFormatBarcodeFile(variable dataSource, variable dataTarget)
+.. ven:function:: FilFormatBarcodeFile(variable dataSource, variable dataTarget)
 
   This function takes the barcode ASCII text file written during LoadCarrier and converts it into a strongly formatted barcode file. This strongly formatted file can be an ASCII text file, a Microsoft Excel file, or a Microsoft Access file. Will contain the following columns:
 
@@ -69,14 +69,14 @@ This library allows interaction with and manipulation of files present on the ho
   :return: Boolean showing if the function was successful or not
   :rtype: Boolean
 
-.. py:function:: FilGetBinPath()
+.. ven:function:: FilGetBinPath()
 
   This function retrieves the vector binary path
 
   :return: The vectory binary path (usually C:\Program Files (x86)\Hamilton\Bin)
   :rtype: Variable
 
-.. py:function:: FilGetCommState(file port)
+.. ven:function:: FilGetCommState(file port)
 
   This function retrieves the configuration information for the specified communication resource. The entries of the structure that retrieves the configuration information must be accessible in the global scope.
 
@@ -85,7 +85,7 @@ This library allows interaction with and manipulation of files present on the ho
   :return: Boolean showing if the function was successful or not
   :rtype: Boolean
 
-.. py:function:: GetCommTimeouts(file port)
+.. ven:function:: GetCommTimeouts(file port)
 
   This function retrieves the time-out parameters for all read and write operations for the specified communication resource. The entries of the structure that contains the configuration information must be accessible in the global scope. 
 
@@ -94,49 +94,49 @@ This library allows interaction with and manipulation of files present on the ho
   :return: Boolean showing if the function was successful or not
   :rtype: Boolean
 
-.. py:function:: FilGetConfigPath()
+.. ven:function:: FilGetConfigPath()
 
   This function retrieves the vector configuration path
 
   :return: The vector configuration path (usually C:\Program Files (x86)\Hamilton\Config)
   :rtype: Variable
 
-.. py:function:: FilGetLabwarePath()
+.. ven:function:: FilGetLabwarePath()
 
   This function retrieves the vector labware path
 
   :return: The vector labware path (usually C:\Program Files (x86)\Hamilton\Labware)
   :rtype: Variable
 
-.. py:function:: FilGetLibraryPath()
+.. ven:function:: FilGetLibraryPath()
 
   This function retrieves the vector library path
 
   :return: The vector library path (usually C:\Program Files (x86)\Hamilton\Library)
   :rtype: Variable
 
-.. py:function:: FilGetLogFilesPath()
+.. ven:function:: FilGetLogFilesPath()
 
   This function retrieves the vector log files path
 
   :return: The vector log files path (usually C:\Program Files (x86)\Hamilton\LogFiles)
   :rtype: Variable
 
-.. py:function:: FilGetMethodsPath()
+.. ven:function:: FilGetMethodsPath()
 
   This function retrieves the vector methods path
 
   :return: The vector methods path (usually C:\Program Files (x86)\Hamilton\Methods)
   :rtype: Variable
 
-.. py:function:: FilGetSystemPath()
+.. ven:function:: FilGetSystemPath()
 
   This function retrieves the vector system path
 
   :return: The vector system path (usually C:\Program Files (x86)\Hamilton\System)
   :rtype: Variable
 
-.. py:function:: FilIsNull(variable value)
+.. ven:function:: FilIsNull(variable value)
 
   This function returns a non-zero if the variable is a null value (SQL style Null). 
 
@@ -145,7 +145,7 @@ This library allows interaction with and manipulation of files present on the ho
   :return: A boolean determining if the variable is SQL style Null or not
   :rtype: Boolean
 
-.. py:function:: FilReadString(file fileObj)
+.. ven:function:: FilReadString(file fileObj)
 
   This function reads the next record from the input file as string-valued data. Row data, but no schema data, is saved to the string. After you call FilReadString, the next unread record becomes the current record, or Eof is set to hslTrue if there are no more records.
 
@@ -154,7 +154,7 @@ This library allows interaction with and manipulation of files present on the ho
   :return: The contents of the line being looked at as string-valued data, or the specific run-time error
   :rtype: String
 
-.. py:function:: FilRemoveFields(file fileObj)
+.. ven:function:: FilRemoveFields(file fileObj)
 
   This function removes all fields from a record definition
 
@@ -163,7 +163,7 @@ This library allows interaction with and manipulation of files present on the ho
   :return: None
   :rtype: N/A
 
-.. py:function:: FilSearchPath(variable fileName)
+.. ven:function:: FilSearchPath(variable fileName)
 
   This function searches for the specified file, and outputs the path and filename of the file if found, or an empty string if not found. Will search the current directory, the methods directory, the library directory, and any directories in the PATH environment variable.
 
@@ -172,7 +172,7 @@ This library allows interaction with and manipulation of files present on the ho
   :return: The path name of the first file found, or an empty string if no files were found
   :rtype: Variable
 
-.. py:function:: FilSetCommState(file port, variable cfgFile)
+.. ven:function:: FilSetCommState(file port, variable cfgFile)
 
   This function configures a communication resource according to the specifications in a structure that contains the configuration information. The structure that contains the configuration information must be structured as shown below. Each entry in the structure is optional and overwrites the default value in parentheses.
 
@@ -183,7 +183,7 @@ This library allows interaction with and manipulation of files present on the ho
   :return: Boolean showing whether the function succeeded or not
   :rtype: Boolean
 
-.. py:function:: FilSetCommTimeouts(file port, variable cfgFile)
+.. ven:function:: FilSetCommTimeouts(file port, variable cfgFile)
 
   This function sets the time-out parameters for all read and write operations on a specified communication resource. The structure that contains the time-out information is as shown below. Each entry in the structure is optional and overwrites the default value in parentheses.
 
@@ -194,7 +194,7 @@ This library allows interaction with and manipulation of files present on the ho
   :return: Boolean showing whether the function succeeded or not
   :rtype: Boolean
 
-.. py:function:: FilUpdateRecord(file fileObj)
+.. ven:function:: FilUpdateRecord(file fileObj)
 
   Updates the current record of the file object with the values of the variable objects specified in the record definition. The current record remains current after you call the FilUpdateRecord function. The provider must support UPDATE.
 
@@ -203,7 +203,7 @@ This library allows interaction with and manipulation of files present on the ho
   :return: Boolean showing whether the function succeeded or not
   :rtype: Boolean
 
-.. py:function:: FilWriteString(file fileObj, variable stringObj)
+.. ven:function:: FilWriteString(file fileObj, variable stringObj)
 
   Writes a string to the end of the file data source. After you call the FilWriteString function, the new record becomes the current record.
 
