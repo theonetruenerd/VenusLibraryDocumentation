@@ -154,6 +154,8 @@ When pipetting using the 1000ul channels, there are 8 channels total. Channel pa
 
 There are several different tip types available for an ML_STAR, the most commonly used are 300ul (Standard volume, tip id 0), and 50ul (tip id 22). You can also get 10ul tips and 1000ul tips. All tips have the option of being normal, stackable, or filtered. No tip can take up more liquid than its type (i.e. a 300uL tip cannot ever have more than 300ul total volume in it). The 300ul tips should not be used to go below 10ul as they become very inaccurate. When pipetting, the total volume in a channel is the amount of liquid that has been aspirated by that channel minus the amount of liquid that has been dispensed by that channel. 
 
+For arrays in venus, you have to declare the size of the array (which can be empty) and then add items one by one; with the core functions you can't add more than one item at once. To add an item you can either specify an index or add to the end of the array; when adding to an empty array you can only add to the end of the array. Arrays in venus are 1-based rather than 0-based.
+
 General Steps
 -------------------------------------------------------
 
