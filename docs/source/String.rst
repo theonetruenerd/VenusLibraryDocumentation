@@ -5,15 +5,15 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/String.pkg
 
 The String library from HSLExtensions adds a few functions to facilitate easier manipulation of strings. It adds the following functions:
 
-  - :py:func:`ConvertToAsciiArray`
-  - :py:func:`ConvertToCharArray`
-  - :py:func:`FromAsciiArray`
-  - :py:func:`Join`
-  - :py:func:`JoinWithDelimiter`
-  - :py:func:`Split`
-  - :py:func:`Trim`
+  - :ven:func:`ConvertToAsciiArray`
+  - :ven:func:`ConvertToCharArray`
+  - :ven:func:`FromAsciiArray`
+  - :ven:func:`Join`
+  - :ven:func:`JoinWithDelimiter`
+  - :ven:func:`Split`
+  - :ven:func:`Trim`
 
-.. py:function:: ConvertToAsciiArray(variable i_strValue)
+.. ven:function:: ConvertToAsciiArray(variable i_strValue)
 
   This function converts the input string into an array with the regarding ASCII codes. If the input parameter is not a string the function returns an empty array.
 
@@ -22,7 +22,7 @@ The String library from HSLExtensions adds a few functions to facilitate easier 
   :return: An array of ASCII codes, or an empty array if the input parameter is not a string
   :rtype: Array
 
-.. py:function:: ConvertToCharArray(variable i_strValue)
+.. ven:function:: ConvertToCharArray(variable i_strValue)
 
   This function converts the input string into an array with the regarding characters. If the input parameter is not a string the function returns an empty array.
 
@@ -31,7 +31,7 @@ The String library from HSLExtensions adds a few functions to facilitate easier 
   :return: An array of characters (strings with length 1), or an empty array if the input parameter is not a string
   :rtype: Array
 
-.. py:function:: FromAsciiArray(array i_arrAsciiValues)
+.. ven:function:: FromAsciiArray(array i_arrAsciiValues)
 
   This function converts an input array with ASCII codes into a string. If the input parameter is not an array with ASCII codes, the function returns an empty string.
 
@@ -40,7 +40,7 @@ The String library from HSLExtensions adds a few functions to facilitate easier 
   :return: The output string formed by the concatenation of the converted versions of the ASCII codes. An empty string if the input parameter is not an array with ASCII codes.
   :rtype: Variable
 
-.. py:function:: Join(array i_arrValues)
+.. ven:function:: Join(array i_arrValues)
 
   This function joins an array of strings into a single string. Can be used to concatenate any number of strings into a single one. If the input parameter is not an array with strings, the function returns an empty string.
 
@@ -49,7 +49,7 @@ The String library from HSLExtensions adds a few functions to facilitate easier 
   :return: The concatenated form of all the strings in the array, or an empty string if the input parameter is not an array of strings
   :rtype: Variable
 
-.. py:function:: JoinWithDelimiter(array i_arrValues, variable i_strDelimiter)
+.. ven:function:: JoinWithDelimiter(array i_arrValues, variable i_strDelimiter)
 
   This function joins an array of strings into a single string and adds a delimiter between each substring. If the input parameter is not an array with strings, the function returns an empty string.
 
@@ -60,7 +60,7 @@ The String library from HSLExtensions adds a few functions to facilitate easier 
   :return: The concatenated strings from the array, with delimiters between each substring. An empty string if the input parameter is not an array of strings.
   :rtype: Variable
 
-.. py:function:: Split(variable i_strValue, variable i_strDelimiter, variable i_bTrimWhitespaces)
+.. ven:function:: Split(variable i_strValue, variable i_strDelimiter, variable i_bTrimWhitespaces)
 
   This function splits a string into substrings, forming an array of strings. The input string is split based on a delimiter that the user inputs. 
 
@@ -73,7 +73,7 @@ The String library from HSLExtensions adds a few functions to facilitate easier 
   :return: An array of strings containing each substring formed from splitting the original string
   :rtype: Array
 
-.. py:function:: Trim(variable i_strValue)
+.. ven:function:: Trim(variable i_strValue)
 
   This function trims leading and trailing whitespace characters from the input string. If the input parameter is not a string the function returns an empty string.
 
