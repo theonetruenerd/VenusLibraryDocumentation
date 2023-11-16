@@ -5,39 +5,39 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/HSLStrLib.pkg
 
 HSL String Library provides the following functions: 
 
-- :py:func:`StrAsciiToStr`
-- :py:func:`StrConcat2`
-- :py:func:`StrConcat4`
-- :py:func:`StrConcat8`
-- :py:func:`StrConcat12`
-- :py:func:`StrEvaluateExpr`
-- :py:func:`StrFillLeft`
-- :py:func:`StrFillRight`
-- :py:func:`StrFind`
-- :py:func:`StrFStr`
-- :py:func:`StrFStrEx`
-- :py:func:`StrFVal`
-- :py:func:`StrGetLength`
-- :py:func:`StrGetType`
-- :py:func:`StrHexIStr`
-- :py:func:`StrIsDigit`
-- :py:func:`StrIStr`
-- :py:func:`StrIVal`
-- :py:func:`StrLeft`
-- :py:func:`StrMakeLower`
-- :py:func:`StrMakeLowerCopy`
-- :py:func:`StrMakeUpper`
-- :py:func:`StrMakeUpperCopy`
-- :py:func:`StrMid`
-- :py:func:`StrReplace`
-- :py:func:`StrReverseFind`
-- :py:func:`StrRight`
-- :py:func:`StrSpanExcluding`
-- :py:func:`StrStrToAscii`
-- :py:func:`StrTrimLeft`
-- :py:func:`StrTrimRight`
+- :ven:func:`StrAsciiToStr`
+- :ven:func:`StrConcat2`
+- :ven:func:`StrConcat4`
+- :ven:func:`StrConcat8`
+- :ven:func:`StrConcat12`
+- :ven:func:`StrEvaluateExpr`
+- :ven:func:`StrFillLeft`
+- :ven:func:`StrFillRight`
+- :ven:func:`StrFind`
+- :ven:func:`StrFStr`
+- :ven:func:`StrFStrEx`
+- :ven:func:`StrFVal`
+- :ven:func:`StrGetLength`
+- :ven:func:`StrGetType`
+- :ven:func:`StrHexIStr`
+- :ven:func:`StrIsDigit`
+- :ven:func:`StrIStr`
+- :ven:func:`StrIVal`
+- :ven:func:`StrLeft`
+- :ven:func:`StrMakeLower`
+- :ven:func:`StrMakeLowerCopy`
+- :ven:func:`StrMakeUpper`
+- :ven:func:`StrMakeUpperCopy`
+- :ven:func:`StrMid`
+- :ven:func:`StrReplace`
+- :ven:func:`StrReverseFind`
+- :ven:func:`StrRight`
+- :ven:func:`StrSpanExcluding`
+- :ven:func:`StrStrToAscii`
+- :ven:func:`StrTrimLeft`
+- :ven:func:`StrTrimRight`
 
-..  py:function:: StrAsciiToStr(variable asciiCode)
+..  ven:function:: StrAsciiToStr(variable asciiCode)
 
     Converts the given ASCII Code (an integer) to a character (string).
 
@@ -46,7 +46,7 @@ HSL String Library provides the following functions:
     :return: The ASCII code as a string
     :rtype: String
 
-.. py:function:: StrConcat2(variable Var1, variable Var2)
+.. ven:function:: StrConcat2(variable Var1, variable Var2)
 
     Combines two strings into a new string
 
@@ -57,7 +57,7 @@ HSL String Library provides the following functions:
     :return: The combined string of Var1 + Var2
     :rtype: String
 
-.. py:function:: StrConcat4(variable Var1, variable Var2, variable Var3, variable Var4)
+.. ven:function:: StrConcat4(variable Var1, variable Var2, variable Var3, variable Var4)
 
     Combines four strings into a new string
 
@@ -72,7 +72,7 @@ HSL String Library provides the following functions:
     :return: The combined string of Var1 + Var2 + Var3 + Var4
     :rtype: String
 
-.. py:function:: StrConcat8(variable Var1, variable Var2, variable Var3, variable Var4, variable Var5, variable Var6, variable Var7, variable Var8)
+.. ven:function:: StrConcat8(variable Var1, variable Var2, variable Var3, variable Var4, variable Var5, variable Var6, variable Var7, variable Var8)
 
     Combines eight strings into a new string
 
@@ -95,7 +95,7 @@ HSL String Library provides the following functions:
     :return: The combined string of Var1 + Var2 + Var3 + Var4 + Var5 + Var6 + Var7 + Var8
     :rtype: String
 
-.. py:function:: StrConcat12(variable Var1, variable Var2, variable Var3, variable Var4, variable Var5, variable Var6, variable Var7, variable Var8, variable Var9, variable var10, variable var11, variable var12)
+.. ven:function:: StrConcat12(variable Var1, variable Var2, variable Var3, variable Var4, variable Var5, variable Var6, variable Var7, variable Var8, variable Var9, variable var10, variable var11, variable var12)
 
     Combines twelve strings into a new string
 
@@ -126,7 +126,7 @@ HSL String Library provides the following functions:
     :return: The combined string of Var1 + Var2 + Var3 + Var4 + Var5 + Var6 + Var7 + Var8 + Var9 + Var10 + Var11 + Var12
     :rtype: Variable
 
-.. py:function:: StrEvaluateExpr(variable expression)
+.. ven:function:: StrEvaluateExpr(variable expression)
 
     This function evaluates an expression within a string. All variables involved must have global scope. 
 
@@ -135,7 +135,7 @@ HSL String Library provides the following functions:
     :return: The value of the expression if the function succeeds, otherwise a runtime error
     :rtype: Variable
 
-.. py:function:: StrFillLeft(variable str, variable character, variable width)
+.. ven:function:: StrFillLeft(variable str, variable character, variable width)
 
     This function fills leading characters to the string
 
@@ -148,7 +148,7 @@ HSL String Library provides the following functions:
     :return: The modified string
     :rtype: Variable
 
-.. py:function:: StrFillRight(variable str, variable character, variable width)
+.. ven:function:: StrFillRight(variable str, variable character, variable width)
 
     This function fills trailing characters to the string
 
@@ -161,7 +161,7 @@ HSL String Library provides the following functions:
     :return: The modified string
     :rtype: Variable
 
-.. py:function:: StrFind(variable str, variable subStr)
+.. ven:function:: StrFind(variable str, variable subStr)
 
     This function searches the string for the first match of the sub-string.
 
@@ -172,7 +172,7 @@ HSL String Library provides the following functions:
     :return: The zero-based index of the first character in this string object that matches the requested sub-string or characters. -1 if the sub-string is not found.
     :rtype: Integer
 
-.. py:function:: StrFStr(variable number)
+.. ven:function:: StrFStr(variable number)
 
     This function converts the floating point number input into the corresponding character string. 
 
@@ -181,7 +181,7 @@ HSL String Library provides the following functions:
     :return: The string form of the float
     :rtype: Variable
 
-.. py:function:: StrFStrEx(variable number, variable languageSpecific, variable precision)
+.. ven:function:: StrFStrEx(variable number, variable languageSpecific, variable precision)
 
     This function converts the floating point number input into the corresponding character string
 
@@ -194,7 +194,7 @@ HSL String Library provides the following functions:
     :return: The string representation of the floating point number
     :rtype: Variable
 
-.. py:function:: StrFVal(variable str)
+.. ven:function:: StrFVal(variable str)
 
     Converts the sequence of digits, contained in the character string str, into the corresponding floating point number. Conversion aborts at the first character in str, which is not a digit or not one of the characters +, -, e, E.
 
@@ -203,7 +203,7 @@ HSL String Library provides the following functions:
     :return: THe float representation of the input string. Null if the string cannot be converted. DBL_MAX if the conversion results in an overflow. DBL_MIN if the conversion results in an underflow. 
     :rtype: Float or variable
 
-.. py:function:: StrGetLength(variable str)
+.. ven:function:: StrGetLength(variable str)
 
     Returns the number of characters in a string object (without '\0').
 
@@ -212,7 +212,7 @@ HSL String Library provides the following functions:
     :return: The length of the string
     :rtype: Integer
 
-.. py:function:: StrGetType(variable var)
+.. ven:function:: StrGetType(variable var)
 
     This function retrieves the type of the value of a variable
 
@@ -221,7 +221,7 @@ HSL String Library provides the following functions:
     :return: One of the following string-valued constants that indicates the type of the value of a variable. i = hslInteger, f = hslFloat, s = hslString, null = no type
     :rtype: Variable
 
-.. py:function:: StrHexIStr(variable number)
+.. ven:function:: StrHexIStr(variable number)
 
     Converts the input integer into the corresponding hexadecimal character string
 
@@ -230,7 +230,7 @@ HSL String Library provides the following functions:
     :return: The hexadecimal string representation of the integer
     :rtype: String
 
-.. py:function:: StrIsDigit(variable character)
+.. ven:function:: StrIsDigit(variable character)
 
     The StrIsDigit function determines if the specified input string (which should be a character) is a digit or not.
 
@@ -239,7 +239,7 @@ HSL String Library provides the following functions:
     :return: Boolean showing whether the character is a digit (1) or not (0)
     :rtype: Boolean
 
-.. py:function:: StrIsStr(variable number)
+.. ven:function:: StrIsStr(variable number)
 
     The StrIStr function converts the input integer into the corresponding character string
 
@@ -248,7 +248,7 @@ HSL String Library provides the following functions:
     :return: The string representation of the integer number
     :rtype: Variable
 
-.. py:function:: StrIVal(variable str)
+.. ven:function:: StrIVal(variable str)
 
     The StrIVal function converts the input sequence of digits into the corresponding integer. The input string is treated as a decimal, unless it begins with an 0x in which case it is interpreted as hexadecimal.            Conversion aborts at the first character in the input which is neither a digit nor one of the characters "+" or "-".
 
@@ -257,7 +257,7 @@ HSL String Library provides the following functions:
     :return: The numeric value of the sequence of digits contained in the character string, as an integer. Null if the character string cannot be converted into a number. LONG_MAX = 2147483647 if the conversion results in an overflow. LONG_MIN = -2147483647 - 1 if the conversion results in an underflow.
     :rtype: Variable
 
-.. py:function:: StrLeft(variable str, variable count)
+.. ven:function:: StrLeft(variable str, variable count)
 
     The StrLeft function extracts the first (leftmost) characters of a string and returns a copy of the extracted substring. The number of characters extracted is equal to the input variable "count". If "count" is longer than the string, the entire string is returned.
 
@@ -268,7 +268,7 @@ HSL String Library provides the following functions:
     :return: A string containing a copy of the specified range of characters. Can be an empty string.
     :rtype: Variable
 
-.. py:function:: StrMakeLower(variable str)
+.. ven:function:: StrMakeLower(variable str)
 
     The StrMakeLower function converts the original string to its lowercase form.
 
@@ -277,7 +277,7 @@ HSL String Library provides the following functions:
     :return: The original string converted to lowercase
     :rtype: Variable
 
-.. py:function:: StrMakeLowerCopy(variable str)
+.. ven:function:: StrMakeLowerCopy(variable str)
 
     The StrMakeLowerCopy function returns a copy of the original string converted to lowercase.
 
@@ -286,7 +286,7 @@ HSL String Library provides the following functions:
     :return: A copy of the original string converted to lowercase
     :rtype: Variable
 
-.. py:function:: StrMakeUpper(variable str)
+.. ven:function:: StrMakeUpper(variable str)
 
     The StrMakeUpper function converts the original string to its uppercase form.
 
@@ -295,7 +295,7 @@ HSL String Library provides the following functions:
     :return: The original string converted to uppercase
     :rtype: Variable
 
-.. py:function:: StrMakeUpperCopy(variable str)
+.. ven:function:: StrMakeUpperCopy(variable str)
 
     The StrMakeUpperCopy function returns a copy of the original string converted to uppercase.
 
@@ -304,7 +304,7 @@ HSL String Library provides the following functions:
     :return: A copy of the original string converted to uppercase
     :rtype: Variable
 
-.. py:function:: StrMid(variable str, variable first, variable count)
+.. ven:function:: StrMid(variable str, variable first, variable count)
 
     The StrMid function extracts a substring of length "count" characters from the input variable "str", starting at position "first" which is 0-based. The function returns a copy of the extracted substring.
 
@@ -317,7 +317,7 @@ HSL String Library provides the following functions:
     :return: A string containing a copy of the specified range of characters, can be empty
     :rtype: Variable
 
-.. py:function:: StrReplace(variable str, variable oldSubStr, variable newSubStr)
+.. ven:function:: StrReplace(variable str, variable oldSubStr, variable newSubStr)
 
     The StrReplace function searches a string for a specified substring and replaces it with another specified substring.
 
@@ -330,7 +330,7 @@ HSL String Library provides the following functions:
     :return: The number of replaced instances of oldSubStr. Zero if the string is unchanged.
     :rtype: Variable
 
-.. py:function:: StrReverseFind(variable str, variable subStr)
+.. ven:function:: StrReverseFind(variable str, variable subStr)
 
     The StrReverseFind function searches a string object for the last match of a sub-string
 
@@ -341,7 +341,7 @@ HSL String Library provides the following functions:
     :return: The zero-based index of the last character in this string that matches the requested substring or characters. -1 if the substring is not found.
     :rtype: Variable
 
-.. py:function:: StrRight(variable str, variable count)
+.. ven:function:: StrRight(variable str, variable count)
 
     The StrRight function extracts the last (rightmost) characters of a string and returns a copy of the extracted substring. The number of characters extracted is equal to the input variable "count". If "count" is longer than the string, the entire string is returned.
 
@@ -352,7 +352,7 @@ HSL String Library provides the following functions:
     :return: A string containing a copy of the specified range of characters. Can be an empty string.
     :rtype: Variable
 
-.. py:function:: StrSpanExcluding(variable str, variable subStr)
+.. ven:function:: StrSpanExcluding(variable str, variable subStr)
 
     The StrSpanExcluding function can be used to search the string for the first occurrence of any character in the specified set subStr. StrSpanExcluding extracts and returns all characters preceding the first occurrence of a character from subStr (in other words, the character from subStr and all characters following it in the string, are not returned). If no character from subStr is found in the string, then StrSpanExcluding returns the entire string.
 
@@ -363,7 +363,7 @@ HSL String Library provides the following functions:
     :return: A sub-string containing characters in the string that are not in subStr, beginning with the first character in the string and ending with the first character found in the string that is also in subStr (that is, starting with the first character in the string and up to but excluding the first character in the string that is found subStr). It returns the entire string if no character in subStr is found in the string.
     :rtype: Variable
 
-.. py:function:: StrStrToAscii(variable character)
+.. ven:function:: StrStrToAscii(variable character)
 
     The StrStrToAscii function converts the given character (as a string) into an ASCII code (as an integer)
 
@@ -372,7 +372,7 @@ HSL String Library provides the following functions:
     :return: The ASCII code for the given character as an integer, -1 if the function fails
     :rtype: Variable
 
-.. py:function:: StrTrimLeft(variable str, variable character)
+.. ven:function:: StrTrimLeft(variable str, variable character)
 
     The StrTrimLeft function trims leading whitespace characters from the string (removes newline, space, tab, and user-defined characters)
 
@@ -383,7 +383,7 @@ HSL String Library provides the following functions:
     :return: None
     :rtype: N/A
 
-.. py:function:: StrTrimRight(variable str, variable character)
+.. ven:function:: StrTrimRight(variable str, variable character)
 
     The StrTrimRight function trims lagging whitespace characters from the string (removes newline, space, tab, and user-defined characters)
 
