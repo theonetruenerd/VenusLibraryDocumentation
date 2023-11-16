@@ -5,18 +5,18 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/ArrayTools.pkg
 
 The ArrayTools library provides the following functions:
 
-- :py:func:`ArraySeqVLookup`
-- :py:func:`ArrayVLookup`
-- :py:func:`ConvertArrayOfNumericIntegersToString`
-- :py:func:`ConvertArrayOfNumericStringsToInteger`
-- :py:func:`Lookup`
-- :py:func:`Sort3ArraysByNumericAscendingOrder`
-- :py:func:`Update_Value_in_Array`
-- :py:func:`get_distinct_from_array`
-- :py:func:`mergeArrays`
-- :py:func:`removeValueFromArray_basedOnIndex`
+- :ven:func:`ArraySeqVLookup`
+- :ven:func:`ArrayVLookup`
+- :ven:func:`ConvertArrayOfNumericIntegersToString`
+- :ven:func:`ConvertArrayOfNumericStringsToInteger`
+- :ven:func:`Lookup`
+- :ven:func:`Sort3ArraysByNumericAscendingOrder`
+- :ven:func:`Update_Value_in_Array`
+- :ven:func:`get_distinct_from_array`
+- :ven:func:`mergeArrays`
+- :ven:func:`removeValueFromArray_basedOnIndex`
 
-.. py:function:: ArraySeqVLookup(array i_arraySequencesA, array i_arrayValuesB, variable i_varCondition, array o_arraySequencesC)
+.. ven:function:: ArraySeqVLookup(array i_arraySequencesA, array i_arrayValuesB, variable i_varCondition, array o_arraySequencesC)
 
   Given 2 arrays  A (Sequences) and B (Values) with same size
   Retrieve all the sequences in A where B = input value
@@ -37,7 +37,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: ArrayVLookup(array i_arrayValuesA, array i_arrayValuesB, variable i_varCondition, array o_arrayValuesC)
+.. ven:function:: ArrayVLookup(array i_arrayValuesA, array i_arrayValuesB, variable i_varCondition, array o_arrayValuesC)
 
   Given 2 arrays of values A and B with same size
   Retrieve all the elements in B where A = input value
@@ -59,7 +59,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: ConvertArrayOfNumericIntegersToString(array i_arr1_int, array o_arr1_str)
+.. ven:function:: ConvertArrayOfNumericIntegersToString(array i_arr1_int, array o_arr1_str)
 
   Converts all the numeric integers within an array to strings.
 
@@ -70,7 +70,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: ConvertArrayOfNumericStringsToIntegers(array i_arr1_str, array o_arr1_int)
+.. ven:function:: ConvertArrayOfNumericStringsToIntegers(array i_arr1_str, array o_arr1_int)
 
   Converts all the numeric strings within an array to integers.
 
@@ -81,7 +81,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: Lookup(array array, variable item)
+.. ven:function:: Lookup(array array, variable item)
 
   Looks up a value within an array, outputting a 1-based index of the value if found in the array, and a 0 if the value isn't found.
 
@@ -92,7 +92,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: Sort3ArraysByNumericAscendingOrder(array io_array1, array io_array2, array io_array3)
+.. ven:function:: Sort3ArraysByNumericAscendingOrder(array io_array1, array io_array2, array io_array3)
 
   Sorts 3 arrays by numeric ascending order. io_array1 must contain only numeric values; this one will be sorted and then the other arrays will update to match the new order of io_array1.
 
@@ -105,7 +105,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: Update_Value_in_Array(array i_array, variable i_value, variable i_index)
+.. ven:function:: Update_Value_in_Array(array i_array, variable i_value, variable i_index)
 
   Overwrites a value in the array at a specified index.
 
@@ -118,7 +118,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: get_distinct_from_array(array i_arr, array o_arr)
+.. ven:function:: get_distinct_from_array(array i_arr, array o_arr)
 
   Gets all the values in an array that only appear once.
 
@@ -129,7 +129,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: mergeArrays(array array1, array array2, array array3)
+.. ven:function:: mergeArrays(array array1, array array2, array array3)
 
   Concatenates two arrays and outputs the result into a third array.
 
@@ -142,7 +142,7 @@ The ArrayTools library provides the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: removeValueFromArray_basedOnIndex(array i_array_elements, variable i_index_to_remove)
+.. ven:function:: removeValueFromArray_basedOnIndex(array i_array_elements, variable i_index_to_remove)
 
   Removes a value from an array at the specified index.
 
