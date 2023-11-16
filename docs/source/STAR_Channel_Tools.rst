@@ -5,40 +5,40 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/STAR_Channel_Tools.pkg
 
 The STAR_Channel_Tools submethod library adds a variety of functions which are related to the use of the 8 channels. The following functions are added:
 
-  - :py:func:`CHAN_ACCESS_Sort1Sequence`
-  - :py:func:`CHAN_ACCESS_Sort1Sequence1Array`
-  - :py:func:`CHAN_ACCESS_Sort1Sequence2Arrays`
-  - :py:func:`CHAN_ACCESS_Sort2Sequences`
-  - :py:func:`CHAN_ACCESS_Sort2Sequences1Array`
-  - :py:func:`CHAN_ACCESS_Sort2Sequences2Arrays`
-  - :py:func:`LIQUID_LEVEL_GetLiquidLevelHeight`
-  - :py:func:`LIQUID_LEVEL_MeasureLiquidMulti`
-  - :py:func:`LIQUID_LEVEL_MeasureLiquidSingle`
-  - :py:func:`LIQUID_LEVEL_ReturnVolumesFromLiquidLevel`
-  - :py:func:`MOVE_ChannelsToSequencePosition`
-  - :py:func:`MOVE_ChannelsToSequencePosition_5mL`
-  - :py:func:`MOVE_CheckPlateWithTwoChannels`
-  - :py:func:`MOVE_InitDispenseDrive`
-  - :py:func:`MOVE_InitDispenseDrive_5mL`
-  - :py:func:`PLATE_STACK_CountPlateStacks`
-  - :py:func:`QUERY_GetChannelPosition`
-  - :py:func:`QUERY_GetChannelPosition_5mL`
-  - :py:func:`QUERY_GetTipPresentState`
-  - :py:func:`QUERY_GetTipPresentState_5mL`
-  - :py:func:`QUERY_GetTipVolume`
-  - :py:func:`QUERY_GetTIpVolume_5mL`
-  - :py:func:`SPLIT_WELLS_AddContainersToWell`
-  - :py:func:`SPLIT_WELLS_RemoveContainers`
-  - :py:func:`TRAVEL_LANES_MoveChannelsToTravelLanes`
-  - :py:func:`TRAVEL_LANES_MoveChannelsToTravelLanes_5mL`
-  - :py:func:`TRAVEL_LANES_MoveChannelsToYPosition`
-  - :py:func:`TRAVEL_LANES_MoveChannelsToYPosition_5mL`
-  - :py:func:`TRAVEL_LANES_MoveChannelsWithTravelLanes`
-  - :py:func:`TRAVEL_LANES_MoveChannelsWithTravelLanes_5mL`
-  - :py:func:`TRAVEL_LANES_SingleSource_ChannelDisplacement`
-  - :py:func:`TRAVEL_LANES_SingleSource_ChannelDisplacement_5mL`
+  - :ven:func:`CHAN_ACCESS_Sort1Sequence`
+  - :ven:func:`CHAN_ACCESS_Sort1Sequence1Array`
+  - :ven:func:`CHAN_ACCESS_Sort1Sequence2Arrays`
+  - :ven:func:`CHAN_ACCESS_Sort2Sequences`
+  - :ven:func:`CHAN_ACCESS_Sort2Sequences1Array`
+  - :ven:func:`CHAN_ACCESS_Sort2Sequences2Arrays`
+  - :ven:func:`LIQUID_LEVEL_GetLiquidLevelHeight`
+  - :ven:func:`LIQUID_LEVEL_MeasureLiquidMulti`
+  - :ven:func:`LIQUID_LEVEL_MeasureLiquidSingle`
+  - :ven:func:`LIQUID_LEVEL_ReturnVolumesFromLiquidLevel`
+  - :ven:func:`MOVE_ChannelsToSequencePosition`
+  - :ven:func:`MOVE_ChannelsToSequencePosition_5mL`
+  - :ven:func:`MOVE_CheckPlateWithTwoChannels`
+  - :ven:func:`MOVE_InitDispenseDrive`
+  - :ven:func:`MOVE_InitDispenseDrive_5mL`
+  - :ven:func:`PLATE_STACK_CountPlateStacks`
+  - :ven:func:`QUERY_GetChannelPosition`
+  - :ven:func:`QUERY_GetChannelPosition_5mL`
+  - :ven:func:`QUERY_GetTipPresentState`
+  - :ven:func:`QUERY_GetTipPresentState_5mL`
+  - :ven:func:`QUERY_GetTipVolume`
+  - :ven:func:`QUERY_GetTIpVolume_5mL`
+  - :ven:func:`SPLIT_WELLS_AddContainersToWell`
+  - :ven:func:`SPLIT_WELLS_RemoveContainers`
+  - :ven:func:`TRAVEL_LANES_MoveChannelsToTravelLanes`
+  - :ven:func:`TRAVEL_LANES_MoveChannelsToTravelLanes_5mL`
+  - :ven:func:`TRAVEL_LANES_MoveChannelsToYPosition`
+  - :ven:func:`TRAVEL_LANES_MoveChannelsToYPosition_5mL`
+  - :ven:func:`TRAVEL_LANES_MoveChannelsWithTravelLanes`
+  - :ven:func:`TRAVEL_LANES_MoveChannelsWithTravelLanes_5mL`
+  - :ven:func:`TRAVEL_LANES_SingleSource_ChannelDisplacement`
+  - :ven:func:`TRAVEL_LANES_SingleSource_ChannelDisplacement_5mL`
 
-..  py:function:: CHAN_ACCESS_Sort1Sequence(device ML_STAR, sequence io_Sequence_to_Sort, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, variable o_Channel_Pattern)
+..  ven:function:: CHAN_ACCESS_Sort1Sequence(device ML_STAR, sequence io_Sequence_to_Sort, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, variable o_Channel_Pattern)
 
   This submethod takes an input sequence and sorts it based on the input parameters of labware, position, and raster. Once sorted, the submethod will choose a position that the current channel can access up to the maximum. If the current channel cannot access the position, it will skip it and move to the next available position. If the current cannot access any more positions, that channel will be skipped. Make sure the channel use setting is set to "All Sequence Positions" in the pipettting step, otherwise the sequence and channel pattern will not line up.
 
@@ -63,7 +63,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: The number of sequence positions remaining in the sequence
   :rtype: Variable
 
-.. py:function:: CHAN_ACCESS_Sort1Sequence1Array(device ML_STAR, sequence io_Sequence_to_Sort, array io_Array_of_Variables, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, array o_Sorted_Array, variable o_Channel_Pattern)
+.. ven:function:: CHAN_ACCESS_Sort1Sequence1Array(device ML_STAR, sequence io_Sequence_to_Sort, array io_Array_of_Variables, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, array o_Sorted_Array, variable o_Channel_Pattern)
 
   This submethod takes in input sequence and sorts it by the conditions given below.  After sorting, the submethod will choose a position that the current channel can access up to the maximum.  If the current channel cannot access the position, it wil skip it and move to the next available position.  If the current channel cannot access any more positions, that channel will be skipped.  The array will be sorted with the sequence.  The array and the sequence must be the same size. Make sure the channel use setting is set to "All sequence positions" otherwise the sequence and channel pattern will not line up.
 
@@ -92,7 +92,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: The number of sequence positions remaining in the sequence
   :rtype: Variable
 
-.. py:function:: CHAN_ACCESS_Sort1Sequence2Arrays(device ML_STAR, sequence io_Sequence_to_Sort, array io_Array_of_Variables, array io_Array_of_Variables2, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, array o_Sorted_Array, array o_Sorted_Array2, variable o_Channel_Pattern)
+.. ven:function:: CHAN_ACCESS_Sort1Sequence2Arrays(device ML_STAR, sequence io_Sequence_to_Sort, array io_Array_of_Variables, array io_Array_of_Variables2, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, array o_Sorted_Array, array o_Sorted_Array2, variable o_Channel_Pattern)
 
   This submethod takes in input sequence and sorts it by the conditions given below.  After sorting, the submethod will choose a position that the current channel can access up to the maximum.  If the current channel cannot access the position, it wil skip it and move to the next available position.  If the current channel cannot access any more positions, that channel will be skipped.  The arrays will be sorted with the sequence.  The arrays and the sequence must be the same size. Make sure the channel use setting is set to "All sequence positions" otherwise the sequence and channel pattern will not line up.
 
@@ -125,7 +125,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: The number of sequence positions remaining in the sequence
   :rtype: Variable
 
-..  py:function:: CHAN_ACCESS_Sort2Sequences(device ML_STAR, sequence io_Sequence_to_Sort, sequence io_Sequence_to_Sort2, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, sequence o_Sorted_Sequence2, variable o_Channel_Pattern)
+..  ven:function:: CHAN_ACCESS_Sort2Sequences(device ML_STAR, sequence io_Sequence_to_Sort, sequence io_Sequence_to_Sort2, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, sequence o_Sorted_Sequence2, variable o_Channel_Pattern)
 
   This sub method takes the in input sequences and sorts them by the conditions given below.  After sorting, the sub will choose a position that the current channel can access in both sequence positions up to the maximum.  If the current channel cannot access the positions, it wil skip it and move to the next available position.  If the current channel cannot access any more positions, that channel will be skipped. Make sure the channel use setting is set to "All sequence positions" otherwise the sequence and channel pattern will not line up. The first sequence is the driving sequence and the second sequence will be adjusted by the first sort.
  
@@ -154,7 +154,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: The number of sequence positions remaining in the sequence
   :rtype: Variable
 
-.. py:function:: CHAN_ACCESS_Sort2Sequences1Array(device ML_STAR, sequence io_Sequence_to_Sort, sequence io_Sequence_to_Sort2, array io_Array_of_Variables, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, sequence o_Sorted_Sequence2, array o_Sorted_Array, variable o_Channel_Pattern)
+.. ven:function:: CHAN_ACCESS_Sort2Sequences1Array(device ML_STAR, sequence io_Sequence_to_Sort, sequence io_Sequence_to_Sort2, array io_Array_of_Variables, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, sequence o_Sorted_Sequence2, array o_Sorted_Array, variable o_Channel_Pattern)
 
   This sub method takes the in input sequences and sorts them by the conditions given below.  After sorting, the sub will choose a position that the current channel can access in both sequence positions up to the maximum.  If the current channel cannot access the positions, it wil skip it and move to the next available position.  If the current channel cannot access any more positions, that channel will be skipped. Make sure the channel use setting is set to "All sequence positions" otherwise the sequence and channel pattern will not line up. The first sequence is the driving sequence and the second sequence will be adjusted by the first sort.
  
@@ -185,7 +185,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: The number of sequence positions remaining in the sequence
   :rtype: Variable
 
-.. py:function:: CHAN_ACCESS_Sort2Sequences2Arrays(device ML_STAR, sequence io_Sequence_to_Sort, sequence io_Sequence_to_Sort2, array io_Array_of_Variables, array io_Array_of_Variables2, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, sequence o_Sorted_Sequence2, array o_Sorted_Array, array o_Sorted_Array2, variable o_Channel_Pattern)
+.. ven:function:: CHAN_ACCESS_Sort2Sequences2Arrays(device ML_STAR, sequence io_Sequence_to_Sort, sequence io_Sequence_to_Sort2, array io_Array_of_Variables, array io_Array_of_Variables2, variable i_Channel_Type, boolean i_Sort_by_Labware, boolean i_Sort_by_XY, boolean i_Sort_for_Channel_Raster, variable i_Max_Channel, sequence o_Sorted_Sequence, sequence o_Sorted_Sequence2, array o_Sorted_Array, array o_Sorted_Array2, variable o_Channel_Pattern)
 
   This sub method takes the in input sequences and sorts them by the conditions given below.  After sorting, the sub will choose a position that the current channel can access in both sequence positions up to the maximum.  If the current channel cannot access the positions, it wil skip it and move to the next available position.  If the current channel cannot access any more positions, that channel will be skipped. Make sure the channel use setting is set to "All sequence positions" otherwise the sequence and channel pattern will not line up. The first sequence is the driving sequence and the second sequence will be adjusted by the first sort.
  
@@ -220,7 +220,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: The number of sequence positions remaining in the sequence
   :rtype: Variable
 
-.. py:function:: LIQUID_LEVEL_GetLiquidLevelHeight(device ML_STAR, variable i_str_LiquidLevelReturn, sequence i_seq_Labware, variable i_int_Channel, variable o_flt_LiquidHeight)
+.. ven:function:: LIQUID_LEVEL_GetLiquidLevelHeight(device ML_STAR, variable i_str_LiquidLevelReturn, sequence i_seq_Labware, variable i_int_Channel, variable o_flt_LiquidHeight)
 
   This function will return the liquid level height relative to the container bottem.
 
@@ -237,7 +237,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: LIQUID_LEVEL_MeasureLiquidMulti(device ML_STAR, array i_arrseq_FullReservoirSequences, sequence i_seq_TipsToUse, sequence i_seq_TipWaste, variable i_str_TipCounter, variable i_int_LLD_Sensitivity, variable i_bool_ConvertTouL, array o_arr_VolumesMeasured)
+.. ven:function:: LIQUID_LEVEL_MeasureLiquidMulti(device ML_STAR, array i_arrseq_FullReservoirSequences, sequence i_seq_TipsToUse, sequence i_seq_TipWaste, variable i_str_TipCounter, variable i_int_LLD_Sensitivity, variable i_bool_ConvertTouL, array o_arr_VolumesMeasured)
 
   This function will pick up the desired tips and will measure the liquid level at the center most well of the desired reservoirs and will return the volumes in uL. Ensure the sequence used for the reservoir contains the FULL number of positions of the reservoir, otherwise volume estimation will be incomplete! The tip types supported are: 50uL Filter, 50uL, 300uL Filter, 300uL, 1000uL Filter, and 1000uL.
 
@@ -260,7 +260,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: Whether the measurement has been successful or not
   :rtype: Boolean
 
-.. py:function:: LIQUID_LEVEL_MeasureLiquidSingle(device ML_STAR, sequence i_seq_FullReservoirSequence, sequence i_seq_TipsToUse, sequence i_seq_TipWaste, variable i_str_TipCounter, variable i_bool_IncrementTipSequence, variable i_int_LLD_Sensitivity, variable i_bool_ConvertTouL, variable o_flt_VolumeMeasured)
+.. ven:function:: LIQUID_LEVEL_MeasureLiquidSingle(device ML_STAR, sequence i_seq_FullReservoirSequence, sequence i_seq_TipsToUse, sequence i_seq_TipWaste, variable i_str_TipCounter, variable i_bool_IncrementTipSequence, variable i_int_LLD_Sensitivity, variable i_bool_ConvertTouL, variable o_flt_VolumeMeasured)
 
   This function will pick up the desired tip and will measure the liquid level at the center most well of the desired reservoir and will return the volume in uL. Ensure the sequence used for the reservoir contains the FULL number of positions of the reservoir, otherwise volume estimation will be incomplete! The tip types supported are: 50uL Filter, 50uL, 300uL Filter, 300uL, 1000uL Filter, and 1000uL.
 
@@ -285,7 +285,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: Whether the measurement has been successful or not
   :rtype: Boolean
 
-.. py:function:: LIQUID_LEVEL_ReturnVolumesFromLiquidLevel(device ML_STAR, variable i_str_PipettingReturn, variable i_str_LiquidLevelReturn, variable i_bool_ConvertTouL, array o_arr_VolumesMeasured)
+.. ven:function:: LIQUID_LEVEL_ReturnVolumesFromLiquidLevel(device ML_STAR, variable i_str_PipettingReturn, variable i_str_LiquidLevelReturn, variable i_bool_ConvertTouL, array o_arr_VolumesMeasured)
 
   This function will return the volumes that were measured from a previous aspiration step.
 
@@ -302,7 +302,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: MOVE_ChannelsToSequencePosition(device ML_STAR, variable i_str_ChPattern, sequence i_seq_Positions, variable i_flt_ZHeight)
+.. ven:function:: MOVE_ChannelsToSequencePosition(device ML_STAR, variable i_str_ChPattern, sequence i_seq_Positions, variable i_flt_ZHeight)
 
   This function moves the 1mL channels to set positions. This function will only move the channels that are activated by the channel pattern.  The positions in the sequence will skip over the positions where the channel is turned off.
 
@@ -317,7 +317,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: MOVE_ChannelsToSequencePosition_5mL(device ML_STAR, variable i_str_ChPattern, sequence i_seq_Positions, variable i_flt_ZHeight)
+.. ven:function:: MOVE_ChannelsToSequencePosition_5mL(device ML_STAR, variable i_str_ChPattern, sequence i_seq_Positions, variable i_flt_ZHeight)
 
   This function moves the 5mL channels to set positions. This function will only move the channels that are activated by the channel pattern.  The positions in the sequence will skip over the positions where the channel is turned off.
 
@@ -332,7 +332,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: MOVE_CheckPlateWithTwoChannels(device ML_STAR, variable i_int_FrontMostChannel, sequence i_seq_PlateToCheck, variable i_flt_TapWidth)
+.. ven:function:: MOVE_CheckPlateWithTwoChannels(device ML_STAR, variable i_int_FrontMostChannel, sequence i_seq_PlateToCheck, variable i_flt_TapWidth)
 
   This function will take the front most channel and the channel behind it to tap the labware at the sequence position.  This function requires both channels to either have a tip or tool loaded on them before calling.  
 
@@ -347,7 +347,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: Boolean determining whether plate was found (hslTrue) or not (hslFalse)
   :rtype: Boolean
 
-.. py:function:: MOVE_InitDispenseDrive(device ML_STAR, variable i_int_ChannelNumber)
+.. ven:function:: MOVE_InitDispenseDrive(device ML_STAR, variable i_int_ChannelNumber)
 
   This function moves the dispense drive for the specified 1mL channel to its home position
 
@@ -358,7 +358,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: MOVE_InitDispenseDrive_5mL(device ML_STAR, variable i_int_ChannelNumber)
+.. ven:function:: MOVE_InitDispenseDrive_5mL(device ML_STAR, variable i_int_ChannelNumber)
 
   This function moves the dispense drive for the specified 5mL channel to its home position
 
@@ -369,7 +369,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: PLATE_STACK_CountPlateStacks(device ML_STAR, sequence i_seq_PlateStack_Full, sequence o_seq_PlateStack_Count, variable o_int_PlateCount)
+.. ven:function:: PLATE_STACK_CountPlateStacks(device ML_STAR, sequence i_seq_PlateStack_Full, sequence o_seq_PlateStack_Count, variable o_int_PlateCount)
 
   This function will use the channels to measure the number of plates in a plate stack
 
@@ -384,7 +384,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: QUERY_GetChannelPosition(device ML_STAR, variable i_int_ChNumber, variable o_flt_XCoord, variable o_flt_YCoord, variable o_flt_ZCoord)
+.. ven:function:: QUERY_GetChannelPosition(device ML_STAR, variable i_int_ChNumber, variable o_flt_XCoord, variable o_flt_YCoord, variable o_flt_ZCoord)
 
   This function will return the current coordinate of the specified 1mL channel
 
@@ -401,7 +401,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: QUERY_GetChannelPosition_5mL(device ML_STAR, variable i_int_ChNumber, variable o_flt_XCoord, variable o_flt_YCoord, variable o_flt_ZCoord)
+.. ven:function:: QUERY_GetChannelPosition_5mL(device ML_STAR, variable i_int_ChNumber, variable o_flt_XCoord, variable o_flt_YCoord, variable o_flt_ZCoord)
 
   This function will return the current coordinate of the specified 5mL channel
 
@@ -418,7 +418,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: QUERY_GetTipPresentState(device ML_STAR, variable i_int_ChNumber, variable o_bln_TipPresent)
+.. ven:function:: QUERY_GetTipPresentState(device ML_STAR, variable i_int_ChNumber, variable o_bln_TipPresent)
 
   This function outputs true if a tip is loaded and false if a tip is not loaded on the specified 1mL channel
 
@@ -431,7 +431,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: QUERY_GetTipPresentState_5mL(device ML_STAR, variable i_int_ChNumber, variable o_bln_TipPresent)
+.. ven:function:: QUERY_GetTipPresentState_5mL(device ML_STAR, variable i_int_ChNumber, variable o_bln_TipPresent)
 
   This function outputs true if a tip is loaded and false if a tip is not loaded on the specified 5mL channel
 
@@ -444,7 +444,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: QUERY_GetTipVolume(device ML_STAR, variable i_int_ChNumber, variable o_flt_MaxVolume, variable o_flt_CurrentChannelVolume)
+.. ven:function:: QUERY_GetTipVolume(device ML_STAR, variable i_int_ChNumber, variable o_flt_MaxVolume, variable o_flt_CurrentChannelVolume)
 
   This function queries the specified 1mL channel to get the max and the current channel volume.  This volume includes the air gap and the conversion made by the correction curve.
 
@@ -459,7 +459,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: QUERY_GetTipVolume(device ML_STAR, variable i_int_ChNumber, variable o_flt_MaxVolume, variable o_flt_CurrentChannelVolume)
+.. ven:function:: QUERY_GetTipVolume(device ML_STAR, variable i_int_ChNumber, variable o_flt_MaxVolume, variable o_flt_CurrentChannelVolume)
 
   This function queries the specified 5mL channel to get the max and the current channel volume.  This volume includes the air gap and the conversion made by the correction curve.
 
@@ -474,7 +474,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: SPLIT_WELLS_AddContainersToWell(device ML_STAR, sequence i_seq_SequenceToSplit, variable i_int_SequenceIndex, variable i_int_MaxSplitNumber, sequence io_seq_SplitSequence)
+.. ven:function:: SPLIT_WELLS_AddContainersToWell(device ML_STAR, sequence i_seq_SequenceToSplit, variable i_int_SequenceIndex, variable i_int_MaxSplitNumber, sequence io_seq_SplitSequence)
 
   This function will split a well into a sequence of multiple containers, each of which can be aspirated from individually. 
 
@@ -491,7 +491,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: SPLIT_WELLS_Remove_Containers(device ML_STAR, variable i_bool_UpdateVolumes)
+.. ven:function:: SPLIT_WELLS_Remove_Containers(device ML_STAR, variable i_bool_UpdateVolumes)
 
   This function will remove the containers added by the split wells function
 
@@ -502,7 +502,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: TRAVEL_LANES_MoveChannelsToTravelLanes(device ML_STAR)
+.. ven:function:: TRAVEL_LANES_MoveChannelsToTravelLanes(device ML_STAR)
 
   This function will move the 1mL channels to the travel lanes
 
@@ -511,7 +511,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: TRAVEL_LANES_MoveChannelsToTravelLanes_5mL(device ML_STAR)
+.. ven:function:: TRAVEL_LANES_MoveChannelsToTravelLanes_5mL(device ML_STAR)
 
   This function will move the 5mL channels to the travel lanes
 
@@ -520,7 +520,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: TRAVEL_LANES_MoveChannelsToYPosition(device ML_STAR, sequence i_seq_TargetSequence, variable i_flt_XOffsetFromOrigin)
+.. ven:function:: TRAVEL_LANES_MoveChannelsToYPosition(device ML_STAR, sequence i_seq_TargetSequence, variable i_flt_XOffsetFromOrigin)
 
   Parameters include the Instrument, a destination sequence, and whether or not a shift in the x-direction is wanted before moving the 1mL channels in y-direction (to doubly ensure no crossver of open wells).  Channels will be moved to their Y coordinates at the X origin of the next labware in the sequence plus the X offset. The channels will move to the current position of the input Sequence.
 
@@ -533,7 +533,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: TRAVEL_LANES_MoveChannelsToYPosition_5mL(device ML_STAR, sequence i_seq_TargetSequence, variable i_flt_XOffsetFromOrigin)
+.. ven:function:: TRAVEL_LANES_MoveChannelsToYPosition_5mL(device ML_STAR, sequence i_seq_TargetSequence, variable i_flt_XOffsetFromOrigin)
 
   Parameters include the Instrument, a destination sequence, and whether or not a shift in the x-direction is wanted before moving the 5mL channels in y-direction (to doubly ensure no crossver of open wells).  Channels will be moved to their Y coordinates at the X origin of the next labware in the sequence plus the X offset. The channels will move to the current position of the input Sequence.
 
@@ -546,7 +546,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: TRAVEL_LANES_MoveChannelsWithTravelLanes(device ML_STAR, sequence i_seq_TargetSequence, variable i_flt_XOffsetFromOrigin)
+.. ven:function:: TRAVEL_LANES_MoveChannelsWithTravelLanes(device ML_STAR, sequence i_seq_TargetSequence, variable i_flt_XOffsetFromOrigin)
 
   This command is designed to shift all the 1mL channels on the instrument to either the front and/or the back of the instrument in a layout that ensures tips will not crossover any carriers. Parameters include the Instrument, a destination sequence, and whether or not a shift in the x-direction is wanted before moving the channels in y-direction (to doubly ensure no crossver of open wells).  Channels will be moved to their Y coordinates at the X origin of the next labware in the sequence plus the X offset. The channels will move to the current position of the input Sequence.
 
@@ -559,7 +559,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: TRAVEL_LANES_MoveChannelsWithTravelLanes_5mL(device ML_STAR, sequence i_seq_TargetSequence, variable i_flt_XOffsetFromOrigin)
+.. ven:function:: TRAVEL_LANES_MoveChannelsWithTravelLanes_5mL(device ML_STAR, sequence i_seq_TargetSequence, variable i_flt_XOffsetFromOrigin)
 
   This command is designed to shift all the 5mL channels on the instrument to either the front and/or the back of the instrument in a layout that ensures tips will not crossover any carriers. Parameters include the Instrument, a destination sequence, and whether or not a shift in the x-direction is wanted before moving the channels in y-direction (to doubly ensure no crossver of open wells).  Channels will be moved to their Y coordinates at the X origin of the next labware in the sequence plus the X offset. The channels will move to the current position of the input Sequence.
 
@@ -572,7 +572,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: TRAVEL_LANES_SingleSource_ChannelDisplacement(device ML_STAR, variable i_strStepReturn)
+.. ven:function:: TRAVEL_LANES_SingleSource_ChannelDisplacement(device ML_STAR, variable i_strStepReturn)
 
   This command is designed to move unused 1mL channels to the back of the instrument when pipetting one well at a time while more than one channel has tips/liquid. It requires the Instrument type and Step Return variable from the Aspirate/Dispense step (this is used to determine which channel needs to be moved).
 
@@ -583,7 +583,7 @@ The STAR_Channel_Tools submethod library adds a variety of functions which are r
   :return: None
   :rtype: N/A
 
-.. py:function:: TRAVEL_LANES_SingleSource_ChannelDisplacement_5mL(device ML_STAR, variable i_strStepReturn)
+.. ven:function:: TRAVEL_LANES_SingleSource_ChannelDisplacement_5mL(device ML_STAR, variable i_strStepReturn)
 
   This command is designed to move unused 5mL channels to the back of the instrument when pipetting one well at a time while more than one channel has tips/liquid. It requires the Instrument type and Step Return variable from the Aspirate/Dispense step (this is used to determine which channel needs to be moved).
 
