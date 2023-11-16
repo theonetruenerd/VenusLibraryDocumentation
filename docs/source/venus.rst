@@ -3,8 +3,6 @@ Venus
 
 This section aims to cover the *functions* that Venus can run. Documentation on more general principles of Venus, including things like the liquid editor and labware editor, will be found separately.
 
-NB: This section is probably coming last as out of all of the Venus resources it has the best documentation.
-
 Venus functions are organised into several sections. These are the following:
 
 
@@ -135,6 +133,13 @@ The Schedule process is divided into two phases: scheduling and executing. The s
 - :ven:func:`1000ul Channel Needle Eject`
 - :ven:func:`1000ul Channel Tip Pick Up`
 - :ven:func:`1000ul Channel Tip Eject`
+
+How venus works
+-------------------------------------------------------
+
+Venus is a drag-and-drop wrapper for a separate coding language called HSL. When coding a method in venus, all the available functions (core and any from imported libraries) are listed on the left hand side of the screen in a tree view. When you want to add a step to your method, you drag and drop that function from the left hand side and drop it wherever you want it to be in your method. This will then open a dialog box which allows you to input your desired parameters. The method is saved as a .med file, which can be run through a software called HxRunControl.exe. The run control software can run simulations of the code as well as the code on an actual robot. In the run control software window, you can see the deck layout dynamically changing, an open view of the method showing what step you are on, and a trace file which is a type of log which displays the data from every step that is occuring and is timestamped for each step. The trace file is saved to the Log Files folder within the main Hamilton folder in Program Files (x86). Method files (.med) can compile into HSL files (.hsl) which can also be edited and run through the run control software. Instead of being drag-and-drop, HSL is a more standard coding language, with C++ like syntax. HSL files cannot be converted into .med files; as such, it is usually recommended to insert snippets of HSL code into the main .med file rather than coding in HSL itself, or to only use HSL for creation of fresh libraries. 
+
+Libraries are groups of functions which reside in the library folder within the main Hamilton folder. They can be imported into specific methods, at which point the functions associated with that library will appear in the function tree on the left hand side of the method editor. Libraries can either be written in HSL (and are thus .hsl files) or can be "sub-method libraries", which is a series of steps coded in Venus that are stored in a way that works like a function. Sub-method libraries are .smt files. You can have submethods in a normal method file, and it is often encouraged so that your code is "parcelled" into blocks which contain the main blocks of your method. These submethods are just like the normal method but reside in a separate tab in the method editor. 
 
 General Steps
 -------------------------------------------------------
