@@ -5,24 +5,24 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/ErrorSimulator.pkg
 
 This library adds the ability to simulate a variety of errors, to assist with debugging or custom error handling. The functions it adds are:
 
-  - :py:func:`AA_Abstract`
-  - :py:func:`STEP1_PrepareRegistryAndCfgFile`
-  - :py:func:`STEP2a_SimulateError_Channels`
-  - :py:func:`STEP2b_SimulateError_COREGripper`
-  - :py:func:`STEP2c_SimulateError_iSWAP`
-  - :py:func:`STEP2d_SimulateError_96Head`
-  - :py:func:`STEP2e_SimulateError_384Head`
-  - :py:func:`STEP2f_SimulateError_BarcodeReading`
-  - :py:func:`STEP2g_SimulateError_Autoload`
-  - :py:func:`STEP2h_SimulateError_CRWashstation`
-  - :py:func:`STEP3_Restore_BackupCfgFile`
-  - :py:func:`STEP4_Optional_SwitchChecksum_ON`
+  - :ven:func:`AA_Abstract`
+  - :ven:func:`STEP1_PrepareRegistryAndCfgFile`
+  - :ven:func:`STEP2a_SimulateError_Channels`
+  - :ven:func:`STEP2b_SimulateError_COREGripper`
+  - :ven:func:`STEP2c_SimulateError_iSWAP`
+  - :ven:func:`STEP2d_SimulateError_96Head`
+  - :ven:func:`STEP2e_SimulateError_384Head`
+  - :ven:func:`STEP2f_SimulateError_BarcodeReading`
+  - :ven:func:`STEP2g_SimulateError_Autoload`
+  - :ven:func:`STEP2h_SimulateError_CRWashstation`
+  - :ven:func:`STEP3_Restore_BackupCfgFile`
+  - :ven:func:`STEP4_Optional_SwitchChecksum_ON`
 
-.. py:function:: AA_Abstract()
+.. ven:function:: AA_Abstract()
 
   This function does nothing. In the submethod library itself it simply lists the changelog.
 
-.. py:function:: STEP1_PrepareRegistryAndCfgFile(device ML_STAR)
+.. ven:function:: STEP1_PrepareRegistryAndCfgFile(device ML_STAR)
 
   This function prepares the system files and registry to perform the error simulation. You can put this step at the beginning of your method, and you can disable it after the 1st run, once all registry and configuration settings are done. It switches off the checksum in the registry, asking for confirmation to modify the registry during run. It converts the \Config\ML_STAR_Simulator.cfg file to ASCII. It creates a copy of ML_STAR_Simulator.cfg named ML_STAR_Simulator.cfg.bak for future restoration if needed. It replaces the string reload "0" with reload "1".
 
@@ -31,7 +31,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
-.. py:function:: STEP2a_SimulateError_Channels(variable ChannelNumber, variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
+.. ven:function:: STEP2a_SimulateError_Channels(variable ChannelNumber, variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
 
   This function simulates an error in the channels. It can simulate an error of your choice (between errors 1 and 12) in a desired channel at any step of the pipetting process. The error codes are: 
   - 1....... Liquid Level not found  (error 06/70)
@@ -58,7 +58,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
-.. py:function:: STEP2b_SimulateError_COREGripper(variable ChannelNumber, variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
+.. ven:function:: STEP2b_SimulateError_COREGripper(variable ChannelNumber, variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
 
   This function simulates an error in the CO-RE gripper. It can simulate an error of your choice (between errors 1 and 4) in a desired channel at any step of the process. The error codes are:
   - 1....... Can´t get the CORE grippers  (error 08/75)
@@ -77,7 +77,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
-.. py:function:: STEP2c_SimulateError_iSWAP(variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
+.. ven:function:: STEP2c_SimulateError_iSWAP(variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
 
   This function simulates an error in the iSWAP. It can simulate an error of your choice (between errors 1 and 4) at any step of the process. The error codes are:
   - 1...... Expected object not found (error 21/94)
@@ -94,7 +94,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
-.. py:function:: STEP2d_SimulateError_96Head(variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
+.. ven:function:: STEP2d_SimulateError_96Head(variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
 
   This function simulates an error in the 96-head. It can simulate an error of your choice (between errors 1 and 12 - not all available) at any step of the process. The error codes are:
   - 1....... Liquid Level not found  (error 06/70)
@@ -116,7 +116,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
-.. py:function:: STEP2e_SimulateError_384head(variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
+.. ven:function:: STEP2e_SimulateError_384head(variable WhenSimulateError, variable ErrorToSimulate, device ML_STAR)
 
   This function simulates an error in the 384-head. It can simulate an error of your choice (between errors 1 and 12 - not all available) at any step of the process. The error codes are:
   - 1....... Liquid Level not found  (error 06/70)
@@ -138,7 +138,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
-.. py:function:: STEP2f_SimulateError_BarcodeReading(variable WhenSimulateError, device ML_STAR)
+.. ven:function:: STEP2f_SimulateError_BarcodeReading(variable WhenSimulateError, device ML_STAR)
 
   This function simulates an error during the barcode reading step. It can simulate the error as though it was either the CO-RE grips or the iSWAP involved.
 
@@ -149,7 +149,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
-.. py:function:: STEP2g_SimulateError_Autoload(variable notReadPosition_Str, variable notPresentPosition_Str, device ML_STAR)
+.. ven:function:: STEP2g_SimulateError_Autoload(variable notReadPosition_Str, variable notPresentPosition_Str, device ML_STAR)
 
   This submethod simulates the "Barcode not read"  and "Labware not Present Errors".you can enter positions with errors separated by a comma
 
@@ -162,7 +162,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None  
   :rtype: N/A
 
-.. py:function:: STEP2h_SimulateError_CRWashstation(variable errorToSimulate, device ML_STAR)
+.. ven:function:: STEP2h_SimulateError_CRWashstation(variable errorToSimulate, device ML_STAR)
 
   This function simulates an error when starting the washing with the CR washstation
 
@@ -173,7 +173,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
-.. py:function:: STEP3_Restore_BackupCfgFile(device ML_STAR)
+.. ven:function:: STEP3_Restore_BackupCfgFile(device ML_STAR)
 
   This function restores the backup configuration file created in function STEP1_PrepareRegistryAndCfgFile
 
@@ -182,7 +182,7 @@ This library adds the ability to simulate a variety of errors, to assist with de
   :return: None
   :rtype: N/A
 
-.. py:function:: STEP4_Optional_SwitchChecksum_ON()
+.. ven:function:: STEP4_Optional_SwitchChecksum_ON()
 
   This function is optional.  Use it at the end of your method if you want to Switch the File Checksum ON in the registry
 
