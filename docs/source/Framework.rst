@@ -5,17 +5,17 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/Framework.pkg
 
 The framework library from HSLExtensions provides two visible functions, but is also required for a few of the other HSLExtension libraries. It uses the functionality of the ASW Standard TraceLevel library. The functions it adds are: 
 
-- :py:func:`GetVersion`
-- :py:func:`SetTraceLevel`
+- :ven:func:`GetVersion`
+- :ven:func:`SetTraceLevel`
 
-.. py:function:: GetVersion()
+.. ven:function:: GetVersion()
 
   This function gets the framework version
 
   :return: The framework version
   :rtype: String
 
-.. py:function:: SetTraceLevel(variable i_intTraceLevel)
+.. ven:function:: SetTraceLevel(variable i_intTraceLevel)
 
   This function sets the trace level of the framework.
 
