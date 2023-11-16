@@ -141,6 +141,15 @@ Venus is a drag-and-drop wrapper for a separate coding language called HSL. When
 
 Libraries are groups of functions which reside in the library folder within the main Hamilton folder. They can be imported into specific methods, at which point the functions associated with that library will appear in the function tree on the left hand side of the method editor. Libraries can either be written in HSL (and are thus .hsl files) or can be "sub-method libraries", which is a series of steps coded in Venus that are stored in a way that works like a function. Sub-method libraries are .smt files. You can have submethods in a normal method file, and it is often encouraged so that your code is "parcelled" into blocks which contain the main blocks of your method. These submethods are just like the normal method but reside in a separate tab in the method editor. 
 
+The following function groups are not libraries and instead are "core" groups which do not need importing; every other function referenced is part of a library.
+  - General Steps
+  - Scheduler Steps
+  - Custom Dialog Steps
+  - Favourites
+  - Templates
+  - ML_STAR
+  - Microlab STAR Smart Steps
+
 General Steps
 -------------------------------------------------------
 
