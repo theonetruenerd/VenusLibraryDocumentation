@@ -5,9 +5,9 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/Aliquot_for_EasySteps.
 
 The Aliquot with Easy Steps library adds one function aimed at making aliquoting with Easy- or Single steps easier. This library is outdated, the Aliquot_for_EasySteps_v2 library should be used instead. The function it adds is:
 
-- :py:func:`CalcAliquote`
+- :ven:func:`CalcAliquote`
 
-.. py:function:: CalcAliquote(sequence DispenseSequence, variable VolumePerWell, variable VolumePreAliquote, variable VolumePostAliquote, variable MaxVolumeTip, variable VolumeToAspirate, variable NumberOfDispense, variable FullTrace, variable NumberOfChannels)
+.. ven:function:: CalcAliquote(sequence DispenseSequence, variable VolumePerWell, variable VolumePreAliquote, variable VolumePostAliquote, variable MaxVolumeTip, variable VolumeToAspirate, variable NumberOfDispense, variable FullTrace, variable NumberOfChannels)
 
   This function calculates the important variables for performing aliquoting with Easy- or Single steps.
 
