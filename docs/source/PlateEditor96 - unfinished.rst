@@ -5,12 +5,12 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/PlateEditor96.pkg
 
 This library adds functions which help edit the sequences on a plate dynamically during a method, either with a dialogue or from a csv file. The functions it adds are:
 
-  - :py:func:`EditPlate96_Custom`
-  - :py:func:`EditPlate96`
-  - :py:func:`EditPlate96_with_BarcodesFromCsv`
-  - :py:func:`EditPlate96_with_BarcodesFromExcelAccess`
+  - :ven:func:`EditPlate96_Custom`
+  - :ven:func:`EditPlate96`
+  - :ven:func:`EditPlate96_with_BarcodesFromCsv`
+  - :ven:func:`EditPlate96_with_BarcodesFromExcelAccess`
 
-.. py:function:: EditPlate96_Custom(sequence o_SeqEdit, sequence i_OriginalPlateSeq, variable i_message, variable fixed_number, sequence i_forbiddenWellsSeq, sequence i_preSelectionSeq, variable i_Editable)
+.. ven:function:: EditPlate96_Custom(sequence o_SeqEdit, sequence i_OriginalPlateSeq, variable i_message, variable fixed_number, sequence i_forbiddenWellsSeq, sequence i_preSelectionSeq, variable i_Editable)
 
   This function shows a GUI to select wells in a 96 plate, and returns a sequence sorted A1,B1,C1... with the selection  with addtional options.
 
