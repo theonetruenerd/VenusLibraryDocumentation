@@ -5,16 +5,16 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/HSLStatistics.pkg
 
 The HSLStatistics library is designed to easily allow the user to perform basic statistical functions easily. It adds the following functions:
 
-  - :py:func:`Stat_Average`
-  - :py:func:`Stat_StdDeviation`
-  - :py:func:`Stat_CorrelationCoefficent`
-  - :py:func:`Stat_RSQ`
-  - :py:func:`Stat_Slope`
-  - :py:func:`Stat_Intercept`
-  - :py:func:`Stat_Min`
-  - :py:func:`Stat_Max`
+  - :ven:func:`Stat_Average`
+  - :ven:func:`Stat_StdDeviation`
+  - :ven:func:`Stat_CorrelationCoefficent`
+  - :ven:func:`Stat_RSQ`
+  - :ven:func:`Stat_Slope`
+  - :ven:func:`Stat_Intercept`
+  - :ven:func:`Stat_Min`
+  - :ven:func:`Stat_Max`
 
-.. py:function:: Stat_Average(array DataArray)
+.. ven:function:: Stat_Average(array DataArray)
 
   This function returns the average of a data set input as an array
 
@@ -23,7 +23,7 @@ The HSLStatistics library is designed to easily allow the user to perform basic 
   :return: The calculated average of the array
   :rtype: Variable
 
-.. py:function:: Stat_StdDeviation(array DataArray)
+.. ven:function:: Stat_StdDeviation(array DataArray)
 
   This function returns the standard deviation of a data set input as an array
 
@@ -32,7 +32,7 @@ The HSLStatistics library is designed to easily allow the user to perform basic 
   :return: The calculated standard deviation of the array
   :rtype: Variable
 
-.. py:function:: Stat_CorrelationCoefficient(array XArray, array YArray)
+.. ven:function:: Stat_CorrelationCoefficient(array XArray, array YArray)
 
   This function returns the correlation coefficient (r-value) of a paired data set
 
@@ -43,7 +43,7 @@ The HSLStatistics library is designed to easily allow the user to perform basic 
   :return: The r-value of the paired data set
   :rtype: Variable
 
-.. py:function:: Stat_RSQ(array XArray, array YArray)
+.. ven:function:: Stat_RSQ(array XArray, array YArray)
 
   This function returns the pearson coefficient (r^2) of a paired data set
 
@@ -54,7 +54,7 @@ The HSLStatistics library is designed to easily allow the user to perform basic 
   :return: The pearson coefficient of the paired data set
   :rtype: Variable
 
-.. py:function:: Stat_Slope(array XArray, array YArray)
+.. ven:function:: Stat_Slope(array XArray, array YArray)
 
   This function returns the slope of the best fit line of a paired data set
 
@@ -65,7 +65,7 @@ The HSLStatistics library is designed to easily allow the user to perform basic 
   :return: The slope of the best fit line
   :rtype: Variable
 
-.. py:function:: Stat_Intercept(array XArray, array YArray)
+.. ven:function:: Stat_Intercept(array XArray, array YArray)
 
   This function returns the intercept of the best fit line of a paired data set
 
@@ -76,7 +76,7 @@ The HSLStatistics library is designed to easily allow the user to perform basic 
   :return: The intercept of the line of best fit
   :rtype: Variable
 
-.. py:function:: Stat_Min(array DataArray)
+.. ven:function:: Stat_Min(array DataArray)
 
   This function returns the lowest value of a dataset
 
@@ -85,7 +85,7 @@ The HSLStatistics library is designed to easily allow the user to perform basic 
   :return: The lowest value of the dataset
   :rtype: Variable
 
-.. py:functions:: Stat_Max(array DataArray)
+.. ven:functions:: Stat_Max(array DataArray)
 
   This function returns the hgihest value of a dataset
 
