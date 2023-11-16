@@ -5,10 +5,10 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/CheckCarrierPresence.p
 
 This library adds functions which allow you to check whether one or more carriers are loaded on the deck. It requires the sensor at each carrier position to be present and functional. The functions it adds are:
 
-  - :py:func:`CheckCarrierPresenceByArrOfLabIDs`
-  - :py:func:`CheckCarrierPresenceByLabID`
+  - :ven:func:`CheckCarrierPresenceByArrOfLabIDs`
+  - :ven:func:`CheckCarrierPresenceByLabID`
 
-.. py:function:: CheckCarrierPresenceByArrOfLabIDs(variable iInstrument, array iArrLabIDs, array oArrLabIDsNotLoaded)
+.. ven:function:: CheckCarrierPresenceByArrOfLabIDs(variable iInstrument, array iArrLabIDs, array oArrLabIDsNotLoaded)
 
   This function checks whether several carriers are loaded on the deck. This is done by checking if the sensor at each carrier is giving a signal. It will output an array of all the not-loaded carriers, as well as returning a boolean to say whether all carriers are loaded (0) or at least one carrier is not loaded properly (1)
 
@@ -21,7 +21,7 @@ This library adds functions which allow you to check whether one or more carrier
   :return: Boolean of whether all carriers are loaded correctly (0) or at least one carrier is not loaded correctly (1)
   :rtype: Boolean
 
-.. py:function:: CheckCarrierPresenceByLabID(variable iInstrument, variable iLabIDOfCarrier)
+.. ven:function:: CheckCarrierPresenceByLabID(variable iInstrument, variable iLabIDOfCarrier)
 
   This function checks whether a carrier is loaded on the deck. This is done by checking if the sensor at the carrier is giving a signal. It will return a boolean to say whether the carrier is not loaded (0) or loaded (1). 
 
