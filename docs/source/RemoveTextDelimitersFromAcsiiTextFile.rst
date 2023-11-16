@@ -5,9 +5,9 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/RemoveTextDelimitersFr
 
 The RemoveTextDelimitersFromAsciiFile library adds a single function which edits a file to remove all delimiters from the Ascii file at the given file path. 
 
-- :py:func:`RemoveTextDelimitersFromAsciiTextFile`
+- :ven:func:`RemoveTextDelimitersFromAsciiTextFile`
 
-.. py:function:: RemoveTextDelimitersFromAsciiTextFile(variable fileName)
+.. ven:function:: RemoveTextDelimitersFromAsciiTextFile(variable fileName)
 
   This function removes any text delimiters from the Ascii text file at the specified file path. It edits the file rather than outputting a copy.
 
