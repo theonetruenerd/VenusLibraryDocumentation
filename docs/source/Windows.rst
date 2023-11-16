@@ -5,11 +5,11 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/Windows.pkg
 
 The windows library from HSLExtensions adds functions related to registries and special directories. The functions it adds are as follows:
 
-- :py:func:`GetRegistryValue`
-- :py:func:`GetSpecialDirectory`
-- :py:func:`SetRegistryValue`
+- :ven:func:`GetRegistryValue`
+- :ven:func:`GetSpecialDirectory`
+- :ven:func:`SetRegistryValue`
 
-.. py:function:: GetRegistryValue(variable i_intHKey, variable i_strKey, variable i_strValueName, variable o_varValue)
+.. ven:function:: GetRegistryValue(variable i_intHKey, variable i_strKey, variable i_strValueName, variable o_varValue)
 
   This function reads a value from the specified registry
 
@@ -24,7 +24,7 @@ The windows library from HSLExtensions adds functions related to registries and 
   :return: Boolean showing whether the key exists (hslTrue) or not (hslFalse)
   :rtype: Boolean
 
-.. py:function:: GetSpecialDirectory(variable i_intSpecialDirectory)
+.. ven:function:: GetSpecialDirectory(variable i_intSpecialDirectory)
 
   This function gets the specified special directory
 
@@ -33,7 +33,7 @@ The windows library from HSLExtensions adds functions related to registries and 
   :return: The special directory
   :rtype: String
 
-.. py:function:: SetRegistryValue(variable i_intHKey, variable i_strKey, variable i_strValueName, variable i_varValue, variable i_intValueType)
+.. ven:function:: SetRegistryValue(variable i_intHKey, variable i_strKey, variable i_strValueName, variable i_varValue, variable i_intValueType)
 
   This function writes a value to the specified registry
 
