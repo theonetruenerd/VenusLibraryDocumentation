@@ -5,10 +5,10 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/If_And_If_Or.pkg
 
 The if_and_if_or library adds two functions:
 
-- :py:func:`if_and`
-- :py:func:`if_or`
+- :ven:func:`if_and`
+- :ven:func:`if_or`
 
-.. py:function:: if_and(variable iVar1, variable iVar2, variable iVar3, variable iVar4)
+.. ven:function:: if_and(variable iVar1, variable iVar2, variable iVar3, variable iVar4)
 	
 	This function checks variable iVar1 against iVar2 and iVar3 against iVar4; if both statements are true then the function returns a 1, otherwise it returns a 0
 
@@ -23,7 +23,7 @@ The if_and_if_or library adds two functions:
 	:return: 1 if both true, 0 otherwise
 	:rtype: Variable
 
-.. py:function:: if_or(variable iVar1, variable iVar2, variable iVar3, variable iVar4)
+.. ven:function:: if_or(variable iVar1, variable iVar2, variable iVar3, variable iVar4)
 
 	This function checks variable iVar1 against iVar2 and iVar3 against iVar4; if at least one of the statements is true then the function will return a 1, otherwise it will return a 0
 
