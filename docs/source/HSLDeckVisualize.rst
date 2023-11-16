@@ -5,11 +5,11 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/HSLDeckVisualize.pkg
 
 The HSLDeckVisualize library adds functions which will update the layout shown in the run control to account for manually performed actions or cause specific effects to occur. The functions it adds are:
 
-- :py:func:`UpdateUsedPositions`
-- :py:func:`UpdateUsedLabware`
-- :py:func:`UpdateLoadedLabware`
+- :ven:func:`UpdateUsedPositions`
+- :ven:func:`UpdateUsedLabware`
+- :ven:func:`UpdateLoadedLabware`
 
-.. py:function:: UpdateUsedPositions(device dev, sequence positions, variable action, variable description)
+.. ven:function:: UpdateUsedPositions(device dev, sequence positions, variable action, variable description)
 
   This function updates the list of used positions and updates the view.
 
@@ -24,7 +24,7 @@ The HSLDeckVisualize library adds functions which will update the layout shown i
   :return: None
   :rtype: N/A
 
-.. py:function:: UpdateUsedLabware(device dev, array labware, array action, variable description)
+.. ven:function:: UpdateUsedLabware(device dev, array labware, array action, variable description)
 
   This function updates the list of used labware and updates the view accordingly. The labware and action arrays must be the same size.
 
@@ -39,7 +39,7 @@ The HSLDeckVisualize library adds functions which will update the layout shown i
   :return: None
   :rtype: N/A
 
-.. py:function:: UpdateLoadedLabware(device dev, array labware, array state, variable description)
+.. ven:function:: UpdateLoadedLabware(device dev, array labware, array state, variable description)
 
   This function updates the list of loaded labware and updates the view accordingly. The labware and action arrays must be the same size.
 
