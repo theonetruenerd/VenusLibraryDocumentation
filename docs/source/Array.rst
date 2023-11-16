@@ -5,26 +5,26 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/Array.pkg
 
 The array library from HSLExtensions adds functions to help manipulate 1-D arrays. The following functions are added:
 
-- :py:func:`Append`
-- :py:func:`CompareArrays`
-- :py:func:`Concat`
-- :py:func:`ContainsDuplicates`
-- :py:func:`ContainsValue`
-- :py:func:`ConvertToBooleanArray`
-- :py:func:`ConvertToFloatArray`
-- :py:func:`ConvertToIntegerArray`
-- :py:func:`ConvertToStringArray`
-- :py:func:`Copy`
-- :py:func:`FindValue`
-- :py:func:`InitializeAllValues`
-- :py:func:`IsBooleanArray`
-- :py:func:`IsEmpty`
-- :py:func:`IsFloatArray`
-- :py:func:`IsIntegerArray`
-- :py:func:`IsStringArray`
-- :py:func:`Sort`
+- :ven:func:`Append`
+- :ven:func:`CompareArrays`
+- :ven:func:`Concat`
+- :ven:func:`ContainsDuplicates`
+- :ven:func:`ContainsValue`
+- :ven:func:`ConvertToBooleanArray`
+- :ven:func:`ConvertToFloatArray`
+- :ven:func:`ConvertToIntegerArray`
+- :ven:func:`ConvertToStringArray`
+- :ven:func:`Copy`
+- :ven:func:`FindValue`
+- :ven:func:`InitializeAllValues`
+- :ven:func:`IsBooleanArray`
+- :ven:func:`IsEmpty`
+- :ven:func:`IsFloatArray`
+- :ven:func:`IsIntegerArray`
+- :ven:func:`IsStringArray`
+- :ven:func:`Sort`
 
-.. py:function:: Append(array io_arrValuesA, array i_arrValuesB)
+.. ven:function:: Append(array io_arrValuesA, array i_arrValuesB)
 
   This function updates the array io_arrValuesA to add all the values from i_arrValuesB at the end of the array.
 
@@ -35,7 +35,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: None
   :rtype: N/A
 
-.. py:function:: CompareArrays(array i_arrExpectedValues, array i_arrActualValues, array o_arrMissingValues, array o_arrNotExpectedValues)
+.. ven:function:: CompareArrays(array i_arrExpectedValues, array i_arrActualValues, array o_arrMissingValues, array o_arrNotExpectedValues)
 
   This function compares two arrays and outputs arrays of values which are missing from the first array but present in the second, and values which are present in the second array but not in the first.
 
@@ -50,9 +50,9 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: True if both arrays contain the same values (resulting in empty output arrays), false if arrays don't contain the same values (in which case the output arrays will have data in them)
   :rtype: Boolean
 
-.. py:function:: Concat(array i_arrValuesA, array i_arrValuesB)
+.. ven:function:: Concat(array i_arrValuesA, array i_arrValuesB)
 
-  This function appends one array to the other and then returns the concatenated array. The difference between this and the :py:func:`Append` function is that the Append function updates an existing array, whereas this function doesn't change the existing arrays and instead returns a new array.
+  This function appends one array to the other and then returns the concatenated array. The difference between this and the :ven:func:`Append` function is that the Append function updates an existing array, whereas this function doesn't change the existing arrays and instead returns a new array.
 
   :params i_arrValuesA: The array to which the values will be added
   :params i_arrValuesB: The array from which the values will be added
@@ -61,7 +61,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: A new array which is the concatenated version of the input arrays
   :rtype: Array
 
-.. py:function:: ContainsDuplicates(array i_arrValues)
+.. ven:function:: ContainsDuplicates(array i_arrValues)
 
   This function checks whether the input array has multiple of the same value in it
 
@@ -70,7 +70,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: An array with all values which appear more than once in the input array
   :rtype: Array
 
-.. py:function:: ContainsValue(array i_arrValues, variable i_varValue)
+.. ven:function:: ContainsValue(array i_arrValues, variable i_varValue)
 
   This function determines whether a value exists in an array without returning its index
 
@@ -81,7 +81,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: True if the value is present, false otherwise
   :rtype: Boolean
 
-.. py:function:: ConvertToBooleanArray(array i_arrValues, variable o_blnSuccessfullyConverted)
+.. ven:function:: ConvertToBooleanArray(array i_arrValues, variable o_blnSuccessfullyConverted)
 
   This function converts the input array to an array with boolean values. If it is not possible to convert one or more values of the input array, the output will be false and the output array will be empty. Cannot interact with strings, will convert a non-zero int or float into a 1, and will turn a 0 float into a 0.
 
@@ -92,7 +92,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: The boolean version of the input array
   :rtype: Array
 
-.. py:function:: ConvertToFloatArray(array i_arrValues, variable o_blnSuccessfullyConverted)
+.. ven:function:: ConvertToFloatArray(array i_arrValues, variable o_blnSuccessfullyConverted)
 
   This function converts the input array to an array with float values. If it is not possible to convert one or more values of the input array, the output will be false and the output array will be empty. Cannot interact with strings, will convert any int into a float. 
 
@@ -103,7 +103,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: The float version of the input array
   :rtype: Array
 
-.. py:function:: ConvertToIntArray(array i_arrValues, variable o_blnSuccessfullyConverted)
+.. ven:function:: ConvertToIntArray(array i_arrValues, variable o_blnSuccessfullyConverted)
 
   This function converts the input array to one with integer values. If it is not possible to convert one or more values of the input array, the output will be false and the output array will be empty. Cannot interact with strings, will round any floats to the nearest integer.
 
@@ -114,7 +114,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: The integer version of the input array
   :rtype: Array
 
-.. py:function:: ConvertToStringArray(array i_arrValues)
+.. ven:function:: ConvertToStringArray(array i_arrValues)
 
   This function converts the input array to one with string values. 
 
@@ -123,7 +123,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: The float version of the input array
   :rtype: Array
 
-.. py:function:: Copy(array i_arrValues)
+.. ven:function:: Copy(array i_arrValues)
 
   This function will output an exact copy of the input array. 
 
@@ -132,7 +132,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: A copy of the input array
   :rtype: Array
 
-.. py:function:: FindValue(array i_arrValues, variable i_varValue)
+.. ven:function:: FindValue(array i_arrValues, variable i_varValue)
 
   This function will lookup the input variable within the input array and return a 1-based array of the indices of all positions that the input variable was found.
 
@@ -143,7 +143,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: An array of all the locations that the input variable was found
   :rtype: Array
 
-.. py:function:: InitializeAllValues(array io_arrValues, variable i_varValue)
+.. ven:function:: InitializeAllValues(array io_arrValues, variable i_varValue)
 
   This function sets all values within an array to the input variable. Does not work on empty arrays. 
 
@@ -154,7 +154,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: None
   :rtype: N/A
 
-.. py:function:: IsBooleanArray(array i_arrValues)
+.. ven:function:: IsBooleanArray(array i_arrValues)
 
   This function checks whether all values in the array are booleans.
 
@@ -163,7 +163,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: A boolean of whether the input array is all booleans or not
   :rtype: Boolean
 
-.. py:function:: IsEmpty(array i_arrValues)
+.. ven:function:: IsEmpty(array i_arrValues)
 
   This function checks whether the input array is empty
 
@@ -172,7 +172,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: A boolean of whether the input array is empty or not
   :rtype: Boolean
 
-.. py:function:: IsFloatArray(array i_arrValues)
+.. ven:function:: IsFloatArray(array i_arrValues)
 
   This function checks whether all values in the array are floats.
 
@@ -181,7 +181,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: A boolean of whether the input array is all floats or not
   :rtype: Boolean
 
-.. py:function:: IsIntegerArray(array i_arrValues)
+.. ven:function:: IsIntegerArray(array i_arrValues)
 
   This function checks whether all values in the array are integers.
 
@@ -190,7 +190,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: A boolean of whether the input array is all integers or not
   :rtype: Boolean
 
-.. py:function:: IsStringArray(array i_arrValues)
+.. ven:function:: IsStringArray(array i_arrValues)
 
   This function checks whether all values in the array are strings.
 
@@ -199,7 +199,7 @@ The array library from HSLExtensions adds functions to help manipulate 1-D array
   :return: A boolean of whether the input array is all strings or not
   :rtype: Boolean
 
-.. py:function:: Sort(array i_arrValues, variable i_intSortMode, o_bSuccessfulSorted)
+.. ven:function:: Sort(array i_arrValues, variable i_intSortMode, o_bSuccessfulSorted)
 
   This function outputs a sorted version of the array using the Shakersort sorting algorithm. All values in the array must share the same type for this function to work. Sort mode can either be 1 or 2, 1 is ascending and 2 is descending. 
 
