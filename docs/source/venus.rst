@@ -150,6 +150,10 @@ The following function groups are not libraries and instead are "core" groups wh
   - ML_STAR
   - Microlab STAR Smart Steps
 
+When pipetting using the 1000ul channels, there are 8 channels total. Channel patterns (which determine which channels are in use at any given point in time) are written in the form of a string of 1s and 0s, where 0 is not in use and 1 is in use. For example, if using channels 2, 3, and 5, the channel pattern would be "01101000".
+
+There are several different tip types available for an ML_STAR, the most commonly used are 300ul (Standard volume, tip id 0), and 50ul (tip id 22). You can also get 10ul tips and 1000ul tips. All tips have the option of being normal, stackable, or filtered. No tip can take up more liquid than its type (i.e. a 300uL tip cannot ever have more than 300ul total volume in it). The 300ul tips should not be used to go below 10ul as they become very inaccurate. When pipetting, the total volume in a channel is the amount of liquid that has been aspirated by that channel minus the amount of liquid that has been dispensed by that channel. 
+
 General Steps
 -------------------------------------------------------
 
