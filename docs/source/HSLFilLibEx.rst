@@ -5,11 +5,11 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/HSLFilLibEx.pkg
 
 HSLFilLibEx allows you to manipulate files. It adds the following functions:
 
-- :py:func:`FilCopyFileEx`
-- :py:func:`FilDeleteFileEx`
-- :py:func:`FilFormatReportFileEx`
+- :ven:func:`FilCopyFileEx`
+- :ven:func:`FilDeleteFileEx`
+- :ven:func:`FilFormatReportFileEx`
 
-.. py:function:: FilCopyFileEx(variable SourceFilePathName, variable DestinationFilePathName)
+.. ven:function:: FilCopyFileEx(variable SourceFilePathName, variable DestinationFilePathName)
 
   This function creates a copy of the specified file, which will be placed in the specified new location
 
@@ -20,7 +20,7 @@ HSLFilLibEx allows you to manipulate files. It adds the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: FilDeleteFileEx(variable FilePathName)
+.. ven:function:: FilDeleteFileEx(variable FilePathName)
 
   This function deletes the file at the specified location
 
@@ -29,7 +29,7 @@ HSLFilLibEx allows you to manipulate files. It adds the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: FilFormatReportFileEx(variable SourceFilePathName, variable DestinationFilePathName)
+.. ven:function:: FilFormatReportFileEx(variable SourceFilePathName, variable DestinationFilePathName)
 
   This function creates a formatted/filtered copy of the specified report file. It searches the file for the string "Element Name" and copies any subsequent lines to the new file.
 
