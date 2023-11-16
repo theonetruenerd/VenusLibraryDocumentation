@@ -5,12 +5,12 @@ https://github.com/theonetruenerd/VenusPackages/blob/main/EditFileAttributes.pkg
 
 The Edit File Attributes library adds the following functions: 
 
-- :py:func:`Make_Hidden`
-- :py:func:`Make_ReadOnly`
-- :py:func:`Remove_Hidden`
-- :py:func:`Remove_ReadOnly`
+- :ven:func:`Make_Hidden`
+- :ven:func:`Make_ReadOnly`
+- :ven:func:`Remove_Hidden`
+- :ven:func:`Remove_ReadOnly`
 
-.. py:function:: Make_Hidden(variable Filename)
+.. ven:function:: Make_Hidden(variable Filename)
 
   Applies the hidden attribute to the file found at the path specified.
 
@@ -19,7 +19,7 @@ The Edit File Attributes library adds the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: Make_ReadOnly(variable Filename)
+.. ven:function:: Make_ReadOnly(variable Filename)
 
   Applies the read only attribute to the file found at the path specified.
 
@@ -28,7 +28,7 @@ The Edit File Attributes library adds the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: Remove_Hidden(variable Filename)
+.. ven:function:: Remove_Hidden(variable Filename)
 
   Removes the hidden attribute from the file found at the path specified.
 
@@ -37,7 +37,7 @@ The Edit File Attributes library adds the following functions:
   :return: None
   :rtype: N/A
 
-.. py:function:: Remove_ReadOnly(variable Filename)
+.. ven:function:: Remove_ReadOnly(variable Filename)
 
   Removes the read only attribute from the file found at the path specified.
 
