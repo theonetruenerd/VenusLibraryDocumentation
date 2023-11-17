@@ -168,6 +168,8 @@ For creation of reaction mixes, if unspecified, you should add in the following 
 
 If the substance type is unknown, then prioritise adding high volumes before low volumes. In the code, functions do not have the :ven:func` prefix. 
 
+Microlab STARs have something called TADM; this is a pressure monitoring system of within pipetting steps, standing for Total Air Displacement Monitoring. The pressure data is saved in 10ms timepoints in a microsoft access database, along with the channel number, timestamp, and liquid class being used for the specific pipetting step that the TADM data was generated from. With the TADMCurveExport library, you can export the TADM data from the Microsoft Access Database file into an Excel file or a set of CSV files automatically. The TADM data can also be uploaded into the liquid class database to be associated with the specific liquid classes involved. You can set TADM tolerance bands within the liquid class database, which can cause the method to abort if TADM pressure data goes outside of the tolerance bands. The TADM data can also be used to analyze success of pipetting steps as incorrect/flawed pipetting (e.g. generating bubbles) will cause noticeable changes in the TADM data. 
+
 General Steps
 -------------------------------------------------------
 
@@ -238,6 +240,24 @@ ML_STAR
 .. ven:function:: Lock/Unlock Front Cover (Single Step)
 
   The Lock/Unlock Front Cover (Single Step) function locks or unlocks the protective cover of the Microlab STAR. It can either be set to 1 (locked) or 0 (unlocked). The error settings dialog allows you to input automatic responses to certain errors.
+
+.. ven:function:: iSWAP Get Plate (Single Step)
+
+  The iSWAP Get Plate (Single Step) function uses the iSWAP (if the instrument has one installed) to pick up a plate from a specified position, in preparation for either an iSWAP Move Plate or iSWAP Place Plate function to be called. You specify the sequence of the plate to be picked up, as well as the lid sequence if it has a lid. You specify whether sequence counting is automatic (1) or manual (0); usually it is manual, it is automatic if you plan on moving multiple plates which are in the same sequence. You can set the iSWAP grip parameters, which are the grip height in mm, measured from the top of the labware, and the grip mode - this can be gripping the labware on the small side (0; the default) or the long side (1). Most labware comes with data in the labware file as to what grip width is required and the opening width before access, but this function has the option to override that, in which case you can put in the grip width and opening width before access, both in mm. The movement can either be just to a carrier (0; default) or a complex movement (1). The transport mode can be set to 0 (plate only), 1 (lid only) or 2 (plate and lid). If complex movement is chosen, three more parameters have to be input: the retract distance in mm, the lift-up height in mm, and the labware orientation, which can either be 1, 2, 3 or 4, based on which of the cardinal directions the iSWAP is pickup up the labware from. 
+  The advanced setting dialog allows you to set the iSWAP grip force (default 5, goes between 0 and 10), as well as the tolerance in mm, whether the grip is inverse (1) or normal (0), and whether collision control is on (1) or off (0). The error settings dialog allows you to program in automatic responses to specific errors. 
+
+.. ven:function:: iSWAP Place Plate (Single Step)
+
+  The iSWAP Place Plate (Single Step) function allows the iSWAP to move to a specified location and place down a plate if it is holding one. You input the target sequence which is the location you wish the iSWAP place the plate in, as well as the lid sequence if the plate has a lid. The movement can either be just to a carrier (0; default) or a complex movement (1). The transport mode can be set to 0 (plate only), 1 (lid only) or 2 (plate and lid). If complex movement is chosen, three more parameters have to be input: the retract distance in mm, the lift-up height in mm, and the labware orientation, which can either be 1, 2, 3 or 4, based on which of the cardinal directions the iSWAP is pickup up the labware from. You specify whether sequence counting is automatic (1) or manual (0); usually it is manual, it is automatic if you plan on placing multiple plates which are in the same sequence.
+  The advanced option dialog allows you to determine whether collision control is on (1) or off (0). The error settings dialog allows you to program in automatic responses to specific errors. 
+
+.. ven:function:: iSWAP Move Plate (Single Step)
+
+  The iSWAP Move Plate (Single Step) function allows the iSWAP to move to a specified location. You input the target sequence which is the location you wish the iSWAP to be moved to. The advanced option dialog allows you to determine whether the labware is gripped on the small side (0) or long side (1), as well as whether collision control is on (1) or off (0). The error settings dialog allows you to program in automatic responses to specific errors. 
+
+.. ven:function:: Wait for TADM Upload (Single Step)
+
+  The Wait for TADM Upload (Single Step) function forces the method to wait until the TADM data for specified pipetting tool (either the 1000ul channels (0), the 5ml channels (1), or the 96 head (2)) has been uploaded to a microsoft access database. 
 
 Microlab STAR Smart Steps
 -------------------------------------------------
