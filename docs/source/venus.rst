@@ -150,7 +150,7 @@ The following function groups are not libraries and instead are "core" groups wh
   - ML_STAR
   - Microlab STAR Smart Steps
 
-When pipetting using the 1000ul channels, there are 8 channels total. Channel patterns (which determine which channels are in use at any given point in time) are written in the form of a string of 1s and 0s, where 0 is not in use and 1 is in use. For example, if using channels 2, 3, and 5, the channel pattern would be "01101000".
+When pipetting using the 1000ul channels, there are 8 channels total. Channel patterns (which determine which channels are in use at any given point in time) are written in the form of a string of 1s and 0s, where 0 is not in use and 1 is in use. For example, if using channels 2, 3, and 5, the channel pattern would be "01101000". All pipetting steps require a channel pattern input as one of the parameters. Unless specified, the priority of the channels should always be to use the channels with lower indices. 
 
 There are several different tip types available for an ML_STAR, the most commonly used are 300ul (Standard volume, tip id 0), and 50ul (tip id 22). You can also get 10ul tips and 1000ul tips. All tips have the option of being normal, stackable, or filtered. No tip can take up more liquid than its type (i.e. a 300uL tip cannot ever have more than 300ul total volume in it). The 300ul tips should not be used to go below 10ul as they become very inaccurate. When pipetting, the total volume in a channel is the amount of liquid that has been aspirated by that channel minus the amount of liquid that has been dispensed by that channel. 
 
@@ -166,7 +166,7 @@ For creation of reaction mixes, if unspecified, you should add in the following 
 - ATP
 - Enzymes.
 
-If the substance type is unknown, then prioritise adding high volumes before low volumes. 
+If the substance type is unknown, then prioritise adding high volumes before low volumes. In the code, functions do not have the :ven:func` prefix. 
 
 General Steps
 -------------------------------------------------------
@@ -230,6 +230,14 @@ ML_STAR
   The 1000ul Channel Aspirate 2nd Phase (Single Step) function allows you to aspirate a second phase of liquid into a tip that already has liquid in it. You input a target sequence for it to aspirate from, and input whether sequence counting is automatic (1) or manual (0). If automatic, the next time it interacts with a sequence it will treat the first untouched well as the start of the sequence. You can input the volume in ul either as a variable or raw value, or can input individual volumes for each channel as variables, raw values, or array elements. You can set the aspiration mode to 0 (aspiration) or 2 (aspirate all). Aspirate all will remove all available liquid in the well up to the specified volume without throwing errors if there is too little liquid. 
   In the pipetting cycle settings you can input what tip type you are using and the dispense mode, which will then provide a filter for the liquid classes that are available for you to select to use, which are chosen from the liquid class database. You can also set the aspiration position. You can use capacitive liquid level detection (cLLD) to determine the liquid level height, at a variety of sensitivities, with 5 being the default (which means "set in the labware definition" for the specific piece of labware being interacted with). You can have pressure liquid level detection (pLLD) on instead of or as well as cLLD. This uses pressure changes in the tip to determine what the liquid level is. If using both pLLD and cLLD, you can input a max height difference in mm, which will cause an error if the detected height from the cLLD and pLLD differ by more than the set value. You also input a submerge depth in mm which determines how far below the detected liquid level the tip goes before beginning the aspiration. 
   The channel settings available allow you to select which channels are being used in the dispense, which can be either selected via tickboxes, input directly into the dialog box, or input as a variable. The advanced settings let you control the immersion depth for the aspiration in mm, and whether liquid following during aspiration is on (1) or off (0). The advanced settings also let you input the Z speed of Search Level, in mm/s, and the dispenser stream of Search Level, in ul/s. Lastly, the advanced settings let you control the dispense back parameters, allowing you to input a retract distance in mm and a dispense stream in ul/s. The error section lets you set custom error handling responses to specific errors that will potentially occur during the process, and the responses are automatically triggered upon the error. 
+
+.. ven:function:: Initialize (Single Step)
+
+  The Initialize (Single Step) function initializes the Microlab STAR. It is required to be called the first time the STAR is used after being turned on. It is sensible to put it at the beginning of every method. It can either always initialize (1) or only initialize for the first run when turned on (0). The error settings dialog allows you to input automatic responses to certain errors. 
+
+.. ven:function:: Lock/Unlock Front Cover (Single Step)
+
+  The Lock/Unlock Front Cover (Single Step) function locks or unlocks the protective cover of the Microlab STAR. It can either be set to 1 (locked) or 0 (unlocked). The error settings dialog allows you to input automatic responses to certain errors.
 
 Microlab STAR Smart Steps
 -------------------------------------------------
