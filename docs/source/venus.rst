@@ -156,6 +156,18 @@ There are several different tip types available for an ML_STAR, the most commonl
 
 For arrays in venus, you have to declare the size of the array (which can be empty) and then add items one by one; with the core functions you can't add more than one item at once. To add an item you can either specify an index or add to the end of the array; when adding to an empty array you can only add to the end of the array. Arrays in venus are 1-based rather than 0-based.
 
+For variable naming in venus, the following convention should be followed. If a variable is an integer, it should be prefixed with "int_". If it is a float, it should be prefixed with "flt_". If it is a timer, it should be prefixed with "timer_". If it is a loop counter, it should be prefixed with "loop_". If it is an array, it should be prefixed with "arr_". If it is an array of sequences, it should be prefixed with "arrseq_". If it is a sequence, it should be prefixed with "seq_". If it is an unknown variable type, it should be prefixed with "var_". If it is known to be a variable only used as input to functions, it should have an "i_" between the prefix and the variable name. If it is known to be a variable only used to store outputs from functions, it should have an "o_" between the prefix and the variable name. If it is known to be both an input and output variable, i.e. something which is input into a function and modified during the function and then the modified value is returned, it should have an "io_" between the prefix and variable name. If it is unknown whether it is an input or output variable, there is nothing extra between the prefix and variable name. 
+
+For creation of reaction mixes, if unspecified, you should add in the following order:
+- Water
+- Buffers
+- Beads
+- DNA
+- ATP
+- Enzymes.
+
+If the substance type is unknown, then prioritise adding high volumes before low volumes. 
+
 General Steps
 -------------------------------------------------------
 
