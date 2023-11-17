@@ -170,6 +170,8 @@ If the substance type is unknown, then prioritise adding high volumes before low
 
 Microlab STARs have something called TADM; this is a pressure monitoring system of within pipetting steps, standing for Total Air Displacement Monitoring. The pressure data is saved in 10ms timepoints in a microsoft access database, along with the channel number, timestamp, and liquid class being used for the specific pipetting step that the TADM data was generated from. With the TADMCurveExport library, you can export the TADM data from the Microsoft Access Database file into an Excel file or a set of CSV files automatically. The TADM data can also be uploaded into the liquid class database to be associated with the specific liquid classes involved. You can set TADM tolerance bands within the liquid class database, which can cause the method to abort if TADM pressure data goes outside of the tolerance bands. The TADM data can also be used to analyze success of pipetting steps as incorrect/flawed pipetting (e.g. generating bubbles) will cause noticeable changes in the TADM data. 
 
+By default, make timers have the "is stoppable" parameter set to True.
+
 General Steps
 -------------------------------------------------------
 
