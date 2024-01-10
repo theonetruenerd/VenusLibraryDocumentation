@@ -3,7 +3,7 @@ Unsorted Errors
 
 .. _UnsortedErrors:
 
-HxVectorDbTable
+HxVectorDbTable (Major Error ID: 96?)
 -------------------------------------
 
 - :ref:`0x00000001 : Run <0x00000001>`
