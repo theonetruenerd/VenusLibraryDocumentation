@@ -42,6 +42,14 @@ HxVectorDbTable
 Major ID: 31
 -------------------------------------------
 Values (presumably corresponding to specific/minor errors? unsure)
+
 - :ref:`100 : HxErr`
 - :ref:`101 : Phoenix Error, error code %s\n\nError code 0x%x - 0x%x - 0x%x \n`
+- :ref:`102 : Instrument Error
+- :ref:`103 : Error`
+- :ref:`104 : Unknown Hx result`
+- :ref:`105 : Unkown HRESULT`
+- :ref:`106 : No description available in rich error data`
+- :ref:`107 : Failed to get extended error information`
+- :ref:`108 : Locale language not found; loading English resources by default`
 
