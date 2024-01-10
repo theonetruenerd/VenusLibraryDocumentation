@@ -61,3 +61,29 @@ Values
 - :ref:`101 : Unexpected error occurred`
 - :ref:`102 : Unable to add string to trace view`
 - :ref:`103 : Unable to open trace file. System error`
+
+HxSecurity45 
+----------------------------------------------
+Values
+
+- :ref:`1 : Error opening file '%s' for checksum verification.\n\nSystem error: "%s"`
+- :ref:`2 : Checksum verification failed\n\nCurrent checksum: %0X`
+- :ref:`3 : Checksum verification of file '%s' failed.`
+- :ref:`4 : File '%s' is not validated.`
+- :ref:`5 : Invalid file validation flag value.`
+- :ref:`6 : Corrupt check sum line in '%s'.`
+- :ref:`7 : File '%s' must not be used in routine work! (File not validated)`
+- :ref:`8 : Current user does not have the right to validate a file`
+- :ref:`9 : No check sum line found in file '%s'`
+- :ref:`10 : File '%s' not opened as a binary file for check sum verification.`
+- :ref:`11 : Value not initialised within give HxFileSecurity object.`
+- :ref:`12 : Invalid file name '%s'.`
+- :ref:`13 : System error on calling function '%s'. ('%s', %d)`
+- :ref:`14 : File '%s' is too large.`
+- :ref:`15 : No user logged on.`
+- :ref:`16 : Unknown object type %d.`
+- :ref:`17 : File.`
+- :ref:`18 : Liquid Class`
+- :ref:`19 : The object '%s' must not be used in routine work.
+- :ref:`57344 : HxSecurity45`
+- :ref:`20 : `
