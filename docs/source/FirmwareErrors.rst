@@ -84,6 +84,6 @@ Values
 - :ref:`16 : Unknown object type %d.`
 - :ref:`17 : File.`
 - :ref:`18 : Liquid Class`
-- :ref:`19 : The object '%s' must not be used in routine work.
+- :ref:`19 : The object '%s' must not be used in routine work.`
 - :ref:`57344 : HxSecurity45`
 - :ref:`20 : `
