@@ -53,3 +53,11 @@ Values (presumably corresponding to specific/minor errors? unsure)
 - :ref:`107 : Failed to get extended error information`
 - :ref:`108 : Locale language not found; loading English resources by default`
 
+Trace View
+----------------------------------------------
+Values
+
+- :ref:`100 : HxTraceView`
+- :ref:`101 : Unexpected error occurred`
+- :ref:`102 : Unable to add string to trace view`
+- :ref:`103 : Unable to open trace file. System error`
