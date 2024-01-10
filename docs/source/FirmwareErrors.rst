@@ -86,4 +86,5 @@ Values
 - :ref:`18 : Liquid Class`
 - :ref:`19 : The object '%s' must not be used in routine work.`
 - :ref:`57344 : HxSecurity45`
-- :ref:`20 : `
+- :ref:`20 : No caption given`
+
