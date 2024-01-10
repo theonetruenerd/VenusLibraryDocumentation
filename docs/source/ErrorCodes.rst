@@ -20,6 +20,7 @@ Minor IDs that have been identified (unsure if all associated with errors?)
 ------------------------------
 
 Hamilton.HxVectorDB:
+
 - 01: IHxVectorDbTracking
 - 02: IHxVectorDbWorklistManagement
 - 03: IHxVectorDbManagement
@@ -30,6 +31,7 @@ Hamilton.HxVectorDB:
 - 08: Singleton
 
 Hamilton.HxDatabase:
+
 - 00: Global
 - 01: Singleton
 - 02: ResourceManager
@@ -49,6 +51,7 @@ Hamilton.HxDatabase:
 - 25: IHxDbTransaction
 
 [Need sorting]
+
 - 10: HxEmail
 - 20: HxErrorEvent
 - 21: SendAddress
