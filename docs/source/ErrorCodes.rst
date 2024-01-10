@@ -7,3 +7,5 @@ The Major ID is usually assigned in the library which is causing the error; for 
 
   - :ref:`Runtime Errors <RuntimeErrors>`
   - :ref:`Syntax Errors <SyntaxErrors>`
+  - :ref:`Firmware Errors <FirmwareErrors>`
+
