@@ -114,3 +114,64 @@ Values
 - :ref:`119 : Main-Modul is in download mode.`
 -----------------
 The above continues to 273, will continue later
+
+Hamilton.HxStarConfig - TopicHelpIdEnum
+-------------------------------------------------
+
+- :ref:`0x000003E8 : Overview`
+- :ref:`0x000003E9 : Instrument Configuration`
+- :ref:`0x000003EA : Instrument Configuration - Default Waste`
+- :ref:`0x000003EB : Instrument Configuration - Teaching with Channel Number`
+- :ref:`0x000003EC : Instrument Configuration - Teaching with XL Channel Number`
+- :ref:`0x000003ED : Instrument Configuration - Front Cover Locking`
+- :ref:`0x000003EE : Instrument Configuration - Speed Up Lld Search`
+- :ref:`0x000003EF : Instrument Configuration - Check For Occupied Deck`
+- :ref:`0x000003F0 : Simulator Configuration`
+- :ref:`0x000003F1 : Simulator Configuration - Simulation`
+- :ref:`0x000003F2 : Simulator Configuration - CO-RE 96 Head`
+- :ref:`0x000003F3 : Simulator Configuration - CO-RE 384 Head`
+- :ref:`0x000003F4 : Simulator Configuration - Pump Unit 1`
+- :ref:`0x000003F5 : Simulator Configuration - Pump Unit 2`
+- :ref:`0x000003F6 : Simulator Configuration - Pump Unit 3`
+- :ref:`0x000003F7 : Simulator Configuration - iSWAP`
+- :ref:`0x000003F8 : Simulator Configuration - Temperature Controlled Carrier 1`
+- :ref:`0x000003F9 : Simulator Configuration - Temperature Controlled Carrier 2`
+- :ref:`0x000003FA : Simulator Configuration - Wash Station 1`
+- :ref:`0x000003FB : Simulator Configuration - Wash Station 2`
+- :ref:`0x000003FC : Simulator Configuration - Nano Dispenser`
+- :ref:`0x000003FD : Simulator Configuration - Simulator Delay`
+- :ref:`0x000003FE : Simulator Configuration - Autoload`
+- :ref:`0x000003FF : Simulator Configuration - Number of Channels`
+- :ref:`0x00000400 : Simulator Configuration - Channel Raster`
+- :ref:`0x00000401 : Simulator Configuration - Number of XL Channels`
+- :ref:`0x00000402 : Simulator Configuration - XL Channel Raster`
+- :ref:`0x00000403 : Simulator Configuration - Head Gripper`
+- :ref:`0x00000404 : Simulator Configuration - Image Channel`
+- :ref:`0x00000405 : Simulator Configuration - Number of Capper Channels`
+- :ref:`0x00000406 : Simulator Configuration - Capper Channel Raster`
+- :ref:`0x00000407 : Simulator Configuration - Gel Card Gripper`
+- :ref:`0x00000408 : Simulator Configuration - Punch Card Gripper`
+- :ref:`0x00000409 : Simulator Configuration - Puncher Module`
+- :ref:`0x0000040A : Simulator Configuration - Robotic Channel Type`
+- :ref:`0x0000040B : Simulator Configuration - Twister Decapper 1`
+- :ref:`0x0000040C : Simulator Configuration - Twister Decapper 2`
+- :ref:`0x0000040D : Step Return`
+- :ref:`0x0000040E : Step Return - Block Delimiter`
+- :ref:`0x0000040F : Step Return - Field Delimiter`
+- :ref:`0x00000410 : Step Selection`
+- :ref:`0x00000411 : Step Selection - Low Level Steps`
+- :ref:`0x00000412 : Barcode Settings`
+- :ref:`0x00000413 : Barcode Settings - Barcode Trace`
+- :ref:`0x00000414 : Barcode Settings - Used Barcode Types`
+- :ref:`0x00000415 : Barcode 2D Settings - Used Barcode Types`
+- :ref:`0x00000416 : Barcode Settings - Ask for Labware`
+- :ref:`0x00000417 : TADM Settings`
+- :ref:`0x00000418 : TADM Settings - TADM Mode`
+- :ref:`0x00000419 : TADM Settings - TADM Upload Mode`
+- :ref:`0x0000041A : Communication Settings`
+- :ref:`0x0000041B : Communication Settings - Communication Interface`
+- :ref:`0x0000041C : Communication Settings - RS232 Com Port`
+- :ref:`0x0000041D : Communication Settings - TCPIP Port`
+- :ref:`0x0000041E : Maintenance`
+- :ref:`0x0000041F : Maintenance - Maintenance Control`
+- :ref:`0x00000420 : Maintenance - Maintenance Processes`
