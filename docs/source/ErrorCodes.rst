@@ -7,5 +7,10 @@ The Major ID is usually assigned in the library which is causing the error; for 
 
   - :ref:`Runtime Errors <RuntimeErrors>`
   - :ref:`Syntax Errors <SyntaxErrors>`
-  - :ref:`Firmware Errors <FirmwareErrors>`
+  - :ref:`Unsorted Errors <FirmwareErrors>`
+
+Major IDs
+------------------------------
+  - 96: Hamilton.HxDatabase
+  - 97: Hamilton.HxVectorDatabase
 
