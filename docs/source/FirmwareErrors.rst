@@ -44,7 +44,7 @@ Major ID: 31
 Values (presumably corresponding to specific/minor errors? unsure)
 
 - :ref:`100 : HxErr`
-- :ref:`101 : Phoenix Error, error code %s Error code 0x%x - 0x%x - 0x%x \n `
+- :ref:`101 : Phoenix Error, error code %s Error code 0x%x - 0x%x - 0x%x`
 - :ref:`102 : Instrument Error`
 - :ref:`103 : Error`
 - :ref:`104 : Unknown Hx result`
