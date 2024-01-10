@@ -88,3 +88,29 @@ Values
 - :ref:`57344 : HxSecurity45`
 - :ref:`20 : No caption given`
 
+HxAtsInstrument
+-----------------------------------------------
+Values
+
+- :ref:`100 : HxAtsInstrument`
+- :ref:`101 : H0-Modul is in download mode.`
+- :ref:`102 : The CO-RE head isn't adjusted.`
+- :ref:`103 : CO-RE 96 head.`
+- :ref:`104 : Firmware version of CO-RE 96 head: `
+- :ref:`105 : Error in CO-RE 96 head module (e.g. Error EEPROM Checksumme)`
+- :ref:`106 : Invalid argument at %s: %d`
+- :ref:`107 : Configuration file is invalid`
+- :ref:`108 : Unsupported configuration file version: %d.`
+- :ref:`109 : One or more arguments are invalid.`
+- :ref:`110 : No such interface supported.`
+- :ref:`111 : Invalid pointer.`
+- :ref:`112 : This component has not been successfully initialised.`
+- :ref:`113 : Method not implemented.`
+- :ref:`114 : Unhandled exception.`
+- :ref:`115 : There is no connection.\nPlease check the cable and plugs.`
+- :ref:`116 : Fatal error.`
+- :ref:`117 : Mastermodul is in download mode.`
+- :ref:`118 : Error in Mastermodul (e.g. Error EEPROM Checksumme)
+- :ref:`119 : Main-Modul is in download mode.`
+-----------------
+The above continues to 273, will continue later
