@@ -107,7 +107,7 @@ Values
 - :ref:`112 : This component has not been successfully initialised.`
 - :ref:`113 : Method not implemented.`
 - :ref:`114 : Unhandled exception.`
-- :ref:`115 : There is no connection.\nPlease check the cable and plugs.`
+- :ref:`115 : There is no connection. Please check the cable and plugs.`
 - :ref:`116 : Fatal error.`
 - :ref:`117 : Mastermodul is in download mode.`
 - :ref:`118 : Error in Mastermodul (e.g. Error EEPROM Checksumme)`
