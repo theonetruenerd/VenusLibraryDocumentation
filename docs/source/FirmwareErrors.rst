@@ -110,7 +110,7 @@ Values
 - :ref:`115 : There is no connection.\nPlease check the cable and plugs.`
 - :ref:`116 : Fatal error.`
 - :ref:`117 : Mastermodul is in download mode.`
-- :ref:`118 : Error in Mastermodul (e.g. Error EEPROM Checksumme)
+- :ref:`118 : Error in Mastermodul (e.g. Error EEPROM Checksumme)`
 - :ref:`119 : Main-Modul is in download mode.`
 -----------------
 The above continues to 273, will continue later
@@ -175,3 +175,126 @@ Hamilton.HxStarConfig - TopicHelpIdEnum
 - :ref:`0x0000041E : Maintenance`
 - :ref:`0x0000041F : Maintenance - Maintenance Control`
 - :ref:`0x00000420 : Maintenance - Maintenance Processes`
+
+Hamilton.Interop.HxUserManager
+----------------------------------------------------
+User Information Keys
+
+- :ref:`keyUserName : 0xE0500001`
+- :ref:`keyFullName : 0xE0500002`
+- :ref:`keyDescription : 0xE0500003`
+- :ref:`keyAccessRights : 0xE0500004`
+
+Hamilton.Interop.HxGruCommand
+------------------------------------------------------
+HxCommandMoveKeys
+
+- :ref:`0xE62A0000 : Command Labware ID`
+- :ref:`0xE62A0001 : Command Labware Pointer`
+- :ref:`0xE62A0002 : Command Move Point`
+- :ref:`0xE62A0003 : Command Move Angle`
+- :ref:`0xE62A0004 : Command Move Absolute/Relative Hint`
+- :ref:`0xE62A0005 : Command Move X`
+- :ref:`0xE62A0006 : Command Move Y`
+- :ref:`0xE62A0007 : Command Move Z`
+- :ref:`0xE62A0008 : Probe Head Rows`
+- :ref:`0xE62A0009 : Probe Head Columns`
+- :ref:`0xE62A000A : Probe Tip Delta Column`
+- :ref:`0xE62A000B : Probe Tip Delta Row`
+- :ref:`0xE62A000C : Probe Tip Row Start`
+- :ref:`0xE62A000D : Probe Tip Column Start`
+- :ref:`0xE62A000E : Probe Tip Order by Column`
+- :ref:`0xE62A000F : Probe Tip Serpentine`
+- :ref:`0xE62A0010 : Probe Max Z Position`
+- :ref:`0xE62A0011 : Command Move Axis`
+- :ref:`0xE62A0012 : Command Axis X`
+- :ref:`0xE62A0013 : Command Axis Y`
+- :ref:`0xE62A0014 : Command Axis Z`
+- :ref:`0xE62A0015 : Command Move Distance`
+- :ref:`0xE62A0016 : Command Move Absolute`
+- :ref:`0xE62A0017 : Command Move Relative`
+- :ref:`0xE62A0018 : Probe Tip Delta X Min`
+- :ref:`0xE62A0019 : Probe Tip Delta X Max`
+- :ref:`0xE62A001A : Probe Tip Delta Y Min`
+- :ref:`0xE62A001B : Probe Tip Delta Y Max`
+- :ref:`0xE62A001C : Probe Head Description`
+- :ref:`0xE62A001D : Probe Head View Name`
+- :ref:`0xE62A001E : Probe Head Image`
+- :ref:`0xE62A001F : Default Probe Head`
+
+HxCommandKeys
+
+- :ref:`0xE02A0000 : Parameter String`
+- :ref:`0xE02A0001 : Sequence Names`
+- :ref:`0xE02A0002 : Variable Names`
+- :ref:`0xE02A0003 : Sequence Data`
+- :ref:`0xE02A0004 : Result Data`
+- :ref:`0xE02A0005 : Default Wash Station`
+- :ref:`0xE02A0006 : Step CLSID`
+- :ref:`0xE02A0007 : Step Bitmap`
+- :ref:`0xE02A0008 : Result Data Count`
+- :ref:`0xE02A0009 : Sequence Data Count`
+- :ref:`0xE02A000A : Result Data Names`
+- :ref:`0xE02A000B : File Names`
+- :ref:`0xE02A000C : Timer Names`
+- :ref:`0xE02A000D : Event Names`
+- :ref:`0xE02A000E : String Names`
+- :ref:`0xE02A000F : Dialog Names`
+- :ref:`0xE02A0010 : Step Key Set`
+- :ref:`0xE02A0011 : Step Base Name`
+- :ref:`0xE02A0012 : Step Property`
+- :ref:`0xE02A0013 : Step Collection Name`
+- :ref:`0xE02A0014 : Step Collection Bitmap`
+- :ref:`0xE02A0015 : Step Collection Property`
+- :ref:`0xE02A0016 : Next Collection Level`
+- :ref:`0xE02A0017 : Property Visibility`
+- :ref:`0xE02A0018 : Step Show Name`
+- :ref:`0xE02A0019 : Protocol Config File`
+- :ref:`0xE02A0020 : Protocol CLSID`
+- :ref:`0xE02A0021 : Step Command`
+- :ref:`0xE02A0022 : Child Command`
+- :ref:`0xE02A0023 : Step Command Supports New Syntax Only`
+- :ref:`0xE02A0030 : Object Names`
+- :ref:`0xE02A0031 : Resource Names`
+- :ref:`0xE02A0032 : Sequence Array Names`
+- :ref:`0xE02A0033 : Variable Array Names`
+- :ref:`0xE02A0034 : File Array Names`
+- :ref:`0xE02A0035 : Timer Array Names`
+- :ref:`0xE02A0036 : Event Array Names`
+- :ref:`0xE02A0037 : String Array Names`
+- :ref:`0xE02A0038 : Dialog Array Names`
+- :ref:`0xE02A0039 : Object Array Names`
+- :ref:`0xE02A003A : Resource Array Names`
+- :ref:`0xE02A0040 : Instrument Pointer`
+- :ref:`0xE02A0041 : Instrument Key`
+- :ref:`0xE02A0046 : Step Error Number`
+- :ref:`0xE02A0047 : Step Error Description`
+- :ref:`0xE02A0048 : Step Syntax Errors`
+- :ref:`0xE02A0049 : Step Block Number`
+- :ref:`0xE02A004A : Step Block Line Number`
+- :ref:`0xE02A0050 : Step Property Name`
+- :ref:`0xE02A0051 : Step Property Name Image`
+- :ref:`0xE02A0052 : Step Property Value`
+- :ref:`0xE02A0053 : Step Property Value Image`
+- :ref:`0xE02A0054 : Step Property Next Level`
+- :ref:`0xE02A0055 : Variable Descriptor`
+- :ref:`0xE02A0056 : Variable SubType`
+- :ref:`0xE02A0057 : Variable Color`
+- :ref:`0xE02A0058 : Variable Comment`
+- :ref:`0xE02A0060 : Step Description`
+- :ref:`0xE02A0061 : Step Parameters`
+- :ref:`0xE02A0062 : Parameter Key Name`
+- :ref:`0xE02A0063 : Parameter View Name`
+- :ref:`0xE02A0064 : Parameter Type Specification`
+- :ref:`0xE02A0065 : Parameter Description`
+- :ref:`0xE02D0000 : Function Names`
+- :ref:`0xE02D0003 : Device Names`
+- :ref:`0xE02D0004 : Thread Function Names`
+
+HxCommandErrors
+
+- :ref:`0x80042A00 : Step Edit Cancelled`
+- :ref:`0x80042A01 : Step Run Aborted`
+- :ref:`0x80042A02 : Liquid Edit Cancelled`
+- :ref:`0x80042A03 : Move Probe Cancelled`
+- :ref:`0x80042A04 : Wrong Run State`
