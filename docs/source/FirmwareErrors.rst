@@ -45,7 +45,7 @@ Values (presumably corresponding to specific/minor errors? unsure)
 
 - :ref:`100 : HxErr`
 - :ref:`101 : Phoenix Error, error code %s\n\nError code 0x%x - 0x%x - 0x%x \n`
-- :ref:`102 : Instrument Error
+- :ref:`102 : Instrument Error`
 - :ref:`103 : Error`
 - :ref:`104 : Unknown Hx result`
 - :ref:`105 : Unkown HRESULT`
@@ -66,8 +66,8 @@ HxSecurity45
 ----------------------------------------------
 Values
 
-- :ref:`1 : Error opening file '%s' for checksum verification.\n\nSystem error: "%s"`
-- :ref:`2 : Checksum verification failed\n\nCurrent checksum: %0X`
+- :ref:`1 : Error opening file '%s' for checksum verification.\n\nSystem error: "%s" `
+- :ref:`2 : Checksum verification failed\n\nCurrent checksum: %0X `
 - :ref:`3 : Checksum verification of file '%s' failed.`
 - :ref:`4 : File '%s' is not validated.`
 - :ref:`5 : Invalid file validation flag value.`
