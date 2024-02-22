@@ -5,16 +5,138 @@ I will try compile as many different error codes and their explanations here, as
 
 The Major ID is usually assigned in the library which is causing the error; for example in HSLUtilLib2 there is a function called "Error" in which there is a static const variable called MajorID. The minor ID corresponds to the general type of error; in HSLUtilLib2 "0x01" is used to refer to a general runtime error.
 
+At least I think? I've found a bit of inconsistency so will keep digging.
+
   - :ref:`Runtime Errors <RuntimeErrors>`
   - :ref:`Syntax Errors <SyntaxErrors>`
   - :ref:`Unsorted Errors <FirmwareErrors>`
 
-Major IDs that have been identified (unsure if all associated with errors?)
+Major IDs that have been identified
 ------------------------------
-  - 76: Hamilton.HxServicesBase
-  - 85: Hamilton.HxElementCounter
-  - 96: Hamilton.HxDatabase
-  - 97: Hamilton.HxVectorDatabase
+NB: The codes are in hexadecimal so (for example) 31 = 1F
+  - 0: None
+  - 2: HxCfgFil
+  - 3: HxTrcFil
+  - 4: HxParams
+  - 5: HxLabwr
+  - 6: HxPlumb
+  - 7: HxM4Comm
+  - 8: HxM4Inst
+  - 9: HxM4PPtr
+  - 10: HxPm4Met
+  - 11: HxPm4Cfg
+  - 12: HxPm4Run
+  - 13: HxPhnx
+  - 14: HxMovPrb
+  - 15: HxSsInst
+  - 16: HxDeckEd
+  - 17: HxRun
+  - 18: HxReg
+  - 19: HxM4MetsDat
+  - 20: HxM4MetsCfg
+  - 21: HxP96P4Wz
+  - 22: HxP96M4MetsRun
+  - 23: HxM4PPtrCfg
+  - 25: HxM4LoadCfg
+  - 26: HxM4PrbInLabwr
+  - 27: HxCfgEd
+  - 28: HxPm4Wz
+  - 29: HxWrkFil
+  - 30: HxM4PPtrCfg2
+  - 31: HxM4CComm
+  - 32: HxM4PPtrPars
+  - 33: HxM4Transfer
+  - 34: HxHslParser
+  - 35: HxHslExecutor
+  - 36: HxHslRctl
+  - 37: HxFdxProtocol
+  - 38: HxSerial
+  - 39: HxTextMet
+  - 40: HxGruCommand
+  - 41: HxGruInst
+  - 42: HxCommand
+  - 43: HxSwapCommand
+  - 44: HxProSim
+  - 45: HxCompCommand
+  - 46: HxMetEdCompCmd
+  - 47: HxPrbInLw
+  - 48: HxMetEd
+  - 49: HxCommunication
+  - 50: HxProtocol
+  - 51: HxUsbComm
+  - 52: HxGruCompCmd
+  - 53: HxSampleTracker
+  - 54: HxGruLiquid
+  - 55: HxSecurity
+  - 56: HxGruLiquidEditor
+  - 57: HxStarMaintAndVer
+  - 58: HxSoftMaxPro
+  - 59: HxCytomat
+  - 60: HxM4Command
+  - 61: HxCarousel
+  - 62: HxMetChaining
+  - 63: HxAuditTrail
+  - 64: HxTrace
+  - 65: HxTraceView
+  - 66: HxView
+  - 67: HxWatchView
+  - 68: HxPowerWaveHt
+  - 69: HxInstrumentData
+  - 70: HxMethodCopy
+  - 71: HxBtiElx405AutoWasher
+  - 72: HxSecurityCom
+  - 73: HxStarBvsCommand
+  - 74: HxStarBvsConfig
+  - 75: HxReportConfig
+  - 76: HxServices
+  - 77: HxScheduleView
+  - 78: HxStCompCmd
+  - 79: HxStarData
+  - 80: HxUserManager
+  - 81: HxSchedCompCmd
+  - 82: HxFan
+  - 83: HxSysDeck
+  - 84: HxVSpin
+  - 85: HxElementCounter
+  - 86: HxStarConfig
+  - 87: HxConfigEditor
+  - 88: HxStarDevices
+  - 89: HxVSpinAccess2
+  - 90: HxEditSequenceDlg
+  - 91: HxStarBiotechMaintMet
+  - 92: HxLabwrcat
+  - 93: HxLabwrCatComponents
+  - 94: HxStarDynDilLib
+  - 95: HxMosquito
+  - 96: HxDatabase
+  - 97: HxVectorDatabase
+  - 98: HxTranslationSupport
+  - 99: HxUtilLib
+  - 100: HxReagentDisp
+  - 101: HxSpeVacuum
+  - 102: HxM384
+  - 103: HxGen5
+  - 104: HxBigBearShaker
+  - 105: HxSys3DView
+  - 106: HxImpactCmd
+  - 107: HxXRPLiteMC
+  - 108: NimbusFourProbe
+  - 109: TrackGripper
+  - 110: HxCoreDevices
+  - 111: HxCoreLiquid
+  - 112: HxCoreLiquidEditor
+  - 113: HxXRPLiteConfigurator
+  - 114: HxTcpIpBdzComm
+  - 115: MiroIncubatorCmd
+  - 116: GuavaLinkCmd
+  - 117: PowerSocket
+  - 118: HxCustomDialog
+  - 119: GlasColMixerCmd
+  - 120: EntryExit
+  - 121: ForteOctetCmd
+  - 122: NexusXPeelCmd
+  - 123: PHERAstar_module
+  - 124: HXETRACKCMD
 
 Minor IDs that have been identified (unsure if all associated with errors?)
 ------------------------------
