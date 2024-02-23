@@ -139,10 +139,12 @@ NB: The codes are in hexadecimal so (for example) 31 = 1F
 - 123: PHERAstar_module
 - 124: HXETRACKCMD
 
-Minor IDs that have been identified (unsure if all associated with errors?)
+Minor IDs that have been identified 
 ------------------------------
 
-Hamilton.HxVectorDB:
+NB: Codes are once again in hexadecimal. I'm slightly unsure on some of these
+
+HxVectorDB:
 
 - 0: UnexpectedError
 - 1: InterfaceNotInitialized
@@ -208,7 +210,7 @@ Hamilton.HxVectorDB:
 - 88: Tracking_CannotTrackActionCustomAction
 
 
-Hamilton.HxDatabase:
+HxDatabase:
 
 - 00: Global
 - 01: Singleton
