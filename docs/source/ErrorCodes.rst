@@ -267,7 +267,7 @@ Internal Error Codes which have been identified (presumably is the same as Speci
 -----------------------------------------------------
 NB: Once again, these are in Hexadecimal and four digits - error code 10 is 000A
 
-Hamilton.HxVectorDatabase:
+HxVectorDatabase:
 
 - 0: UnexpectedError
 - 1: InterfaceAlreadyInitialized
