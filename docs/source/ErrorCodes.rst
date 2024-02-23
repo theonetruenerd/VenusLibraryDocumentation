@@ -394,3 +394,30 @@ HxVectorDatabase:
 - 40966: AdditionalDataForeignNotExistsRunAction
 - 40967: AdditionalDataForeignNotExistsRun
 - 65535: CannotCreateErrorInfo
+
+HxDatabase:
+
+- 0: Unexpected
+- 1: CreateTableNotSupported
+- 2: CreateProcedureNotSupported
+- 3: UnknownEnumValue
+- 4: UnsupportedEnumValue
+- 5: CannotSynchronizeInternalParameterCollection
+- 6: InternalParameterCollectionOutOfSync
+- 7: UnknownDBMSIdentifier
+- 8: CannotLoadConfigFile
+- 9: CannotConvertParameter
+- 10: CannotCompareCultureAware
+- 11: CannotInferValueFromValue
+- 12: BadParameterSupplied
+- 13: CannotUseSuppliedConfigFile
+- 14: ConfigFileContainsErrors
+- 15: ParametersMissing
+- 16: SQLScriptCommandTextNotSet
+- 17: SQLScriptDoesNotExist
+- 18: ExecuteSQLScriptRequiresCommandTypeText
+- 19: CannotReadSQLScript
+- 20: CannotExecuteSQLScript
+- 21: NotImplemented
+- 22: CouldNotParseConnectionString
+- 65535: CannotCreateErrorInfo
