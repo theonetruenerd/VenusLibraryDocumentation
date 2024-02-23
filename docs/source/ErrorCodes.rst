@@ -14,6 +14,7 @@ At least I think? I've found a bit of inconsistency so will keep digging.
 Major IDs that have been identified
 ------------------------------
 NB: The codes are in hexadecimal so (for example) 31 = 1F
+
 - 0: None
 - 2: HxCfgFil
 - 3: HxTrcFil
